@@ -1,0 +1,97 @@
+% Festlegung des allgemeinen Dokumentenformats
+\documentclass[a4paper,12pt,headsepline]{article}
+
+% Schrift
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+% Bilder
+\usepackage{graphicx}
+
+% Variablen
+\input{assets/variablen}
+
+% mehrseitige Tabellen ermöglichen
+\usepackage{longtable}
+
+% Packet für Seitenrandabstände und Einstellung für Seitenränder
+\usepackage{geometry}
+\geometry{left=3.5cm, right=2.5cm, top=2.5cm, bottom=2cm}
+
+% bricht lange URLs "schön" um
+\usepackage[hyphens,obeyspaces,spaces]{url}
+
+% Festlegung Art der Zitierung - Havardmethode: Abkuerzung Autor + Jahr
+\bibliographystyle{alphadin}
+
+% Paket für Zeilenabstand
+\usepackage{setspace}
+\onehalfspacing
+
+% für Bildbezeichner
+\usepackage{capt-of}
+
+% für Stichwortverzeichnis
+\usepackage{makeidx}
+
+% Für Phantomsection
+\usepackage{hyperref}
+
+% Konfiguriere das Inhaltsverzeichnis
+\usepackage{tocbasic}
+\DeclareTOCStyleEntries[
+  raggedentrytext,
+  numwidth=0pt,
+  numsep=1ex,
+  dynnumwidth,
+]{tocline}{chapter,section,subsection,subsubsection,paragraph,subparagraph}
+\DeclareTOCStyleEntries[
+  indent=0pt,
+  linefill=\TOCLineLeaderFill,
+]{tocline}{section,subsection,subsubsection,paragraph,subparagraph}
+
+% Titel
+\title{Bachelorarbeit}
+
+% Autor
+\author{Andreas Huber}
+
+% Datum
+\date{\today}
+
+%
+% Start
+% des
+% Dokuments
+%
+\begin{document}
+
+% Titelseite
+\input{pages/deckblatt}
+\newpage
+
+% Römische Nummerierung
+\pagenumbering{roman}
+
+% Inhaltsverzeichnis
+\tableofcontents
+\newpage
+
+% Arabische Seitennummerierung ab hier
+\pagenumbering{arabic}
+
+% Einleitung
+\input{pages/1_einleitung}
+\newpage
+
+% Römische Nummerierung
+\pagenumbering{roman}
+\setcounter{page}{3}
+
+% Literaturliste soll im Inhaltsverzeichnis auftauchen
+\input{pages/x_literaturverzeichnis}
+\newpage
+
+\end{document}
