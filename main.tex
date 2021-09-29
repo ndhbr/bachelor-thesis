@@ -39,18 +39,21 @@
 % Für Phantomsection
 \usepackage{hyperref}
 
+% Für Tabellen
+\usepackage{tabularx}
+
 % Konfiguriere das Inhaltsverzeichnis
 \usepackage{tocbasic}
-\DeclareTOCStyleEntries[
-  raggedentrytext,
-  numwidth=0pt,
-  numsep=1ex,
-  dynnumwidth,
-]{tocline}{chapter,section,subsection,subsubsection,paragraph,subparagraph}
-\DeclareTOCStyleEntries[
-  indent=0pt,
-  linefill=\TOCLineLeaderFill,
-]{tocline}{section,subsection,subsubsection,paragraph,subparagraph}
+% \DeclareTOCStyleEntries[
+%   raggedentrytext,
+%   numwidth=0pt,
+%   numsep=1ex,
+%   dynnumwidth,
+% ]{tocline}{chapter,section,subsection,subsubsection,paragraph,subparagraph}
+% \DeclareTOCStyleEntries[
+%   indent=0pt,
+%   linefill=\TOCLineLeaderFill,
+% ]{tocline}{section,subsection,subsubsection,paragraph,subparagraph}
 
 % Titel
 \title{Bachelorarbeit}
@@ -84,6 +87,22 @@
 
 % Einleitung
 \input{pages/1_einleitung}
+% Tmp
+\subsection{Herausforderung digitales Lernen}
+\subsection{Interaktive Programmier-Lernplattform für alle Studierende}
+\subsection{Struktur der Arbeit}
+\section{Grundlagen}
+\section{Anforderungsanalyse}
+\subsection{Funktionale Anforderungen}
+\subsection{Nichtfunktionale Anforderungen}
+\subsection{Durchführbarkeitsanalyse}
+\section{Softwarearchitektur}
+\subsection{Planung der Einzelkomponenten}
+\subsection{Vergleich von Frameworks und Tools zur Umsetzung}
+\subsection{Ressourcen- und Kapazitätsplanung}
+\section{Implementierung}
+\section{Prototypische Anwendung und Deployment der Software}
+\section{Zusammenfassung und Ausblick}
 \newpage
 
 % Römische Nummerierung
