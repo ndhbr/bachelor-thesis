@@ -26,6 +26,10 @@
 % Festlegung Art der Zitierung - Havardmethode: Abkuerzung Autor + Jahr
 \bibliographystyle{alphadin}
 
+% Abstand zwischen Absätze
+\setlength{\parindent}{2em}
+\setlength{\parskip}{1em}
+
 % Paket für Zeilenabstand
 \usepackage{setspace}
 \onehalfspacing
@@ -54,6 +58,14 @@
 %   indent=0pt,
 %   linefill=\TOCLineLeaderFill,
 % ]{tocline}{section,subsection,subsubsection,paragraph,subparagraph}
+
+% subsubsubsection durch paragraph
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 % Titel
 \title{Bachelorarbeit}
@@ -91,7 +103,10 @@
 \subsection{Herausforderung digitales Lernen}
 \subsection{Interaktive Programmier-Lernplattform für alle Studierende}
 \subsection{Struktur der Arbeit}
-\section{Grundlagen}
+
+% Grundlagen
+\input{pages/2_grundlagen}
+
 \section{Anforderungsanalyse}
 \subsection{Funktionale Anforderungen}
 \subsection{Nichtfunktionale Anforderungen}
