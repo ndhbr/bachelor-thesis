@@ -1,11 +1,3 @@
-\section{Toolchain}
-Dieses Kapitel befasst sich mit der für das Projekt benötigten Toolchain.
-Eine Toolchain ist eine Sammlung verschiedener Anwendungen, die gemeinsam eine
-Lösung bzw. ein Produkt erzeugen. Durch den Vergleich mit verschiedenen
-bestehenden digitalen Lernplattformen ist es möglich, optimale 
-Software-Werkzeuge für die Hochschule Regensburg zu finden und schließlich
-einzusetzen.
-
 \subsection{Vergleich vorhandener Systeme}
 \subsubsection{CS50 der Harvard University}
 \paragraph{Allgemeines}
@@ -74,21 +66,19 @@ Folge dessen ist ein Einsatz des CS50-Systems an der OTH zum heutigen Datum
 nicht möglich.
 
 \subsubsection{Code FREAK der Fachhochschule Kiel}
-\subsubsection{Allgemeines}
+\paragraph{Allgemeines}
 Code FREAK ist eine All-In-One Lösung für Online-Programmieraufgaben mit
 automatisiertem Feedback. Die von der Hochschule Kiel entwickelte Open-Source
 Software soll den Einstieg in eine digitale Lernumgebung einfach machen. Die
 Zielgruppe von Code FREAK bezieht sich hierbei explizit auf Universitäten und
-Einrichtungen einer höheren Bildung.
+Einrichtungen einer höheren Bildung. \cite{codefreak-startseite}
 
 Desweiteren wirbt Code FREAK mit einer LMS-Integration. LMS ist die englische
 Abkürzung für Learning Management System (dt. Lernplattform). Viele Schulen und
 Universitäten verwendenx bekannte LMS-Systeme, wie Moodle, um Kurse, Fächer und
-Studierende zu verwalten.
+Studierende zu verwalten. \cite{moodle}
 Dies hat den Vorteil, dass Studierende kein extra Nutzerkonto für Code FREAK
 anlegen müssen. Sie können sich direkt mit ihrem gewohnten Zugang anmelden.
-% TODO: Quelle https://codefreak.org/#about
-% https://moodle.de/
 
 \paragraph{Ablauf für Studierende}
 Studierende können nach Anmeldung am System, an für sie sichtbaren Kursen
@@ -111,10 +101,9 @@ Software um mit Hilfe von Containervirtualisierung einzelne Anwendungen
 voneinander zu isolieren. Durch die Containervirtualisierung werden unter
 Anderem viele Abhängigkeits- und Deploymentprobleme beseitigt. Der Container
 enthält alle Bibliotheken und Abhängigkeiten, die die Software für die Laufzeit
-benötigt. Docker entstand auf Basis von Linux-Containern, welche ein oder
-mehrere Prozesse vom restlichen System isolieren können.
-% TODO: Quelle https://books.google.de/books?id=wpYpCwAAQBAJ&hl=de&redir_esc=y
-% Quelle: https://www.redhat.com/de/topics/containers/whats-a-linux-container
+benötigt \cite{docker}. Docker entstand auf Basis von Linux-Containern, welche
+ein oder mehrere Prozesse vom restlichen System isolieren können 
+\cite{linux-container}.
 
 Durch diese Handhabung, kann Code FREAK mit nur einem Befehl in der
 Kommandozeile installiert und gestartet werden. Die Software benötigt
@@ -129,22 +118,19 @@ Probleme. Das erste Problem bezieht sich auf den vorher erwähnten
 Arbeitsspeicher. Die Praxis zeigt, dass eine Instanz der Online-IDE schon nach
 wenigen Dateien ~3 Gigabytes an Arbeitsspeicher verwendet. Um eine reibungslose
 und parallele Nutzung für alle Studierende des Kurses gewährleisten zu können,
-werden dementsprechend sehr hohe Serverkosten fällig.
-% Quelle für Erfahrung? Quelle für 3 Gb?
+werden dementsprechend sehr hohe Serverkosten fällig. 
+\cite{codefreak-memory-problem}
 
 Ein weitere Hürde ist die Stabilität der Software. Code FREAK befindet sich,
 Stand heute, mitten in der Entwicklung, weshalb einige Funktionen und Features
 noch nicht ordnungsgemäß funktionieren. Darunter die vorher geworbene
-LMS-Integration. Zum heutigen Zeitpunkt ist LDAP die einzige Möglichkeit sich
-mit dem System zu authentifizieren. Ein eigenes Anmeldeverfahren gibt es nicht.
+LMS-Integration. \cite{codefreak-docs} Zum heutigen Zeitpunkt ist LDAP die
+einzige Möglichkeit sich mit dem System zu authentifizieren. Ein eigenes Anmeldeverfahren gibt es nicht.
+
 LDAP steht für Lightweight Directory Access Protocol und ist ein
 Netzwerkprotokoll zur Durchführung von Abfragen und Änderungen in einem 
 verteilten Verzeichnisdienst. LDAP ist der De-facto Industriestandard für
-Authentifizierung und Autorisierung.
-
-% Quelle: https://docs.codefreak.org/codefreak/index.html
-% "Code FREAK is under heavy development. Things might break between updates even if we try to be backwards-compatible."
-% Quelle LDAP: Buch?
+Authentifizierung und Autorisierung. \cite{ldap}
 
 Der Kurs Digital Skills soll den Teilnehmern einen Überblick über den
 Arbeitsalltag eines Informatikers geben. Dazu gehört unter anderem die
@@ -153,13 +139,47 @@ Kommandozeile. Eine Anforderung der Lernplattform ist deshalb, dass man
 Kommandozeile testen und abgeben kann. In Code FREAK kann man Aufgaben lediglich
 über die Oberfläche testen und abgeben.
 
-%% Zu realitätsfern mit blauen Knopf für alles? Benötigen Kommandozeile!
 \subsubsection{GitHub Classroom}
+\paragraph{Allgemeines}
 GitHub Classroom ist ein weiterer Kandidat für den Einsatz an der
-OTH-Regensburg.
+Hochschule Regensburg. Die Plattform ermöglicht die automatisierte
+Erstellung von Repositories auf GitHub. Außerdem hilft Classroom dabei,
+Aufgabenvorlagen und dazugehörige Abgaben einfach zu verwalten und automatisch
+zu benoten. Dabei enthalten die von GitHub Classroom erstellten
+Aufgaben-Repositories bereits vorkonfigurierte Zugriffskontrollen. \cite{github-classroom-startseite}
 
-\begin{quote}
-GitHub Classroom automates repository creation and access control, making it easy to distribute starter code and collect assignments on GitHub.
-\end{quote}
+\paragraph{Ablauf für Studierende}
+Studierende bekommen pro Programmieraufgabe einen Einladungslink.
+Nach Annahme der Einladung, wird pro Studierenden automatisch ein Repository für
+die jeweilige Aufgabe angelegt. Dieses Repository enthält die Vorlage,
+welche zum Bearbeiten der Aufgabe benötigt wird.
 
-\subsection{IT-Benchmarking}
+Sobald der Studierende eine Lösung zur Korrektur abgeben möchte, kann er per
+Push die Änderungen in das Remote-Repository hochladen. Je nach Konfiguration
+der Aufgabe starten daraufhin serverseitig ein oder mehrere Tests. Wenn alle
+Tests bestanden sind, hat der Studierende die Aufgabe erfolgreich abgeschlossen.
+
+\paragraph{Architektur}
+GitHub Classroom ist ein Bildungsservice der Firma GitHub Inc. und ist Stand
+heute kostenfrei \cite{github-classroom-kostenlos}. Die Software basiert auf der Automatisierung von Repositories. Jeder bei GitHub registrierte Nutzer, kann
+einen sogenannten \glqq Classroom\grqq erstellen und darin Aufgaben auf Basis
+vorhandener öffentlichen GitHub-Repositories erstellen.
+
+\paragraph{Probleme beim Einsatz für die OTH}
+Es gibt keine Möglichkeit das System von GitHub Classroom auf einen lokalen
+Git-Server zu replizieren. Auf Grund dessen schafft man sich durch die
+Verwendung von Classroom eine externe Abhängigkeit an GitHub. Dies kann unter
+Umständen zu erheblichen Problemen führen, wenn der Dienst beispielsweise
+nicht erreichbar oder aufgelöst wird. Ersteres ist durch die Größe und
+Infrastruktur des Unternehmens nicht (häufig) zu erwarten.
+
+Ein weitere Hürde ist der Bedarf an weiterer Software. GitHub Classroom alleine
+ist nicht ausreichend, um als vollständige Lernplattform für den Kurs Digital
+Skills geeignet zu sein. Hier bietet es sich an, eine eigene statische Website
+mit Anleitungen und Erklärungen zu bauen, welche dann jeweils auf Classroom
+Einladungslinks verweist. Als Online-Entwicklungsumgebung kann der Dienst Replit
+verwendet werden. In Replit ist es möglich, ein vorhandenes Git-Repository als
+Template für eine neue Umgebung zu verwenden. Dieses Template könnte
+Wrapper-Programme für den git-Workflow enthalten. Der Vorteil daran:
+Studierende bekommen erste Erfahrungen mit der Kommandozeile, müssen jedoch
+keine komplexen Git-Kommandos absetzen.

@@ -1,5 +1,5 @@
 % Festlegung des allgemeinen Dokumentenformats
-\documentclass[a4paper,12pt,headsepline]{article}
+\documentclass[a4paper,12pt]{article}
 
 % Schrift
 \usepackage[T1]{fontenc}
@@ -23,8 +23,8 @@
 % bricht lange URLs "schön" um
 \usepackage[hyphens,obeyspaces,spaces]{url}
 
-% Festlegung Art der Zitierung - Havardmethode: Abkuerzung Autor + Jahr
-\bibliographystyle{alphadin}
+% Festlegung Art der Zitierung
+\bibliographystyle{assets/IEEEtran.de}
 
 % Abstand zwischen Absätze
 \setlength{\parindent}{2em}
@@ -101,22 +101,28 @@
 \input{pages/1_einleitung}
 % Tmp
 \subsection{Herausforderung digitales Lernen}
-\subsection{Interaktive Programmier-Lernplattform für alle Studierende}
+\subsection{Kurs Digital Skills als Zusatzstudium}
 \subsection{Struktur der Arbeit}
-
-% Grundlagen
-\input{pages/2_grundlagen}
 
 \section{Anforderungsanalyse}
 \subsection{Funktionale Anforderungen}
 \subsection{Nichtfunktionale Anforderungen}
-\subsection{Durchführbarkeitsanalyse}
-\section{Softwarearchitektur}
-\subsection{Planung der Einzelkomponenten}
-\subsection{Vergleich von Frameworks und Tools zur Umsetzung}
-\subsection{Ressourcen- und Kapazitätsplanung}
-\section{Implementierung}
-\section{Prototypische Anwendung und Deployment der Software}
+
+% Softwarearchitektur
+\input{pages/architektur}
+
+\section{Konfiguration und Implementierung}
+\subsection{XXX}
+\subsection{GitHub Classroom}
+\subsubsection{Konfiguration}
+\subsubsection{Erste Aufgaben}
+\subsubsection{Tests und Benotung}
+\subsection{Erstellung eines Replit-Starter-Template}
+\subsubsection{Allgemein}
+\subsubsection{OTH-Console}
+\subsubsection{SSH-Keys}
+\subsubsection{Wrapper-Tools (get, check, submit)}
+\section{Studie: Test an fachfremden Studierenden}
 \section{Zusammenfassung und Ausblick}
 \newpage
 
