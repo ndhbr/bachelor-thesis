@@ -7,21 +7,27 @@ betreut wird. Der Kurs wurde aufgrund seines Erfolgs digitalisiert und wird nun
 als CS50x auf der Lernplattform edX angeboten. Folgende Recherchen und Aussagen
 sind jeweils immer auf die Online-Version CS50x bezogen.
 
-Der Kurs CS50 lehrt Schüler die Grundlagen der Informatik. Dabei werden
-diverse Programmierübungen abgefragt. Aufgrund der hohen Anzahl an Teilnehmern
-besitzt der Kurs ein automatisiertes Abgabe- und Benotungssystem.
+Der Kurs CS50 lehrt Schüler\footnote{Aus Gründen der besseren Lesbarkeit wird
+in der gesamten Arbeit auf die gleichzeitige Verwendung der Sprachformen
+männlich, weiblich und divers (m/w/d) verzichtet. Sämtliche
+Personenbezeichnungen gelten gleichermaßen für alle Geschlechter. Ist eine
+spezifische Geschlechtergruppe gemeint, wird das entsprechende Adjektiv
+vorangestellt (z.B. \glqq männliche Studenten\grqq)} die Grundlagen der
+Informatik. Dabei werden diverse Programmierübungen abgefragt. Aufgrund der
+hohen Anzahl an Teilnehmern besitzt der Kurs ein automatisiertes Abgabe- und Benotungssystem.
 
 Das System hinter CS50 wird mittlerweile vielfältig eingesetzt und wurde zu
 einem universalen Online-Lernsystem erweitert. Jeder kann sich durch eine
 Authentifizierung über die Plattform GitHub im Abgabesystem von CS50 einloggen
-und eigene Kurse erstellen.
+und eigene Kurse erstellen. \cite{cs50}
 
+\newpage
 \paragraph{Ablauf für Studierende}
 Dem Teilnehmer wird jede Woche ein neues Kapitel präsentiert. Er kann sich dabei
 sowohl durch ein Vorlesungsvideo, als auch durch geschriebene Materialien über
 das Thema der Woche informieren. Mit Beginn der Woche bekommt der Teilnehmer
 neben den Materialien auch Programmieraufgaben, welche er mit dem vorher
-genannten System bearbeiten kann.
+genannten System bearbeiten kann. \cite{cs50-edx}
 
 Die Programmieraufgaben können wahlweise über die, auf AWS Cloud9 basierenden,
 Online-Entwicklungsumgebung \glqq CS50-IDE\grqq{} von Harvard oder in jeder
@@ -29,19 +35,19 @@ anderen beliebigen Entwicklungsumgebung der Wahl bearbeitet werden. Dies
 wird durch die Architektur des Systems ermöglicht. Jede Funktionalität der
 Automatisierung geschieht durch Kommandozeilen-Tools. Dieses System hat den
 Vorteil, dass es unabhängig von der eingesetzten IDE funktioniert, es wird
-lediglich ein Terminal mit den jeweiligen Tools benötigt.
+lediglich ein Terminal mit den jeweiligen Tools benötigt. \cite{cs50-ide}
 
 Vor der Abgabe der endgültigen Lösung mit dem sogenannten Werkzeug
 \glqq submit50\grqq{}, ist es möglich den Code mit einem weiteren Werkzeug
 namens \glqq check50\grqq{} überprüfen zu lassen. Außerdem gibt es viele weitere
 Werkzeuge, ein Beispiel hierfür ist \glqq style50\grqq{}, welches die Qualität
-und den Style des Programmcodes überprüft und bewertet.
+und den Style des Programmcodes überprüft und bewertet. \cite{submit50}
 
 \paragraph{Architektur}
 Die Harvard University hält den Aufbau von CS50 weitestgehend transparent.
 Viele der eingesetzten Werkzeuge sind öffentlich als Open-Source-Projekte unter
-der GitHub-Organisation \glqq CS50\grqq{} zu finden. Darunter befinden sich
-unter Anderem folgende Projekte:
+der GitHub-Organisation \glqq CS50\grqq{} zu finden \cite{cs50-github}. Darunter
+befinden sich unter Anderem folgende Projekte:
 \begin{itemize}
 \item submit50: Abgabe von Code
 \item check50: Funktionalitätstests des Codes
@@ -52,7 +58,22 @@ unter Anderem folgende Projekte:
 \item server50: Webserver
 \end{itemize}
 
-// TODO: Bild der Architektur mit Erklärung
+\newpage
+
+In Abbildung \ref{fig:cs50-architektur} ist der Aufbau der Lernplattform CS50
+vereinfacht grafisch dargestellt. Die Rechtecke und Menschen sind die
+beteiligten Komponenten. Die Pfeile zwischen den Komponenten beschreiben die
+verbindende Relation. Die von der \glqq CS50-Programm\grqq-Komponente
+ausgehenden gestrichelten Pfeile zeigen, je nach ausgeführtem Befehl,
+mögliche Relationen.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{cs50-architektur}
+    \caption{CS50 Architektur}
+    \bildquelle{Eigene Darstellung}
+    \label{fig:cs50-architektur}
+\end{figure}
 
 \paragraph{Probleme beim Einsatz für die OTH}
 Die Toolchain von CS50 wäre adäquat für den Einsatz an der OTH-Regensburg.
@@ -65,6 +86,7 @@ Planung. Einen genauen öffentlichen Zeitplan hierfür gibt es aktuell nicht. In
 Folge dessen ist ein Einsatz des CS50-Systems an der OTH zum heutigen Datum
 nicht möglich.
 
+\newpage
 \subsubsection{Code FREAK der Fachhochschule Kiel}
 \paragraph{Allgemeines}
 Code FREAK ist eine All-In-One Lösung für Online-Programmieraufgaben mit
@@ -139,6 +161,7 @@ Kommandozeile. Eine Anforderung der Lernplattform ist deshalb, dass man
 Kommandozeile testen und abgeben kann. In Code FREAK kann man Aufgaben lediglich
 über die Oberfläche testen und abgeben.
 
+\newpage
 \subsubsection{GitHub Classroom}
 \paragraph{Allgemeines}
 GitHub Classroom ist ein weiterer Kandidat für den Einsatz an der
@@ -159,7 +182,7 @@ Push die Änderungen in das Remote-Repository hochladen. Je nach Konfiguration
 der Aufgabe starten daraufhin serverseitig ein oder mehrere Tests. Wenn alle
 Tests bestanden sind, hat der Studierende die Aufgabe erfolgreich abgeschlossen.
 
-\paragraph{Architektur}
+\paragraph{Architektur} % TODO: Zitieren?
 GitHub Classroom ist ein Bildungsservice der Firma GitHub Inc. und ist Stand
 heute kostenfrei \cite{github-classroom-kostenlos}. Die Software basiert auf der Automatisierung von Repositories. Jeder bei GitHub registrierte Nutzer, kann
 einen sogenannten \glqq Classroom\grqq erstellen und darin Aufgaben auf Basis
