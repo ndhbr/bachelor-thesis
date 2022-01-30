@@ -47,7 +47,7 @@ und den Style des Programmcodes überprüft und bewertet. \cite{submit50}
 Die Harvard University hält den Aufbau von CS50 weitestgehend transparent.
 Viele der eingesetzten Werkzeuge sind öffentlich als Open-Source-Projekte unter
 der GitHub-Organisation \glqq CS50\grqq{} zu finden \cite{cs50-github}. Darunter
-befinden sich unter Anderem folgende Projekte:
+befinden sich unter anderem folgende Projekte:
 \begin{itemize}
 \item submit50: Abgabe von Code
 \item check50: Funktionalitätstests des Codes
@@ -63,9 +63,7 @@ befinden sich unter Anderem folgende Projekte:
 In Abbildung \ref{fig:cs50-architektur} ist der Aufbau der Lernplattform CS50
 vereinfacht grafisch dargestellt. Die Rechtecke und Menschen sind die
 beteiligten Komponenten. Die Pfeile zwischen den Komponenten beschreiben die
-verbindende Relation. Die von der \glqq CS50-Programm\grqq-Komponente
-ausgehenden gestrichelten Pfeile zeigen, je nach ausgeführtem Befehl,
-mögliche Relationen.
+verbindende Relation. Von der \glqq CS50-Programm\grqq-Komponente ausgehende gestrichelte Pfeile zeigen, je nach ausgeführtem Befehl, mögliche Relationen.
 
 \begin{figure}[h]
     \centering
@@ -77,28 +75,29 @@ mögliche Relationen.
 
 \paragraph{Probleme beim Einsatz für die OTH}
 Die Toolchain von CS50 wäre adäquat für den Einsatz an der OTH-Regensburg.
-Eines der Projekte ist aktuell noch nicht Open-Source: Die Website zur
+Eines der Projekte ist aktuell noch nicht Open-Source: die Website zur
 Erstellung von neuen Kursen, Abgaben und Mitgliederverwaltung. Dieses Projekt
-ist essentiell für die Verwendung der Werkzeuge an der Regensburger Hochschule.
-Nach Rücksprache mit Herr X der Harvard University ist ein Neuaufbau dieser
-Website mit einhergehender Veröffentlichung als Open-Source-Projekt gerade in
-Planung. Einen genauen öffentlichen Zeitplan hierfür gibt es aktuell nicht. In
-Folge dessen ist ein Einsatz des CS50-Systems an der OTH zum heutigen Datum
-nicht möglich.
+ist essenziell für die Verwendung der Werkzeuge an der Regensburger Hochschule.
+Nach Rücksprache mit Herrn Carter Zenke der Harvard University ist ein Neuaufbau
+dieser Website mit einhergehender Veröffentlichung als Open-Source-Projekt
+gerade in Planung. Einen genauen öffentlichen Zeitplan hierfür gibt es aktuell
+nicht. Infolgedessen ist ein Einsatz des CS50-Systems an der OTH zum heutigen
+Datum nicht möglich.
 
 \newpage
 \subsubsection{Code FREAK der Fachhochschule Kiel}
 \paragraph{Allgemeines}
-Code FREAK ist eine All-In-One Lösung für Online-Programmieraufgaben mit
-automatisiertem Feedback. Die von der Hochschule Kiel entwickelte Open-Source
-Software soll den Einstieg in eine digitale Lernumgebung einfach machen. Die
-Zielgruppe von Code FREAK bezieht sich hierbei explizit auf Universitäten und
-Einrichtungen einer höheren Bildung. \cite{codefreak-startseite}
+Code FREAK ist eine All-in-one-Lösung für Online-Programmieraufgaben mit
+automatisiertem Feedback. Die von der Hochschule Kiel entwickelte
+Open-Source-Software soll den Einstieg in eine digitale Lernumgebung einfach
+machen. Die Zielgruppe von Code FREAK bezieht sich hierbei explizit auf
+Universitäten und Einrichtungen einer höheren Bildung.
+\cite{codefreak-startseite}
 
-Desweiteren wirbt Code FREAK mit einer LMS-Integration. LMS ist die englische
+Des Weiteren wirbt Code FREAK mit einer LMS-Integration. LMS ist die englische
 Abkürzung für Learning Management System (dt. Lernplattform). Viele Schulen und
-Universitäten verwendenx bekannte LMS-Systeme, wie Moodle, um Kurse, Fächer und
-Studierende zu verwalten. \cite{moodle}
+Universitäten verwenden bekannte LMS-Systeme, wie Moodle, um Kurse, Fächer und
+Studierende zu verwalten \cite{moodle}.
 Dies hat den Vorteil, dass Studierende kein extra Nutzerkonto für Code FREAK
 anlegen müssen. Sie können sich direkt mit ihrem gewohnten Zugang anmelden.
 
@@ -119,15 +118,15 @@ gelöst hat.
 
 \paragraph{Architektur}
 Code FREAK wird als fertiger Docker-Container ausgeliefert. Docker ist eine
-Software um mit Hilfe von Containervirtualisierung einzelne Anwendungen
+Software um mithilfe von Containervirtualisierung einzelne Anwendungen
 voneinander zu isolieren. Durch die Containervirtualisierung werden unter
-Anderem viele Abhängigkeits- und Deploymentprobleme beseitigt. Der Container
+anderem viele Abhängigkeits- und Einrichtungsprobleme beseitigt. Der Container
 enthält alle Bibliotheken und Abhängigkeiten, die die Software für die Laufzeit
 benötigt \cite{docker}. Docker entstand auf Basis von Linux-Containern, welche
 ein oder mehrere Prozesse vom restlichen System isolieren können 
 \cite{linux-container}.
 
-Durch diese Handhabung, kann Code FREAK mit nur einem Befehl in der
+Durch diese Handhabung kann Code FREAK mit nur einem Befehl in der
 Kommandozeile installiert und gestartet werden. Die Software benötigt
 grundsätzlich nur einen Container. Benutzt ein Studierender jedoch die
 integrierte Online-Entwicklungsumgebung (Online-IDE), muss für jede Instanz ein
@@ -143,13 +142,14 @@ und parallele Nutzung für alle Studierende des Kurses gewährleisten zu können
 werden dementsprechend sehr hohe Serverkosten fällig. 
 \cite{codefreak-memory-problem}
 
-Ein weitere Hürde ist die Stabilität der Software. Code FREAK befindet sich,
+Eine weitere Hürde ist die Stabilität der Software. Code FREAK befindet sich,
 Stand heute, mitten in der Entwicklung, weshalb einige Funktionen und Features
 noch nicht ordnungsgemäß funktionieren. Darunter die vorher geworbene
-LMS-Integration. \cite{codefreak-docs} Zum heutigen Zeitpunkt ist LDAP die
-einzige Möglichkeit sich mit dem System zu authentifizieren. Ein eigenes Anmeldeverfahren gibt es nicht.
+LMS-Integration \cite{codefreak-docs}. Zum heutigen Zeitpunkt ist LDAP die
+einzige Möglichkeit sich mit dem System zu authentifizieren. Ein eigenes
+Anmeldeverfahren gibt es nicht.
 
-LDAP steht für Lightweight Directory Access Protocol und ist ein
+LDAP steht für \glqq Lightweight Directory Access Protocol\grqq{} und ist ein
 Netzwerkprotokoll zur Durchführung von Abfragen und Änderungen in einem 
 verteilten Verzeichnisdienst. LDAP ist der De-facto Industriestandard für
 Authentifizierung und Autorisierung. \cite{ldap}
@@ -173,7 +173,7 @@ Aufgaben-Repositories bereits vorkonfigurierte Zugriffskontrollen. \cite{github-
 
 \paragraph{Ablauf für Studierende}
 Studierende bekommen pro Programmieraufgabe einen Einladungslink.
-Nach Annahme der Einladung, wird pro Studierenden automatisch ein Repository für
+Nach Annahme der Einladung wird pro Studierenden automatisch ein Repository für
 die jeweilige Aufgabe angelegt. Dieses Repository enthält die Vorlage,
 welche zum Bearbeiten der Aufgabe benötigt wird.
 
@@ -190,13 +190,13 @@ vorhandener öffentlichen GitHub-Repositories erstellen.
 
 \paragraph{Probleme beim Einsatz für die OTH}
 Es gibt keine Möglichkeit das System von GitHub Classroom auf einen lokalen
-Git-Server zu replizieren. Auf Grund dessen schafft man sich durch die
+Git-Server zu replizieren. Aufgrund dessen schafft man sich durch die
 Verwendung von Classroom eine externe Abhängigkeit an GitHub. Dies kann unter
 Umständen zu erheblichen Problemen führen, wenn der Dienst beispielsweise
 nicht erreichbar oder aufgelöst wird. Ersteres ist durch die Größe und
 Infrastruktur des Unternehmens nicht (häufig) zu erwarten.
 
-Ein weitere Hürde ist der Bedarf an weiterer Software. GitHub Classroom alleine
+Eine weitere Hürde ist der Bedarf an weiterer Software. GitHub Classroom alleine
 ist nicht ausreichend, um als vollständige Lernplattform für den Kurs Digital
 Skills geeignet zu sein. Hier bietet es sich an, eine eigene statische Website
 mit Anleitungen und Erklärungen zu bauen, welche dann jeweils auf Classroom
