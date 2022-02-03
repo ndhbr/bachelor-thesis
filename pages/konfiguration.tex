@@ -1,0 +1,48 @@
+\section{Konfiguration und Implementierung}
+
+% Tutors.dev
+\subsection{Tutors als Aufgabensammlung}
+
+% GitHub Classroom
+\subsection{GitHub Classroom}
+\subsubsection{Konfiguration}
+Für die Einrichtung wurde eine GitHub Organisation erstellt. GitHub
+Organisationen können von jedem Nutzer GitHub-Nutzer erstellt werden und
+benötigen lediglich einen Namen und eine Kontakt-E-Mail-Adresse. Die
+Organisation dieses Kurses beherbergt alle Aufgabenvorlagen, die später näher
+erläuterte Vorlage für Replit, sowie alle Aufgabenrepositories der Studierenden.
+
+\subsubsection{Erste Aufgaben}
+Nach der Erstellung der OTH-Organisation mussten die Aufgabenvorlagen erstellt
+werden. Aufgabenvorlagen sind in GitHub Classroom normale Repositories, welche
+in GitHub als Vorlage markiert wurden. Sie beinhalten meist zusätzlich Tests, um
+den Code darin zu prüfen.
+
+Sobald die Organisation mit Aufgaben gefüllt war, konnte der
+\glqq Classroom\grqq{} für den Kurs angelegt werden. Anfangs ist ein Classroom,
+wie die Organisation auch, leer. Über die Oberfläche können neue Assignments
+erstellt werden. Assignments sind Aufgaben, welche dem Studierenden zur
+Verfügung stehen. Für jedes vorher angelegte Aufgabenrepository wurde ein
+Assignment erstellt. Bei der Erstellung gibt man verschiedene
+Konfigurationsparameter an. Dazu gehört die Auswahl, ob eine Aufgabe von
+Einzelpersonen, oder einer Gruppe bearbeitet werden kann, oder ob die jeweiligen
+Versuche für alle Studierenden oder nur für die Lehrer sichtbar sind. Ferner
+gibt es die Möglichkeit eine Deadline, sowie den Starter Code anzugeben. Für den
+Starter Code wurde in diesem Fall jeweils das Aufgabenrepository ausgewählt.
+\subsubsection{Tests und Benotung}
+Im nächsten Schritt legt man die Benotung und das Feedback fest. Das Autograding
+(die Benotung) geschieht über Kommandos in der Konsole. In unserem Fall
+beinhaltet jedes Aufgabenrepository einen Ordner mit pytest-Tests. Pytest ist
+eine Code-Test-Bibliothek für Python. Die Assignments wurden so konfiguriert,
+dass GitHub nach jedem Push zum Repository des Studierenden die pytest-Tests
+gestartet werden. Wenn alle Tests erfolgreich sind, erhält der Studierende eine
+vorkonfigurierte Punktzahl. Durch Classroom ist es außerdem möglich, jedem
+Test eine individuelle Punktzahl zuzuweisen. So kann man dem Schüler neben der erfolgreichen Ausführung beispielsweise noch Bonuspunkte für das Fangen von
+nicht geplanten Eingaben vergeben.
+
+% Replit
+\subsection{Erstellung eines Replit-Starter-Templates}
+\subsubsection{Allgemein}
+\subsubsection{OTH-Console}
+\subsubsection{SSH-Keys}
+\subsubsection{Wrapper-Tools (get, check, submit)}
