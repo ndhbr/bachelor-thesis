@@ -8,9 +8,10 @@
 \subsubsection{Konfiguration}
 Für die Einrichtung wurde eine GitHub Organisation erstellt. GitHub
 Organisationen können von jedem Nutzer GitHub-Nutzer erstellt werden und
-benötigen lediglich einen Namen und eine Kontakt-E-Mail-Adresse. Die
-Organisation dieses Kurses beherbergt alle Aufgabenvorlagen, die später näher
-erläuterte Vorlage für Replit, sowie alle Aufgabenrepositories der Studierenden.
+benötigen lediglich einen Namen und eine Kontakt-E-Mail-Adresse
+\cite{github-organisation-erstellen}. Die Organisation dieses Kurses beherbergt
+alle Aufgabenvorlagen, die später näher erläuterte Vorlage für Replit, sowie
+alle Aufgabenrepositories der Studierenden.
 
 \subsubsection{Erste Aufgaben}
 Nach der Erstellung der OTH-Organisation mussten die Aufgabenvorlagen erstellt
@@ -29,6 +30,7 @@ Einzelpersonen, oder einer Gruppe bearbeitet werden kann, oder ob die jeweiligen
 Versuche für alle Studierenden oder nur für die Lehrer sichtbar sind. Ferner
 gibt es die Möglichkeit eine Deadline, sowie den Starter Code anzugeben. Für den
 Starter Code wurde in diesem Fall jeweils das Aufgabenrepository ausgewählt.
+\cite{github-assignment-erstellen}
 \subsubsection{Tests und Benotung}
 Im nächsten Schritt legt man die Benotung und das Feedback fest. Das Autograding
 (die Benotung) geschieht über Kommandos in der Konsole. In unserem Fall
@@ -38,11 +40,97 @@ dass GitHub nach jedem Push zum Repository des Studierenden die pytest-Tests
 gestartet werden. Wenn alle Tests erfolgreich sind, erhält der Studierende eine
 vorkonfigurierte Punktzahl. Durch Classroom ist es außerdem möglich, jedem
 Test eine individuelle Punktzahl zuzuweisen. So kann man dem Schüler neben der erfolgreichen Ausführung beispielsweise noch Bonuspunkte für das Fangen von
-nicht geplanten Eingaben vergeben.
+nicht geplanten Eingaben vergeben. \cite{github-assignment-erstellen}
 
 % Replit
 \subsection{Erstellung eines Replit-Starter-Templates}
-\subsubsection{Allgemein}
-\subsubsection{OTH-Console}
-\subsubsection{SSH-Keys}
+\subsubsection{Template-Repository}
+Projekte in Replit heißen Repls. Diese Repls können auf Basis von GitHub
+Repositories erzeugt werden. Die Import-Funktionalität ermöglicht das
+Bereitstellen von Dateien, die die Bearbeitung der Kursaufgaben erleichtern.
+
+Aus diesem Grund wurde ein öffentliches Repository in der vorher erstellten
+GitHub Organisation angelegt. Dies ist das Template, welches später von den
+Studierenden als Starter-Vorlage verwendet wird. Replit versteckt Dateien,
+welche sich in einem Ordner namens \texttt{/node\_modules} befinden.
+Normalerweise wird der Ordner automatisch im Kontext mit externen Modulen der
+JavaScript-Bibliothek Node.js verwendet \cite{nodejs}. Das ist auch der Grund
+weshalb Replit diesen Ordner automatisch versteckt. Dieses Verhalten nutzen wir,
+um Hilfsprogramme und Konfigurationen zu verstecken.
+
+Studierende werden den ganzen Kurs in einem Repl absolvieren. Jede
+Programmieraufgabe wird als Ordner im Projekt-Repl abgespeichert werden. Um die
+Aufgaben herunterladen, prüfen und schließlich abgeben zu können, benötigt
+man git-Kenntnisse, sowie Erfahrungen mit Test-Frameworks, wie zum Beispiel 
+pytest. Im \texttt{/node\_modules}-Ordner des Starter-Templates befinden sich
+diverse Wrapper-Tools, welche dem Studierenden die Arbeit abnehmen und sie dabei
+unterstützen.
+
 \subsubsection{Wrapper-Tools (get, check, submit)}
+Die Wrapper-Tools \texttt{get}, \texttt{check} und \texttt{submit} sind Python
+Skripte. Über den Konsolenbefehl \texttt{get <PROJEKT-REPOSITORY>} kann der
+Studierende die Aufgabe in seinen Arbeitsbereich laden. Der Befehl 
+\texttt{check <PROJEKT-REPOSITORY>} erlaubt es die Aufgabe auf Fehler zu
+überprüfen. Schließlich pusht der Befehl \texttt{submit <PROJEKT-REPOSITORY>}
+den Lösungsversuch in das GitHub Classroom Aufgabenrepository des
+Kursteilnehmers.
+
+Damit die Skripte Ordnerunabhängig ausgeführt werden können, werden
+Konsolenaliase benötigt. Konsolenaliase können in einer Bash-Konsole
+beispielsweise über das Anhängen folgender Zeile an die \texttt{.bashrc}-Datei
+erstellt werden: \texttt{alias befehl="echo Hallo"}. Bash ist eine Art \glqq Standard-Shell\grqq{} unter Linux und wird auch von Replit als Konsole
+eingesetzt \cite{bash}. Bei jeder neuen Konsolensitzung wird dann der Alias aus
+der Datei eingelesen und angewendet. Die genannte Datei befindet sich in der
+Regel im Benutzerverzeichnis, welches außerhalb des Arbeitsbereiches in Replit
+liegt. Alle Änderungen außerhalb des Arbeitsbereiches werden jedoch von Replit
+nach jeder Sitzung zurückgesetzt. Um dieses Problem zu beheben, wurde die nun
+folgende OTH-Console eingeführt.
+
+\subsubsection{OTH-Console}
+Sobald der Student in seinem Repl auf den Run-Knopf drückt, startet die
+sogenannte OTH-Console in der Konsole. Dies ist eine neue
+modifizierte Konsoleninstanz, welche alle für die Arbeit benötigten
+Konfigurationen enthält.
+
+Sobald der Run-Knopf gedrückt wird, startet das Einrichtungsskript
+\texttt{setup.py}, welches die benötigten Dateien in das Benutzerverzeichnis
+schreibt.
+
+Zuerst wird eine Konfigurationsdatei für Bash angelegt. In diese
+werden alle benötigten Aliase (\texttt{get}, \texttt{submit}, \texttt{check}
+und \texttt{github}) geschrieben. Außerdem wird GitHub, falls noch
+nicht vorhanden, zu den sogenannten \glqq Known Hosts\grqq{} im SSH-Ordner
+hinzugefügt. Der Vorteil daran ist, dass der Student bei der ersten Verbindung
+mit GitHub (bspw. durch den \texttt{get}-Befehl) keine Authentizitätsprüfung
+bestätigen muss \cite{ssh}. Als letztes wird in der Konfigurationsdatei noch das
+Aussehen des Bash Promptes festgelegt.
+
+Im nächsten Schritt wird die passwortlose Authentifizierung mit GitHub
+eingerichtet. Hierzu benötigt man ein SSH-Schlüssle-Paar, welches automatisch,
+falls nicht vorhanden, durch das Einrichtungsskript erzeugt wird. Nach der
+Erzeugung wird es neben dem SSH-Ordner auch in die Repl-Nutzer-Datenbank
+geschrieben. Die Datebank ist ein simpler Key-Value-Speicher, welcher jeweils
+pro Replit-Projekt existiert \cite{replit-database}. Sobald der Studierende
+Replit neustartet und das Benutzerverzeichnis gelöscht wurde, holt sich das Einrichtungsskript die SSH-Keys aus der Datenbank und schreibt sie wieder
+zurück in die jeweiligen Dateien. Dasselbe Verfahren wird für die Konfiguration
+von Git angewandt. Git benötigt, um Änderungen zu pushen, einen Namen mit
+zugehöriger E-Mail Adresse \cite{git-config}. Diese Daten werden zusammen mit
+den SSH-Keys in der Replit-Datenbank gespeichert.
+
+Nach der Ausführung des Einrichtungsskripts, wird eine neue
+Bash-Konsolen-Instanz, mit der gerade angelegten Konfigurationsdatei als
+Parameter, gestartet.
+
+\subsubsection{SSH-Keys}
+Um das vorher generierte SSH-Schlüsselpaar für die Authentifizierung gegen
+GitHub zu verwenden, muss der öffentliche Schlüssel noch zu dem GitHub Profil
+des Studierenden hinzugefügt werden. Hierfür enthält das Starter-Template ein
+weiteres Programm, welches mit dem Befehl \texttt{github} in der OTH-Console
+ausgeführt werden kann. Dieses weitere Python Programm lädt den im SSH-Ordner
+gespeicherten öffentlichen Schlüssel und gibt ihn zusammen mit einem Link
+zum Hinzufügen von SSH-Keys in GitHub aus.
+
+Desweiteren überprüft das Programm, ob Git bereits konfiguriert ist.
+Sind die benötigten Werte nicht in der Replit-Datenbank vorhanden, frägt das
+Programm den Nutzer nach dem Name und der studentischen E-Mail Adresse, welche schließlich beide in der Datenbank hinterlegt werden. Außerdem werden die Werte,
+wie beim Einrichtungsskript auch, in eine Git-Konfigurationsdatei geschrieben.

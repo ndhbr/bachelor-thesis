@@ -1,3 +1,65 @@
 \section{Anforderungsanalyse}
+Funktionale Anforderungen beschreiben, was das Projekt tun soll. Diese
+Informationen sind wichtig, um die richtigen Werkzeuge und Programme für die
+Umsetzung auszuwählen. Nichtfunktionale Bedingungen sind Bedingungen, wie zum
+Beispiel Zuverlässigkeit, oder diverse Sicherheitsanforderungen.
 \subsection{Funktionale Anforderungen}
+\subsubsection{Studierende}
+Studierende sollen eine Kursübersicht mit allen Aufgaben haben. Der Fortschritt
+von jeweiligen Aufgaben sollte dabei leicht ersichtlich sein. Mögliche Deadlines
+oder Abgabefristen sollen bei jeder Aufgabe deutlich erkennbar sein.
+
+Des Weiteren müssen Studierende die Möglichkeit haben, ohne die Installation von zusätzlichen Programmen die Aufgaben online bearbeiten, prüfen und abgeben
+zu können. Trotzdem sollen sie die Option haben, die Aufgaben in der Entwicklungsumgebung ihrer Wahl lösen zu können.
+
+Eine weitere wichtige Anforderung bei der Prüfung der Aufgaben ist, dass
+die Bearbeiter der Aufgaben sogenannte
+\glqq human-readable\grqq{}-Fehlermeldungen erhalten müssen. Das bedeutet, dass
+die Fehlermeldungen bei der Überprüfung auch für nicht-technische Studenten
+leicht verständlich sein müssen. Fehlermeldungen bzw. konstruktives Feedback
+muss dabei automatisiert und jederzeit generiert werden können.
+
+Die Möglichkeit Aufgabenversuche abzugeben, muss ebenfalls mit wenig Aufwand
+behaftet sein. Falls ein Versuch fehlschlägt, oder nicht die volle Punktzahl
+erhält, sollte der Student jederzeit einen neuen Versuch hochladen können.
+
+\subsubsection{Lehrende}
+Lehrende müssen neue Aufgaben anlegen und konfigurieren können, dazu gehört
+unter anderem eine Deadline bzw. ein Abgabedatum. Des Weiteren sollen Lehrer
+eine Übersicht an Aufgaben des jeweiligen Kurses haben. Außerdem sollten
+Lehrende einzelne Aufgaben temporär verstecken oder deaktivieren können.
+
+Überdies hinaus muss es möglich sein, mehrere Administratoren zu den Kursen
+hinzuzufügen. Dadurch ist es möglich, dass verschiedene Personen die Aufgaben
+erstellen und die abgegebenen Lösungen herunterladen können. Dies ist
+gleichzeitig die nächste Anforderung: Administratoren müssen mit wenig
+Aufwand alle Abgaben der Teilnehmer herunterladen können.
+
+Ferner müssen die Aufgaben und die jeweiligen Deadlines auch nach der Erstellung
+editierbar sein.
+
+Lehrende müssen den Aufgaben-Fortschritt der Teilnehmer je nach Kurs 
+übersichtlich einsehen können.
 \subsection{Nichtfunktionale Anforderungen}
+Das eingesetzte System muss neben den funktionalen Anforderungen auch diverse
+nichtfunktionale Anforderungen erfüllen, um von der OTH als sinnvolle
+Lernplattform eingesetzt werden zu können.
+
+Der erste wichtige Punkt ist, dass die Lernplattform möglichst zuverlässig ist.
+Zur Zuverlässigkeit gehört neben einer hohen Verfügbarkeit auch eine skalierende
+Performance, wenn viele Studierende gleichzeitig die Plattform nutzen wollen.
+
+Ein weiterer Punkt ist die Wartbarkeit. Die Plattform sollte mit möglichst wenig
+Wartung sicher bestehen bleiben können. Außerdem sollte nur auf externe Systeme
+gesetzt werden, von denen ausgegangen werden kann, dass diese noch einige Jahre
+gepflegt werden. Hier empfiehlt sich ein Aufteilen der Plattform auf mehrere
+externe Tools, um bei einem Ausfall oder Außerbetriebnahme eines einzelnen Tools
+noch einen Notbetrieb gewährleisten zu können. Der Austausch gegen eine andere
+neue Softwarekomponente gestaltet sich dadurch leichter.
+
+Zu guter Letzt spielt die Ressourcenlast eine weitere Rolle bei der
+Entscheidungsfindung. Wenn Teile der Lernplattform auf OTH-Servern gehostet
+werden müssen, sollten diese möglichst ressourcenschonend sein. Serverressourcen
+sind teuer und können das Projekt im Zweifelsfall unrentabel machen, wenn das
+System bei paralleler Nutzung durch mehrere Studierende eine inadäquate
+Serverlast voraussetzen würde.
