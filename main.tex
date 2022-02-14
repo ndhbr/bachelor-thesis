@@ -25,7 +25,9 @@
 \usepackage[hyphens,obeyspaces,spaces]{url}
 
 % Festlegung Art der Zitierung
-\bibliographystyle{assets/IEEEtran.de}
+\usepackage{csquotes}
+\usepackage[style=apa, backend=biber]{biblatex}
+\addbibresource{assets/literatur.bib}
 
 % Abstand zwischen Absätze
 \setlength{\parindent}{2em}
@@ -112,8 +114,8 @@
 \newpage
 \input{pages/konfiguration}
 
-\section{Studie: Test an fachfremden Studierenden}
-\section{Zusammenfassung und Ausblick}
+\section{Studie: Test an fachfremden Studierenden}\label{studie}
+\section{Zusammenfassung und Ausblick}\label{zusammenfassung-u-ausblick}
 \newpage
 
 % Römische Nummerierung

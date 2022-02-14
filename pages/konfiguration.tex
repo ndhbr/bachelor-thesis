@@ -1,19 +1,19 @@
-\section{Konfiguration und Implementierung}
+\section{Konfiguration und Implementierung}\label{konfiguration-u-impl}
 
 % Tutors.dev
-\subsection{Tutors als Aufgabensammlung}
+\subsection{Tutors als Aufgabensammlung}\label{tutors-als-aufgabensammlung}
 
 % GitHub Classroom
-\subsection{GitHub Classroom}
-\subsubsection{Konfiguration}
+\subsection{GitHub Classroom}\label{github-classroom}
+\subsubsection{Konfiguration}\label{classroom-konfiguration}
 Für die Einrichtung wurde eine GitHub Organisation erstellt. GitHub
 Organisationen können von jedem Nutzer GitHub-Nutzer erstellt werden und
 benötigen lediglich einen Namen und eine Kontakt-E-Mail-Adresse
-\cite{github-organisation-erstellen}. Die Organisation dieses Kurses beherbergt
+\parencite{github-organisation-erstellen}. Die Organisation dieses Kurses beherbergt
 alle Aufgabenvorlagen, die später näher erläuterte Vorlage für Replit, sowie
 alle Aufgabenrepositories der Studierenden.
 
-\subsubsection{Erste Aufgaben}
+\subsubsection{Erste Aufgaben}\label{classroom-erste-aufgaben}
 Nach der Erstellung der OTH-Organisation mussten die Aufgabenvorlagen erstellt
 werden. Aufgabenvorlagen sind in GitHub Classroom normale Repositories, welche
 in GitHub als Vorlage markiert wurden. Sie beinhalten meist zusätzlich Tests, um
@@ -30,8 +30,8 @@ Einzelpersonen, oder einer Gruppe bearbeitet werden kann, oder ob die jeweiligen
 Versuche für alle Studierenden oder nur für die Lehrer sichtbar sind. Ferner
 gibt es die Möglichkeit eine Deadline, sowie den Starter Code anzugeben. Für den
 Starter Code wurde in diesem Fall jeweils das Aufgabenrepository ausgewählt.
-\cite{github-assignment-erstellen}
-\subsubsection{Tests und Benotung}
+\parencite{github-assignment-erstellen}
+\subsubsection{Tests und Benotung}\label{classroom-tests}
 Im nächsten Schritt legt man die Benotung und das Feedback fest. Das Autograding
 (die Benotung) geschieht über Kommandos in der Konsole. In unserem Fall
 beinhaltet jedes Aufgabenrepository einen Ordner mit pytest-Tests. Pytest ist
@@ -40,11 +40,11 @@ dass GitHub nach jedem Push zum Repository des Studierenden die pytest-Tests
 gestartet werden. Wenn alle Tests erfolgreich sind, erhält der Studierende eine
 vorkonfigurierte Punktzahl. Durch Classroom ist es außerdem möglich, jedem
 Test eine individuelle Punktzahl zuzuweisen. So kann man dem Schüler neben der erfolgreichen Ausführung beispielsweise noch Bonuspunkte für das Fangen von
-nicht geplanten Eingaben vergeben. \cite{github-assignment-erstellen}
+nicht geplanten Eingaben vergeben. \parencite{github-assignment-erstellen}
 
 % Replit
-\subsection{Erstellung eines Replit-Starter-Templates}
-\subsubsection{Template-Repository}
+\subsection{Erstellung eines Replit-Starter-Templates}\label{replit-template}
+\subsubsection{Template-Repository}\label{replit-template-repository}
 Projekte in Replit heißen Repls. Diese Repls können auf Basis von GitHub
 Repositories erzeugt werden. Die Import-Funktionalität ermöglicht das
 Bereitstellen von Dateien, die die Bearbeitung der Kursaufgaben erleichtern.
@@ -54,7 +54,7 @@ GitHub Organisation angelegt. Dies ist das Template, welches später von den
 Studierenden als Starter-Vorlage verwendet wird. Replit versteckt Dateien,
 welche sich in einem Ordner namens \texttt{/node\_modules} befinden.
 Normalerweise wird der Ordner automatisch im Kontext mit externen Modulen der
-JavaScript-Bibliothek Node.js verwendet \cite{nodejs}. Das ist auch der Grund
+JavaScript-Bibliothek Node.js verwendet \parencite{nodejs}. Das ist auch der Grund
 weshalb Replit diesen Ordner automatisch versteckt. Dieses Verhalten nutzen wir,
 um Hilfsprogramme und Konfigurationen zu verstecken.
 
@@ -67,26 +67,30 @@ diverse Wrapper-Tools, welche dem Studierenden die Arbeit abnehmen und sie dabei
 unterstützen.
 
 \subsubsection{Wrapper-Tools (get, check, submit)}
+\label{replit-template-wrapper-tools}
 Die Wrapper-Tools \texttt{get}, \texttt{check} und \texttt{submit} sind Python
 Skripte. Über den Konsolenbefehl \texttt{get <PROJEKT-REPOSITORY>} kann der
 Studierende die Aufgabe in seinen Arbeitsbereich laden. Der Befehl 
 \texttt{check <PROJEKT-REPOSITORY>} erlaubt es die Aufgabe auf Fehler zu
-überprüfen. Schließlich pusht der Befehl \texttt{submit <PROJEKT-REPOSITORY>}
+überprüfen.
+
+Schließlich pusht der Befehl \texttt{submit <PROJEKT-REPOSITORY>}
 den Lösungsversuch in das GitHub Classroom Aufgabenrepository des
 Kursteilnehmers.
 
 Damit die Skripte Ordnerunabhängig ausgeführt werden können, werden
 Konsolenaliase benötigt. Konsolenaliase können in einer Bash-Konsole
 beispielsweise über das Anhängen folgender Zeile an die \texttt{.bashrc}-Datei
-erstellt werden: \texttt{alias befehl="echo Hallo"}. Bash ist eine Art \glqq Standard-Shell\grqq{} unter Linux und wird auch von Replit als Konsole
-eingesetzt \cite{bash}. Bei jeder neuen Konsolensitzung wird dann der Alias aus
+erstellt werden: \texttt{alias befehl="echo Hallo"}. Bash ist eine Art
+\glqq Standard-Shell\grqq{} unter Linux und wird auch von Replit als Konsole
+eingesetzt \parencite{bash}. Bei jeder neuen Konsolensitzung wird dann der Alias aus
 der Datei eingelesen und angewendet. Die genannte Datei befindet sich in der
 Regel im Benutzerverzeichnis, welches außerhalb des Arbeitsbereiches in Replit
 liegt. Alle Änderungen außerhalb des Arbeitsbereiches werden jedoch von Replit
 nach jeder Sitzung zurückgesetzt. Um dieses Problem zu beheben, wurde die nun
 folgende OTH-Console eingeführt.
 
-\subsubsection{OTH-Console}
+\subsubsection{OTH-Console}\label{replit-template-oth-console}
 Sobald der Student in seinem Repl auf den Run-Knopf drückt, startet die
 sogenannte OTH-Console in der Konsole. Dies ist eine neue
 modifizierte Konsoleninstanz, welche alle für die Arbeit benötigten
@@ -102,7 +106,7 @@ und \texttt{github}) geschrieben. Außerdem wird GitHub, falls noch
 nicht vorhanden, zu den sogenannten \glqq Known Hosts\grqq{} im SSH-Ordner
 hinzugefügt. Der Vorteil daran ist, dass der Student bei der ersten Verbindung
 mit GitHub (bspw. durch den \texttt{get}-Befehl) keine Authentizitätsprüfung
-bestätigen muss \cite{ssh}. Als letztes wird in der Konfigurationsdatei noch das
+bestätigen muss \parencite{ssh}. Als letztes wird in der Konfigurationsdatei noch das
 Aussehen des Bash Promptes festgelegt.
 
 Im nächsten Schritt wird die passwortlose Authentifizierung mit GitHub
@@ -110,18 +114,18 @@ eingerichtet. Hierzu benötigt man ein SSH-Schlüssle-Paar, welches automatisch,
 falls nicht vorhanden, durch das Einrichtungsskript erzeugt wird. Nach der
 Erzeugung wird es neben dem SSH-Ordner auch in die Repl-Nutzer-Datenbank
 geschrieben. Die Datebank ist ein simpler Key-Value-Speicher, welcher jeweils
-pro Replit-Projekt existiert \cite{replit-database}. Sobald der Studierende
+pro Replit-Projekt existiert \parencite{replit-database}. Sobald der Studierende
 Replit neustartet und das Benutzerverzeichnis gelöscht wurde, holt sich das Einrichtungsskript die SSH-Keys aus der Datenbank und schreibt sie wieder
 zurück in die jeweiligen Dateien. Dasselbe Verfahren wird für die Konfiguration
 von Git angewandt. Git benötigt, um Änderungen zu pushen, einen Namen mit
-zugehöriger E-Mail Adresse \cite{git-config}. Diese Daten werden zusammen mit
+zugehöriger E-Mail Adresse \parencite{git-config}. Diese Daten werden zusammen mit
 den SSH-Keys in der Replit-Datenbank gespeichert.
 
 Nach der Ausführung des Einrichtungsskripts, wird eine neue
 Bash-Konsolen-Instanz, mit der gerade angelegten Konfigurationsdatei als
 Parameter, gestartet.
 
-\subsubsection{SSH-Keys}
+\subsubsection{SSH-Keys}\label{replit-template-ssh-keys}
 Um das vorher generierte SSH-Schlüsselpaar für die Authentifizierung gegen
 GitHub zu verwenden, muss der öffentliche Schlüssel noch zu dem GitHub Profil
 des Studierenden hinzugefügt werden. Hierfür enthält das Starter-Template ein

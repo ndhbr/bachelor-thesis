@@ -19,7 +19,7 @@ hohen Anzahl an Teilnehmern besitzt der Kurs ein automatisiertes Abgabe- und Ben
 Das System hinter CS50 wird mittlerweile vielfältig eingesetzt und wurde zu
 einem universalen Online-Lernsystem erweitert. Jeder kann sich durch eine
 Authentifizierung über die Plattform GitHub im Abgabesystem von CS50 einloggen
-und eigene Kurse erstellen. \cite{cs50}
+und eigene Kurse erstellen. \parencite{cs50}
 
 \newpage
 \paragraph{Ablauf für Studierende}
@@ -27,7 +27,7 @@ Dem Teilnehmer wird jede Woche ein neues Kapitel präsentiert. Er kann sich dabe
 sowohl durch ein Vorlesungsvideo, als auch durch geschriebene Materialien über
 das Thema der Woche informieren. Mit Beginn der Woche bekommt der Teilnehmer
 neben den Materialien auch Programmieraufgaben, welche er mit dem vorher
-genannten System bearbeiten kann. \cite{cs50-edx}
+genannten System bearbeiten kann. \parencite{cs50-edx}
 
 Die Programmieraufgaben können wahlweise über die, auf AWS Cloud9 basierenden,
 Online-Entwicklungsumgebung \glqq CS50-IDE\grqq{} von Harvard oder in jeder
@@ -35,18 +35,18 @@ anderen beliebigen Entwicklungsumgebung der Wahl bearbeitet werden. Dies
 wird durch die Architektur des Systems ermöglicht. Jede Funktionalität der
 Automatisierung geschieht durch Kommandozeilen-Tools. Dieses System hat den
 Vorteil, dass es unabhängig von der eingesetzten IDE funktioniert, es wird
-lediglich ein Terminal mit den jeweiligen Tools benötigt. \cite{cs50-ide}
+lediglich ein Terminal mit den jeweiligen Tools benötigt. \parencite{cs50-ide}
 
 Vor der Abgabe der endgültigen Lösung mit dem sogenannten Werkzeug
 \glqq submit50\grqq{}, ist es möglich den Code mit einem weiteren Werkzeug
 namens \glqq check50\grqq{} überprüfen zu lassen. Außerdem gibt es viele weitere
 Werkzeuge, ein Beispiel hierfür ist \glqq style50\grqq{}, welches die Qualität
-und den Style des Programmcodes überprüft und bewertet. \cite{submit50}
+und den Style des Programmcodes überprüft und bewertet. \parencite{submit50}
 
 \paragraph{Architektur}
 Die Harvard University hält den Aufbau von CS50 weitestgehend transparent.
 Viele der eingesetzten Werkzeuge sind öffentlich als Open-Source-Projekte unter
-der GitHub-Organisation \glqq CS50\grqq{} zu finden \cite{cs50-github}. Darunter
+der GitHub-Organisation \glqq CS50\grqq{} zu finden \parencite{cs50-github}. Darunter
 befinden sich unter anderem folgende Projekte:
 \begin{itemize}
 \item submit50: Abgabe von Code
@@ -92,12 +92,12 @@ automatisiertem Feedback. Die von der Hochschule Kiel entwickelte
 Open-Source-Software soll den Einstieg in eine digitale Lernumgebung einfach
 machen. Die Zielgruppe von Code FREAK bezieht sich hierbei explizit auf
 Universitäten und Einrichtungen einer höheren Bildung.
-\cite{codefreak-startseite}
+\parencite{codefreak-startseite}
 
 Des Weiteren wirbt Code FREAK mit einer LMS-Integration. LMS ist die englische
 Abkürzung für Learning Management System (dt. Lernplattform). Viele Schulen und
 Universitäten verwenden bekannte LMS-Systeme, wie Moodle, um Kurse, Fächer und
-Studierende zu verwalten \cite{moodle}.
+Studierende zu verwalten \parencite{moodle}.
 Dies hat den Vorteil, dass Studierende kein extra Nutzerkonto für Code FREAK
 anlegen müssen. Sie können sich direkt mit ihrem gewohnten Zugang anmelden.
 
@@ -122,9 +122,9 @@ Software um mithilfe von Containervirtualisierung einzelne Anwendungen
 voneinander zu isolieren. Durch die Containervirtualisierung werden unter
 anderem viele Abhängigkeits- und Einrichtungsprobleme beseitigt. Der Container
 enthält alle Bibliotheken und Abhängigkeiten, die die Software für die Laufzeit
-benötigt \cite{docker}. Docker entstand auf Basis von Linux-Containern, welche
+benötigt \parencite{docker}. Docker entstand auf Basis von Linux-Containern, welche
 ein oder mehrere Prozesse vom restlichen System isolieren können 
-\cite{linux-container}.
+\parencite{linux-container}.
 
 Durch diese Handhabung kann Code FREAK mit nur einem Befehl in der
 Kommandozeile installiert und gestartet werden. Die Software benötigt
@@ -140,19 +140,19 @@ Arbeitsspeicher. Die Praxis zeigt, dass eine Instanz der Online-IDE schon nach
 wenigen Dateien ~3 Gigabytes an Arbeitsspeicher verwendet. Um eine reibungslose
 und parallele Nutzung für alle Studierende des Kurses gewährleisten zu können,
 werden dementsprechend sehr hohe Serverkosten fällig. 
-\cite{codefreak-memory-problem}
+\parencite{codefreak-memory-problem}
 
 Eine weitere Hürde ist die Stabilität der Software. Code FREAK befindet sich,
 Stand heute, mitten in der Entwicklung, weshalb einige Funktionen und Features
 noch nicht ordnungsgemäß funktionieren. Darunter die vorher geworbene
-LMS-Integration \cite{codefreak-docs}. Zum heutigen Zeitpunkt ist LDAP die
+LMS-Integration \parencite{codefreak-docs}. Zum heutigen Zeitpunkt ist LDAP die
 einzige Möglichkeit sich mit dem System zu authentifizieren. Ein eigenes
 Anmeldeverfahren gibt es nicht.
 
 LDAP steht für \glqq Lightweight Directory Access Protocol\grqq{} und ist ein
 Netzwerkprotokoll zur Durchführung von Abfragen und Änderungen in einem 
 verteilten Verzeichnisdienst. LDAP ist der De-facto Industriestandard für
-Authentifizierung und Autorisierung. \cite{ldap}
+Authentifizierung und Autorisierung. \parencite{ldap}
 
 Der Kurs Digital Skills soll den Teilnehmern einen Überblick über den
 Arbeitsalltag eines Informatikers geben. Dazu gehört unter anderem die
@@ -169,7 +169,7 @@ Hochschule Regensburg. Die Plattform ermöglicht die automatisierte
 Erstellung von Repositories auf GitHub. Außerdem hilft Classroom dabei,
 Aufgabenvorlagen und dazugehörige Abgaben einfach zu verwalten und automatisch
 zu benoten. Dabei enthalten die von GitHub Classroom erstellten
-Aufgaben-Repositories bereits vorkonfigurierte Zugriffskontrollen. \cite{github-classroom-startseite}
+Aufgaben-Repositories bereits vorkonfigurierte Zugriffskontrollen. \parencite{github-classroom-startseite}
 
 \paragraph{Ablauf für Studierende}
 Studierende bekommen pro Programmieraufgabe einen Einladungslink.
@@ -184,7 +184,7 @@ Tests bestanden sind, hat der Studierende die Aufgabe erfolgreich abgeschlossen.
 
 \paragraph{Architektur} % TODO: Zitieren?
 GitHub Classroom ist ein Bildungsservice der Firma GitHub Inc. und ist Stand
-heute kostenfrei \cite{github-classroom-kostenlos}. Die Software basiert auf der Automatisierung von Repositories. Jeder bei GitHub registrierte Nutzer, kann
+heute kostenfrei \parencite{github-classroom-kostenlos}. Die Software basiert auf der Automatisierung von Repositories. Jeder bei GitHub registrierte Nutzer, kann
 einen sogenannten \glqq Classroom\grqq erstellen und darin Aufgaben auf Basis
 vorhandener öffentlichen GitHub-Repositories erstellen.
 
