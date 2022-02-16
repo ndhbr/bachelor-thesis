@@ -85,7 +85,7 @@ nicht. Infolgedessen ist ein Einsatz des CS50-Systems an der OTH zum heutigen
 Datum nicht möglich.
 
 \newpage
-\subsubsection{Code FREAK der Fachhochschule Kiel}
+\subsubsection{Code FREAK der Fachhochschule Kiel}\label{code-freak}
 \paragraph{Allgemeines}
 Code FREAK ist eine All-in-one-Lösung für Online-Programmieraufgaben mit
 automatisiertem Feedback. Die von der Hochschule Kiel entwickelte
@@ -164,6 +164,7 @@ Kommandozeile testen und abgeben kann. In Code FREAK kann man Aufgaben lediglich
 \newpage
 \subsubsection{GitHub Classroom}
 \paragraph{Allgemeines}
+% TODO: GitHub Classroom kann auch LMS Integration
 GitHub Classroom ist ein weiterer Kandidat für den Einsatz an der
 Hochschule Regensburg. Die Plattform ermöglicht die automatisierte
 Erstellung von Repositories auf GitHub. Außerdem hilft Classroom dabei,
@@ -184,9 +185,10 @@ Tests bestanden sind, hat der Studierende die Aufgabe erfolgreich abgeschlossen.
 
 \paragraph{Architektur} % TODO: Zitieren?
 GitHub Classroom ist ein Bildungsservice der Firma GitHub Inc. und ist Stand
-heute kostenfrei \parencite{github-classroom-kostenlos}. Die Software basiert auf der Automatisierung von Repositories. Jeder bei GitHub registrierte Nutzer, kann
-einen sogenannten \glqq Classroom\grqq erstellen und darin Aufgaben auf Basis
-vorhandener öffentlichen GitHub-Repositories erstellen.
+heute kostenfrei \parencite{github-classroom-kostenlos}. Die Software basiert
+auf der Automatisierung von Repositories. Jeder bei GitHub registrierte Nutzer,
+kann einen sogenannten \glqq Classroom\grqq erstellen und darin Aufgaben auf
+Basis vorhandener öffentlichen GitHub-Repositories erstellen.
 
 \paragraph{Probleme beim Einsatz für die OTH}
 Es gibt keine Möglichkeit das System von GitHub Classroom auf einen lokalen
@@ -206,3 +208,36 @@ Template für eine neue Umgebung zu verwenden. Dieses Template könnte
 Wrapper-Programme für den git-Workflow enthalten. Der Vorteil daran:
 Studierende bekommen erste Erfahrungen mit der Kommandozeile, müssen jedoch
 keine komplexen Git-Kommandos absetzen.
+
+\subsubsection{Bewertung und Entscheidung der vorhandenen Systeme}
+Die folgende Abbildung \ref{fig:systemvergleich} visualisiert die erläuterten
+Systeme und bewertet diese anhand der vorher definierten Anforderungen (siehe 
+Kapitel \ref{anforderungsanalyse}). Wie man der Grafik entnehmen kann,
+repräsentieren alle blau hinterlegten Zeilen die nichtfunktionalen
+Anforderungen. Alle rosa hinterlegten Zeilen wiederum repräsentieren die
+funktionalen Anforderungen aus der Sicht des Teilnehmers. Der letzte Teil,
+welcher gelb hinterlegt ist, spiegelt schließlich die funktionalen Anforderungen
+aus der Sicht der Lehrenden wider.
+
+Die erste Spalte enthält die Namen der Anforderungen, während die zweite Spalte
+eine jeweilige Gewichtung der Anforderung enthält. Der valide Bereich dieser
+Spalte befindet sich zwischen, einschließlich 0,00 und einschließlich 1,00. Eine
+1,00 bedeutet, dass die Anforderung sehr wichtig ist. Je niedriger der Wert,
+desto unwichtiger die Anforderung.
+
+Die Spalten drei, vier und fünf enthalten die Benotungen der Systeme zu den
+Anforderungen. Hierbei gilt ähnlich wie bei der Gewichtung: je höher der Wert,
+desto besser. Der valide Bereich befindet sich hier jedoch zwischen 0,0 und 3,0.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{systemvergleich}
+    \caption{Vergleich und Benotung der Systeme}
+    \bildquelle{Eigene Darstellung}
+    \label{fig:systemvergleich}
+\end{figure}
+
+In der letzten Zeile der Tabelle befinden sich die Summen der Benotungen. In
+diesem Fall hat das System mit GitHub Classroom die meisten Punkte erreicht und
+wird somit als geeigneter Kandidat für die Programmierplattform weiter
+evaluiert.
