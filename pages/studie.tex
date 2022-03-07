@@ -94,9 +94,9 @@ Die Ergebnisse der Fragen werden, wie gewohnt, vom Beobachter in der Tabelle
 notiert.
 
 \subsubsection{Die Aufgaben}\label{studie-aufgaben}
-Der Test aus drei für die Studie vereinfachten Aufgaben. Die erste Aufgabe
-beschäftigt sich lediglich mit der Einrichtung des Arbeitsplatzes in Replit und
-GitHub-Classroom. Die Studierenden sind dazu aufgefordert, das in 
+Der Test besteht aus vier für die Studie vereinfachten Aufgaben. Die erste
+Aufgabe beschäftigt sich lediglich mit der Einrichtung des Arbeitsplatzes in
+Replit und GitHub-Classroom. Die Studierenden sind dazu aufgefordert, das in 
 Kapitel \ref{replit-template} besprochene Replit-Template zu klonen und in 
 Replit einzurichten. Dazu gehört das Hinzufügen des SSH-Keys zu GitHub, sowie
 das Herunterladen der ersten Aufgabe.
@@ -107,9 +107,18 @@ eingesetzten Aufgabe \glqq Lab 4: Hello\grqq{}. Die Vorlage der Aufgabe
 frägt den Nutzer nach seinem Namen. Nach der Eingabe schließt sich das Programm
 wieder. Die Aufgabe des Teilnehmers ist nun den Namen in folgendem Format
 wieder auszugeben: \code{Hallo, mein Name ist <NAME>}. Diese Aufgabe kann der
-Teilnehmer mit einer einzigen Codezeile lösen.
+Teilnehmer mit einer einzigen Codezeile lösen. Die Ausgabe der Lösung sieht dann
+so aus:
 
-Die dritte und letzte Aufgabe ist ebenfalls eine Programmieraufgabe mit der
+\begin{lstlisting}
+    Wie ist dein Name? Andreas
+    Hallo, mein Name ist Andreas!
+\end{lstlisting}
+
+Der Name ist wie vorher beschrieben flexibel und abhängig von der Eingabe des
+Nutzers.
+
+Die dritte Aufgabe ist ebenfalls eine Programmieraufgabe mit der
 Sprache Python. In dieser Aufgabe geht es um die erste Verwendung einer
 \texttt{for}-Schleife. Am Anfang der Anleitung wird sehr ausführlich erklärt was
 eine \texttt{for}-Schleife ist, weshalb man sie braucht und wie man sie
@@ -132,7 +141,7 @@ wird. Der Name und die Anzahl an Ausgaben wird wieder per Funktion als Parameter
     Andi 4
 \end{lstlisting}
 
-Falls noch die Aufgaben reibungslos funktioniert haben, kann der Studierende
+Falls die Aufgaben reibungslos funktioniert haben, kann der Studierende
 die Herausforderung einer optionalen Bonusaufgabe annehmen. Um diese
 Bonusaufgabe zu lösen, muss der Teilnehmer die vorherige Aufgabe modifizieren,
 dass die Ausgabe in der Konsole wie folgt aussieht:
@@ -148,7 +157,47 @@ dass die Ausgabe in der Konsole wie folgt aussieht:
 \end{lstlisting}
 
 Der Unterschied hier ist die Nummerierung. Im Standardfall zählt das Programm
-von 0 bis n - 1. Um die Bonusaufgabe zu bewältigen muss das Programm von 1 bis n
+von 0 bis n - 1. Um die Bonusaufgabe zu bewältigen, muss das Programm von 1 bis n
 zählen.
+
+% TODO: Super Mario Quelle
+Die vierte und letzte Aufgabe beschäftigt sich mit der Generierung von
+Text-Pyramiden, welche der ursprünglichen Version des Videospiels Super Mario
+Brothers entsprechen sollen. Der Nutzer wird nach Start des Programms nach der gewünschten Größe bzw. Höhe der Pyramide. Nach Eingabe eines gültigen Werts
+liefert das Skript, ausgegeben mit Raute-Zeichen, die linke Seite einer Super
+Mario Pyramide. Die Ausgabe der gelösten Aufgabe sieht beispielhaft so aus:
+
+% TODO: Höhe geht irgendwie nicht
+\begin{lstlisting}
+    Height: -1
+    Height: 0
+    Height: 6
+         #
+        ##
+       ###
+      ####
+     #####
+    ######
+\end{lstlisting}
+
+Das Beispiel zeigt neben der Pyramide auch, dass das Skript ungültige
+Größenangaben erkennen und ignorieren soll. Aufgrund der erhöhten Schwierigkeit
+dieser Aufgabe wurde entschieden, die letzte Aufgabe für die Studie zu
+verwerfen.
+
+\subsubsection{Test-Classroom}
+Für die Vorbereitung der Studie wird eine neue GitHub-Organisation, sowie ein
+neuer GitHub-Classroom angelegt. Sowohl das Replit-Template als auch die im
+vorherigen Kapitel beschriebenen Aufgaben werden als Template-Repositories in
+der Test-Organisation abgelegt.
+
+Für die Aufgaben werden mithilfe des Test-Frameworks pytest Benotungstests
+programmiert und in GitHub-Classroom konfiguriert. Jede gelöste Aufgabe belohnt
+den Studienteilnehmer pauschal mit 10 Punkten.
+
+Neben den Programmieraufgaben werden auch ausführliche Anleitungen mit
+Bilder geschrieben. Nach der Erstellung von Vorschaubildern können diese in der,
+auch später produktiv genutzten, Plattform Tutors hochgeladen werden. Die
+Studienteilnehmer erhalten zu Beginn des Probelaufs einen Link zur Übersicht der benötigten Anleitungen in Tutors.
 
 \subsection{Ergebnisse}
