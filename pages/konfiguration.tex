@@ -61,9 +61,19 @@ nicht geplanten Eingaben vergeben. \parencite{github-assignment-erstellen}
 % Replit
 \subsection{Erstellung eines Replit-Starter-Templates}\label{replit-template}
 \subsubsection{Template-Repository}\label{replit-template-repository}
-Projekte in Replit heißen Repls. Diese Repls können auf Basis von GitHub
-Repositories erzeugt werden. Die Import-Funktionalität ermöglicht das
-Bereitstellen von Dateien, die die Bearbeitung der Kursaufgaben erleichtern.
+% TODO: Quelle?
+Projekte in Replit heißen Repls. Ein Projekt ist in Replit ein vollumfänglicher
+Arbeitsbereich, um neue oder bestehende Software zu entwickeln. Neben einer
+Dateiübersicht, einem Texteditor und einer Konsole enthält der Arbeitsbereich
+viele weitere Funktionen. Dazu zählt unter anderem eine eingebaute Oberfläche
+für die Versionskontrolle git, ein Debugger, eine lokale Key-Value-Datenbank,
+private Umgebungsvariablen, sowie ein spezieller Bereich für Unit-Tests.
+
+Repls können auf Basis von bestehenden GitHub Repositories erzeugt werden. Durch
+den Import eines Repositories, werden alle im Repository vorhandenen Dateien
+in den neuen Arbeitsbereich kopiert. Diese Funktionalität ermöglicht das
+Bereitstellen von Hilfsprogrammen und Dateien, die die Bearbeitung der
+Kursaufgaben erleichtern.
 
 Aus diesem Grund wurde ein öffentliches Repository in der vorher erstellten
 GitHub Organisation angelegt. Dies ist das Template, welches später von den
@@ -84,15 +94,30 @@ unterstützen.
 
 \subsubsection{Wrapper-Tools (get, check, submit)}
 \label{replit-template-wrapper-tools}
-Die Wrapper-Tools \texttt{get}, \texttt{check} und \texttt{submit} sind Python
-Skripte. Über den Konsolenbefehl \texttt{get <PROJEKT-REPOSITORY>} kann der
-Studierende die Aufgabe in seinen Arbeitsbereich laden. Der Befehl 
-\texttt{check <PROJEKT-REPOSITORY>} erlaubt es die Aufgabe auf Fehler zu
-überprüfen.
+Die Wrapper-Tools \texttt{get}, \texttt{check} und \texttt{submit} sind
+Bash-Skripte. Über den Konsolenbefehl \texttt{get <PROJEKT-REPOSITORY>} kann der
+Studierende die Aufgabe in seinen Arbeitsbereich laden. Das Skript durchsucht
+die im Code definierte Organisation nach einem Repository mit dem Namen und
+lädt es schließlich über den Befehl \code{git clone} in den Arbeitsbereich.
+
+Der Befehl \texttt{check <PROJEKT-REPOSITORY>} erlaubt es die Aufgabe auf Fehler zu
+überprüfen. In jedem Aufgabenrepository befindet sich eine
+\texttt{.language}-Datei, welche die für die Aufgabe verwendete
+Programmiersprache enthält. Das \texttt{check}-Skript liest die
+\texttt{.language}-Datei aus und entscheidet daraufhin, welche Befehle zum
+Ausführen der Tests nötig sind. Python ist die vom Zusatzstudium Digital Skills
+verwendete Programmiersprache. In diesem Fall installiert das Skript zuerst die
+nötigen Abhängigkeiten mit \code{pip3 install pytest --quiet}. Der Parameter
+\code{--quiet} verhindert für den Teilnehmer unübersichtliche Konsolenausgaben.
+Sobald das Testframework für Python installiert ist, führt das Skript den Befehl
+\code{pytest} aus und startet somit die Ausführung der Korrekturtests.
 
 Schließlich pusht der Befehl \texttt{submit <PROJEKT-REPOSITORY>}
 den Lösungsversuch in das GitHub Classroom Aufgabenrepository des
-Kursteilnehmers.
+Kursteilnehmers. Dazu überprüft das Skript zuerst, ob es in der Zwischenzeit
+Änderungen am Repository gab und lädt diese herunter. Anschließend erstellt
+das Skript einen automatisierten Commit und lädt diesen in das Remote-Repository
+in die GitHub-Organisation des Kurses hoch.
 
 Damit die Skripte Ordnerunabhängig ausgeführt werden können, werden
 Konsolenaliase benötigt. Konsolenaliase können in einer Bash-Konsole
