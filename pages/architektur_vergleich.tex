@@ -73,6 +73,50 @@ verbindende Relation. Von der \glqq CS50-Programm\grqq-Komponente ausgehende ges
     \label{fig:cs50-architektur}
 \end{figure}
 
+Teilnehmer dieses Online-Lehrangebots erhalten von den Dozenten einen
+Einladungslink zum Kurs. Dieser Links führt sie zur me50-Plattform
+(https://submit.cs50.io/), welche gleichzeitig als Aufgabenübersicht dient.
+Auf dieser Plattform können Studierende sowohl ihre Abgaben, als auch ihre Kurse
+übersichtlich verwalten. Neben der Weiterleitung zur me50-Plattform wird
+gleichzeitig in der me50-GitHub-Organisation ein leeres Repository mit dem
+GitHub-Username des Teilnehmers angelegt.
+
+Nach Annahme des Einladungslinks können Studierende in jeder beliebigen
+Entwicklungsumgebung (IDE) die Aufgaben auf der Plattform CS50-Plattform
+(https://cs50.harvard.edu/) lösen. Das Korrigieren und Abgeben der Aufgabe
+benötigt mindestens die Kommandozeilen-Tools \texttt{check50} und
+\texttt{submit50}. Diese sind über den Python-Paketmanager frei verfügbar.
+Harvard stellt außerdem eine kostenlose Online-IDE bereit, welche die genannten Python-Programme bereits zur Verfügung stellt.
+
+Sobald der Studierende eine Aufgabe erfolgreich gelöst hat, kann er mithilfe des
+Namen der Aufgabe die Lösung überprüfen und schließlich abgeben. Hierfür wird
+lediglich der Name der Aufgabe benötigt. Eine Abgabe über die Konsole kann dann beispielsweise so aussehen:
+
+\begin{lstlisting}
+    ~/hello/ $ submit50 cs50/problems/2021/x/hello
+    Connecting......
+    Authenticating...
+    Verifying.........
+    Preparing..................
+    Files that will be submitted:
+    ./hello.c
+    Keeping in mind the course's policy on academic honesty, are you sure you want to submit these files (yes/no)? yes
+    Uploading....
+    .......
+    Go to https://submit.cs50.io/users/ndhbr/cs50/problems/2021/x/hello to see your results.
+\end{lstlisting}
+
+Die letzte Zeile verlinkt erneut auf die me50-Plattform und zeigt dem
+Kursteilnehmer seine Abgaben dieser Aufgabe und seine damit erreichte
+Punktezahl. Gleichzeitig verlinkt die me50-Plattform auf das vorher erstellte
+GitHub-Repository des Teilnehmers. Die Plattform legt bei jeder neu abgegebenen
+Aufgabe einen neuen git-Branch für diese an. Nach der Abgabe des vorherigen
+Beispiels hätte die Plattform folgenden Branch in dem Repository angelegt
+\texttt{cs50/problems/2021/x/hello}. Durch die Commit-History in diesem Branch 
+kann man später den Verlauf der Versuche nachverfolgen.
+
+% TODO: Branch, Commit erklären?
+
 \paragraph{Probleme beim Einsatz für die OTH}
 Die Toolchain von CS50 wäre adäquat für den Einsatz an der OTH-Regensburg.
 Eines der Projekte ist aktuell noch nicht Open-Source: die Website zur
