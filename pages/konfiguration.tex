@@ -171,11 +171,15 @@ Um das vorher generierte SSH-Schlüsselpaar für die Authentifizierung gegen
 GitHub zu verwenden, muss der öffentliche Schlüssel noch zu dem GitHub Profil
 des Studierenden hinzugefügt werden. Hierfür enthält das Starter-Template ein
 weiteres Programm, welches mit dem Befehl \texttt{github} in der OTH-Console
-ausgeführt werden kann. Dieses weitere Python Programm lädt den im SSH-Ordner
+ausgeführt werden kann. Dieses weitere Pythonprogramm lädt den im SSH-Ordner
 gespeicherten öffentlichen Schlüssel und gibt ihn zusammen mit einem Link
 zum Hinzufügen von SSH-Keys in GitHub aus.
 
-Desweiteren überprüft das Programm, ob Git bereits konfiguriert ist.
-Sind die benötigten Werte nicht in der Replit-Datenbank vorhanden, frägt das
-Programm den Nutzer nach dem Name und der studentischen E-Mail Adresse, welche schließlich beide in der Datenbank hinterlegt werden. Außerdem werden die Werte,
-wie beim Einrichtungsskript auch, in eine Git-Konfigurationsdatei geschrieben.
+Des Weiteren überprüft das Programm, ob Git bereits konfiguriert ist. Um Commits
+zu erstellen, benötigt Git einen Namen sowie eine E-Mail-Adresse. Sind die
+benötigten Werte nicht in der Replit-Datenbank vorhanden, fragt das Programm den
+Nutzer nach dem Namen und der studentischen E-Mail-Adresse. Nach gültiger
+Eingabe der Daten werden diese Werte in der nutzerspezifischen Replit-Datenbank
+des Arbeitsbereiches hinterlegt. Damit Git die Werte übernehmen kann, werden
+sie, wie beim Einrichtungsskript auch, in eine dafür vorgesehene
+Git-Konfigurationsdatei geschrieben.

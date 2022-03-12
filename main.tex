@@ -35,14 +35,16 @@
 \setlength{\parskip}{1em}
 
 % Paket für Zeilenabstand
-\usepackage{setspace}
-\onehalfspacing
+\usepackage[doublespacing]{setspace}
 
 % für Bildbezeichner
 \usepackage{capt-of}
 
 % für Stichwortverzeichnis
 \usepackage{makeidx}
+
+% für Abkürzungsverzeichnis
+\usepackage{acronym}
 
 % Für Phantomsection
 \usepackage{hyperref}
@@ -52,6 +54,7 @@
 
 % Konfiguriere das Inhaltsverzeichnis
 \usepackage{tocbasic}
+
 % \DeclareTOCStyleEntries[
 %   raggedentrytext,
 %   numwidth=0pt,
@@ -96,6 +99,10 @@
 
 % Inhaltsverzeichnis
 \tableofcontents
+\newpage
+
+% Abkürzungsverzeichnis
+\input{pages/x_abkuerzungsverzeichnis}
 \newpage
 
 % Arabische Seitennummerierung ab hier
