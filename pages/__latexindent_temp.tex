@@ -1,165 +1,233 @@
-\section{Toolchain}
-Dieses Kapitel befasst sich mit der für das Projekt benötigten Toolchain.
-Eine Toolchain ist eine Sammlung verschiedener Anwendungen, die gemeinsam eine
-Lösung bzw. ein Produkt erzeugen. Durch den Vergleich mit verschiedenen
-bestehenden digitalen Lernplattformen ist es möglich, optimale 
-Software-Werkzeuge für die Hochschule Regensburg zu finden und schließlich
-einzusetzen.
+\section{Studie: Test an fachfremden Studierenden}\label{studie}
+\subsection{Allgemein}
+In einer Studie sollen Fehler und schwierig gestaltete Stellen der
+Programmierplattform gefunden und analysiert werden. Damit die Studie möglichst
+realitätsnah ist, fällt die Wahl hierbei auf eine Feldstudie mit fachfremden
+Studierenden.
 
-\subsection{Vergleich vorhandener Systeme}
-\subsubsection{CS50 der Harvard University}
-\paragraph{Allgemeines}
-CS50 ist die ursprüngliche Bezeichnung eines Lernkurses über Informatik,
-welcher von der Harvard University ins Leben gerufen wurde und weiterhin
-betreut wird. Der Kurs wurde aufgrund seines Erfolgs digitalisiert und wird nun
-als CS50x auf der Lernplattform edX angeboten. Folgende Recherchen und Aussagen
-sind jeweils immer auf die Online-Version CS50x bezogen.
+Nach Vollendung der Tests sollen Schwachstellen und Lücken der
+Programmieraufgaben (Anleitungen, Fehlerbeschreibungen, Aufbau,
+Schwierigkeit, ...) gefunden, behoben und für zukünftige Aufgaben berücksichtigt
+werden. \parencite{studie-testkonzept}
 
-Der Kurs CS50 lehrt Schüler die Grundlagen der Informatik. Dabei werden
-diverse Programmierübungen abgefragt. Aufgrund der hohen Anzahl an Teilnehmern
-besitzt der Kurs ein automatisiertes Abgabe- und Benotungssystem.
+\subsection{Testaufbau}
+Um für jeden Durchlauf gleiche Testbedingungen sicherzustellen, wird ein
+Testkonzept ausgearbeitet. Bei jeder Durchführung wird sich auf die Regeln
+und den Ablauf des Testkonzepts bezogen.
 
-Das System hinter CS50 wird mittlerweile vielfältig eingesetzt und wurde zu
-einem universalen Online-Lernsystem erweitert. Jeder kann sich durch eine
-Authentifizierung über die Plattform GitHub im Abgabesystem von CS50 einloggen
-und eigene Kurse erstellen.
+Das Testkonzept legt im Grunde die Meta-Daten der Studie fest. Neben der
+Zielsetzung, der Zielgruppe und der Dauer des Tests wird in dem Konzept auch die
+Methodik festgelegt.
 
-\paragraph{Ablauf für Studierende}
-Dem Teilnehmer wird jede Woche ein neues Kapitel präsentiert. Er kann sich dabei
-sowohl durch ein Vorlesungsvideo, als auch durch geschriebene Materialien über
-das Thema der Woche informieren. Mit Beginn der Woche bekommt der Teilnehmer
-neben den Materialien auch Programmieraufgaben, welche er mit dem vorher
-genannten System bearbeiten kann.
+\subsubsection{Zielgruppe}
+Die Zielgruppe der Studie lässt sich durch wenige Parameter definieren. Sie
+ist äquivalent zur Zielgruppe des Zusatzstudiums Digital Skills. Gesucht sind
+folglich Studierende, welche keine Studiengänge der Fakultät Informatik und
+Mathematik belegen. Durch diese Einschränkung qualifiziert man sich für die
+Teilnahme am Zusatzstudium Digital Skills und dadurch implizit auch für die
+Anteilnahme an der folgenden Studie.
 
-Die Programmieraufgaben können wahlweise über die, auf AWS Cloud9 basierenden,
-Online-Entwicklungsumgebung \glqq CS50-IDE\grqq{} von Harvard oder in jeder
-anderen beliebigen Entwicklungsumgebung der Wahl bearbeitet werden. Dies
-wird durch die Architektur des Systems ermöglicht. Jede Funktionalität der
-Automatisierung geschieht durch Kommandozeilen-Tools. Dieses System hat den
-Vorteil, dass es unabhängig von der eingesetzten IDE funktioniert, es wird
-lediglich ein Terminal mit den jeweiligen Tools benötigt.
+Um eine gleichmäßig verteilte Stichprobenmenge zu erhalten, werden mindestens
+fünf Testpersonen aus fünf unterschiedlichen Studiengängen für die Durchführung
+benötigt.
 
-Vor der Abgabe der endgültigen Lösung mit dem sogenannten Werkzeug
-\glqq submit50\grqq{}, ist es möglich den Code mit einem weiteren Werkzeug
-namens \glqq check50\grqq{} überprüfen zu lassen. Außerdem gibt es viele weitere
-Werkzeuge, ein Beispiel hierfür ist \glqq style50\grqq{}, welches die Qualität
-und den Style des Programmcodes überprüft und bewertet.
+\subsubsection{Dauer des Tests}
+% TODO: Quelle Feldstudie?
+Die Dauer des Tests wird zwar als groben Leitfaden auf 30 bis 60 Minuten
+festgelegt, soll jedoch keine harten Limits festlegen. Der Test soll möglichst
+naturgemäß ablaufen und kann bei möglichen Unverständnissen auch deutlich länger
+dauern. Gemäß einer Feldstudie darf das Ergebnis der Studie nicht durch eine
+mögliche Manipulation, durch beispielsweise einer zeitlichen Barriere,
+verfälscht werden.
 
-\paragraph{Architektur}
-Die Harvard University hält den Aufbau von CS50 weitestgehend transparent.
-Viele der eingesetzten Werkzeuge sind öffentlich als Open-Source-Projekte unter
-der GitHub-Organisation \glqq CS50\grqq{} zu finden. Darunter befinden sich
-unter Anderem folgende Projekte:
+\subsubsection{Methodik}
+Die Durchführung der Tests geschieht zur Vereinfachung online über eine Software
+für Videokonferenzen. Am Anfang wird vom Beobachter der Durchführung der
+Studie, Andreas Huber, das Zusatzstudium Digital Skills anhand einer
+einseitigen Infografik vorgestellt.
+
+Danach wird dem Teilnehmer die folgende Agenda vorgetragen und anschließend
+werden der Person vier Fragen gestellt. Folgende Fragen müssen mit Schulnoten
+von 1 bis 6 beantwortet werden. Sechs bedeuted hier immer eine gänzliche
+negative Neigung, während eins einer völligen Zusage entspricht. Die restlichen
+Noten bilden wie gewohnt Zwischenwerte.
 \begin{itemize}
-\item submit50: Abgabe von Code
-\item check50: Funktionalitätstests des Codes
-\item render50: Erzeugung von .PDF-Dateien aus Code
-\item ide50: Online-Entwicklungsumgebung
-\item style50: Überprüfung der Code-Qualität
-\item compare50: Plagiatserkennung von abgegebenen Projekten
-\item server50: Webserver
+    \item Hast du schon einmal erwägt eine Programmierausbildung anzustreben?
+    \item Hast du schon einmal programmiert?
+    \item Wie fit fühlst du dich am PC?
+    \item Würde für dich das Zusatzstudium Digital Skills in Frage kommen?
 \end{itemize}
 
-// TODO: Bild der Architektur mit Erklärung
+Nachdem die Fragen von der teilnehmenden Person beantwortet wurden, muss diese
+die Bildschirmübertragung starten. Währendessen schreibt der Beobachter die
+Ergebnisse der Fragen in eine vorher angelegte Tabelle.
 
-\paragraph{Probleme beim Einsatz für die OTH}
-Die Toolchain von CS50 wäre adäquat für den Einsatz an der OTH-Regensburg.
-Eines der Projekte ist aktuell noch nicht Open-Source: Die Website zur
-Erstellung von neuen Kursen, Abgaben und Mitgliederverwaltung. Dieses Projekt
-ist essentiell für die Verwendung der Werkzeuge an der Regensburger Hochschule.
-Nach Rücksprache mit Herr X der Harvard University ist ein Neuaufbau dieser
-Website mit einhergehender Veröffentlichung als Open-Source-Projekt gerade in
-Planung. Einen genauen öffentlichen Zeitplan hierfür gibt es aktuell nicht. In
-Folge dessen ist ein Einsatz des CS50-Systems an der OTH zum heutigen Datum
-nicht möglich.
+% TODO: Quelle Think-Aloud-Methodik
+Der Teilnehmer wird anschließend darauf hingewiesen, dass die Studie dem Think-Aloud-Methodik folgt. Die Think-Aloud-Methode ist eine Forschungsmethode
+bei der der Testteilnehmer darum gebeten wird, seine Gedanken laut
+auszusprechen. Mit dieser Methode können mögliche Aufhänger und Probleme in den Anleitungen der Aufgaben leichter gefunden werden. Der Beobachter des Tests
+schreibt alle Anomalien kategorisiert nach Fortschritt und Teilnehmer des Tests
+auf.
 
-\subsubsection{Code FREAK der Fachhochschule Kiel}
-\subsubsection{Allgemeines}
-Code FREAK ist eine All-In-One Lösung für Online-Programmieraufgaben mit
-automatisiertem Feedback. Die von der Hochschule Kiel entwickelte Open-Source
-Software soll den Einstieg in eine digitale Lernumgebung einfach machen. Die
-Zielgruppe von Code FREAK bezieht sich hierbei explizit auf Universitäten und
-Einrichtungen einer höheren Bildung.
+Aufkommende Fragen werden können vom Beobachter beantwortet werden. Sollte eine
+Frage bzw. Aufgabe unlösbar erscheinen, gibt es am Ende jeder Aufgabe ein
+Lösungsvorschlag. Dieser sollte jedoch nur aufgeklappt werden, wenn keine
+realistische Chance der selbstständigen Lösung des Problems besteht.
 
-Desweiteren wirbt Code FREAK mit einer LMS-Integration. LMS ist die englische
-Abkürzung für Learning Management System (dt. Lernplattform). Viele Schulen und
-Universitäten verwendenx bekannte LMS-Systeme, wie Moodle, um Kurse, Fächer und
-Studierende zu verwalten.
-Dies hat den Vorteil, dass Studierende kein extra Nutzerkonto für Code FREAK
-anlegen müssen. Sie können sich direkt mit ihrem gewohnten Zugang anmelden.
-% TODO: Quelle https://codefreak.org/#about
-% https://moodle.de/
+Folgend werden die im folgenden Kapitel \ref{studie-aufgaben} erläuterten
+Aufgaben durch den Testteilnehmer bearbeitet. Während der Bearbeitung wird
+die dafür benötigte Zeit durch den Beobachter mit einer Stoppuhr gestoppt.
 
-\paragraph{Ablauf für Studierende}
-Studierende können nach Anmeldung am System, an für sie sichtbaren Kursen
-(Assignments) teilnehmen. Dies geschieht meist durch einen vom Dozenten
-generierten Einladungslink. Jedes Assignment kann mehrere Aufgaben (Tasks)
-enthalten. Die einzelnen Aufgaben können dann entweder über die integrierte
-Online-Entwicklungsumgebung, durch Hochladen der Lösung, oder durch die Angabe
-eines Git-Repository-Links bearbeitet werden.
+Abschließend kann der Studierende die Bildschirmübertragung wieder beenden und
+sich auf das Nachgespräch konzentrieren. Hierbei werden dem Teilnehmer noch
+folgende fünf Fragen gestellt. Die Fragen müssen wie vorher in Schulnoten von 1
+bis 6 beantwortet werden.
+\begin{itemize}
+    \item Wie schwer kam dir die Einrichtung, bis zu dem Punkt, an dem du die erste Aufgabe heruntergeladen hast, vor?
+    \item Hattest du Schwierigkeiten mit Aufgabe 1?
+    \item Hattest du Schwierigkeiten mit Aufgabe 2?
+    \item Hast du verstanden was du in den Aufgaben genau gemacht hast?
+    \item Würdest du nach Abschluss des Tests deine Meinung zur Frage am
+    Interesse eines Zusatzstudiums für Digital Skills ändern?
+\end{itemize}
 
-Mit dem Klick auf den Knopf \glqq Start Evaluation\grqq{} wird hochgeladene
-Lösung der Aufgabe überprüft. Die Ergebnisse der einzelnen Test-Schritte können
-dann in einem weiteren Tab eingesehen werden. Wenn alle Tests der Aufgabe
-bestanden wurden, wird der Task mit einem grünen Haken versehen. So sieht der
-Schüler in der Assignment-Ansicht auf einen Blick, welche Aufgaben er bereits
-gelöst hat.
+Die Ergebnisse der Fragen werden, wie gewohnt, vom Beobachter in der Tabelle
+notiert.
 
-\paragraph{Architektur}
-Code FREAK wird als fertiger Docker-Container ausgeliefert. Docker ist eine
-Software um mit Hilfe von Containervirtualisierung einzelne Anwendungen
-voneinander zu isolieren. Durch die Containervirtualisierung werden unter
-Anderem viele Abhängigkeits- und Deploymentprobleme beseitigt. Der Container
-enthält alle Bibliotheken und Abhängigkeiten, die die Software für die Laufzeit
-benötigt. Docker entstand auf Basis von Linux-Containern, welche ein oder
-mehrere Prozesse vom restlichen System isolieren können.
-% TODO: Quelle https://books.google.de/books?id=wpYpCwAAQBAJ&hl=de&redir_esc=y
-% Quelle: https://www.redhat.com/de/topics/containers/whats-a-linux-container
+\subsubsection{Die Aufgaben}\label{studie-aufgaben}
+Der Test besteht aus vier für die Studie vereinfachten Aufgaben. Die erste
+Aufgabe beschäftigt sich lediglich mit der Einrichtung des Arbeitsplatzes in
+Replit und GitHub-Classroom. Die Studierenden sind dazu aufgefordert, das in 
+Kapitel \ref{replit-template} besprochene Replit-Template zu klonen und in 
+Replit einzurichten. Dazu gehört das Hinzufügen des SSH-Keys zu GitHub, sowie
+das Herunterladen der ersten Aufgabe.
 
-Durch diese Handhabung, kann Code FREAK mit nur einem Befehl in der
-Kommandozeile installiert und gestartet werden. Die Software benötigt
-grundsätzlich nur einen Container. Benutzt ein Studierender jedoch die
-integrierte Online-Entwicklungsumgebung (Online-IDE), muss für jede Instanz ein
-zusätzlicher Container mit der Laufzeitumgebung der IDE gestartet werden. Jeder
-weitere Container benötigt weiteren Arbeitsspeicher.
+Die zweite Aufgabe ist eine Programmieraufgabe mit der Sprache Python. Es
+handelt sich hierbei um eine vereinfachte Version der später in produktiv
+eingesetzten Aufgabe \glqq Lab 4: Hello\grqq{}. Die Vorlage der Aufgabe
+frägt den Nutzer nach seinem Namen. Nach der Eingabe schließt sich das Programm
+wieder. Die Aufgabe des Teilnehmers ist nun den Namen in folgendem Format
+wieder auszugeben: \code{Hallo, mein Name ist <NAME>}. Diese Aufgabe kann der
+Teilnehmer mit einer einzigen Codezeile lösen. Die Ausgabe der Lösung sieht dann
+so aus:
 
-\paragraph{Probleme beim Einsatz für die OTH}
-Beim Einsatz von Code FREAK an der Hochschule Regensburg gibt es einige
-Probleme. Das erste Problem bezieht sich auf den vorher erwähnten
-Arbeitsspeicher. Die Praxis zeigt, dass eine Instanz der Online-IDE schon nach
-wenigen Dateien ~3 Gigabytes an Arbeitsspeicher verwendet. Um eine reibungslose
-und parallele Nutzung für alle Studierende des Kurses gewährleisten zu können,
-werden dementsprechend sehr hohe Serverkosten fällig.
-% Quelle für Erfahrung? Quelle für 3 Gb?
+\begin{lstlisting}
+    Wie ist dein Name? Andreas
+    Hallo, mein Name ist Andreas!
+\end{lstlisting}
 
-Ein weitere Hürde ist die Stabilität der Software. Code FREAK befindet sich,
-Stand heute, mitten in der Entwicklung, weshalb einige Funktionen und Features
-noch nicht ordnungsgemäß funktionieren. Darunter die vorher geworbene
-LMS-Integration. Zum heutigen Zeitpunkt ist LDAP die einzige Möglichkeit sich
-mit dem System zu authentifizieren. Ein eigenes Anmeldeverfahren gibt es nicht.
-LDAP steht für Lightweight Directory Access Protocol und ist ein
-Netzwerkprotokoll zur Durchführung von Abfragen und Änderungen in einem 
-verteilten Verzeichnisdienst. LDAP ist der De-facto Industriestandard für
-Authentifizierung und Autorisierung.
+Der Name ist wie vorher beschrieben flexibel und abhängig von der Eingabe des
+Nutzers.
 
-% Quelle: https://docs.codefreak.org/codefreak/index.html
-% "Code FREAK is under heavy development. Things might break between updates even if we try to be backwards-compatible."
-% Quelle LDAP: Buch?
+Die dritte Aufgabe ist ebenfalls eine Programmieraufgabe mit der
+Sprache Python. In dieser Aufgabe geht es um die erste Verwendung einer
+\texttt{for}-Schleife. Am Anfang der Anleitung wird sehr ausführlich erklärt was
+eine \texttt{for}-Schleife ist, weshalb man sie braucht und wie man sie
+anwendet. Danach wird die Aufgabenstellung erklärt, welche ähnlich zur zweiten
+Aufgabe ist. Dieses mal wird der Nutzer nach Start des Programms nicht nur nach
+seinem Namen gefragt, sondern auch nach der Anzahl, wie oft der Name ausgegeben
+werden soll. Wie auch in der vorherigen Aufgabe schließt sich standardmäßig das
+Python-Skript gleich wieder. Der Testteilnehmer muss nun eine Schleife
+programmieren, dass der Name mit der aktuellen Zählervariable n-mal ausgegeben
+wird. Der Name und die Anzahl an Ausgaben wird wieder per Funktion als Parameter
+übergeben. Die Ausgabe in der Konsole soll wie folgt aussehen:
 
-Der Kurs Digital Skills soll den Teilnehmern einen Überblick über den
-Arbeitsalltag eines Informatikers geben. Dazu gehört unter anderem die
-Kommandozeile. Eine Anforderung der Lernplattform ist deshalb, dass man
-(optional) neue Aufgaben herunterladen und Lösungsversuche über Befehle in der
-Kommandozeile testen und abgeben kann. In Code FREAK kann man Aufgaben lediglich
-über die Oberfläche testen und abgeben.
+\begin{lstlisting}
+    Wie ist dein Name? Andreas
+    Wie oft soll der Name ausgegeben werden? 5
+    Andi 0
+    Andi 1
+    Andi 2
+    Andi 3
+    Andi 4
+\end{lstlisting}
 
-%% Zu realitätsfern mit blauen Knopf für alles? Benötigen Kommandozeile!
-\subsubsection{GitHub Classroom}
-GitHub Classroom ist ein weiterer Kandidat für den Einsatz an der
-OTH-Regensburg.
+Falls die Aufgaben reibungslos funktioniert haben, kann der Studierende
+die Herausforderung einer optionalen Bonusaufgabe annehmen. Um diese
+Bonusaufgabe zu lösen, muss der Teilnehmer die vorherige Aufgabe modifizieren,
+dass die Ausgabe in der Konsole wie folgt aussieht:
 
-\begin{quote}
-GitHub Classroom automates repository creation and access control, making it easy to distribute starter code and collect assignments on GitHub.
-\end{quote}
+\begin{lstlisting}
+    Wie ist dein Name? Andreas
+    Wie oft soll der Name ausgegeben werden? 5
+    Andi 1
+    Andi 2
+    Andi 3
+    Andi 4
+    Andi 5
+\end{lstlisting}
 
-\subsection{IT-Benchmarking}
+Der Unterschied hier ist die Nummerierung. Im Standardfall zählt das Programm
+von 0 bis n - 1. Um die Bonusaufgabe zu bewältigen, muss das Programm von 1 bis n
+zählen.
+
+% TODO: Super Mario Quelle
+Die vierte und letzte Aufgabe beschäftigt sich mit der Generierung von
+Text-Pyramiden, welche der ursprünglichen Version des Videospiels Super Mario
+Brothers entsprechen sollen. Der Nutzer wird nach Start des Programms nach der gewünschten Größe bzw. Höhe der Pyramide. Nach Eingabe eines gültigen Werts
+liefert das Skript, ausgegeben mit Raute-Zeichen, die linke Seite einer Super
+Mario Pyramide. Die Ausgabe der gelösten Aufgabe sieht beispielhaft so aus:
+
+% TODO: Höhe geht irgendwie nicht
+\begin{lstlisting}
+    Height: -1
+    Height: 0
+    Height: 6
+         #
+        ##
+       ###
+      ####
+     #####
+    ######
+\end{lstlisting}
+
+Das Beispiel zeigt neben der Pyramide auch, dass das Skript ungültige
+Größenangaben erkennen und ignorieren soll. Aufgrund der erhöhten Schwierigkeit
+dieser Aufgabe wurde entschieden, die letzte Aufgabe für die Studie zu
+verwerfen.
+
+\subsubsection{Test-Classroom}
+Für die Vorbereitung der Studie wird eine neue GitHub-Organisation, sowie ein
+neuer GitHub-Classroom angelegt. Sowohl das Replit-Template als auch die im
+vorherigen Kapitel beschriebenen Aufgaben werden als Template-Repositories in
+der Test-Organisation abgelegt.
+
+Für die Aufgaben werden mithilfe des Test-Frameworks pytest Benotungstests
+programmiert und in GitHub-Classroom konfiguriert. Jede gelöste Aufgabe belohnt
+den Studienteilnehmer pauschal mit 10 Punkten.
+
+Neben den Programmieraufgaben werden auch ausführliche Anleitungen mit
+Bilder geschrieben. Nach der Erstellung von Vorschaubildern können diese in der,
+auch später produktiv genutzten, Plattform Tutors hochgeladen werden. Die
+Studienteilnehmer erhalten zu Beginn des Probelaufs einen Link zur Übersicht der benötigten Anleitungen in Tutors.
+
+\subsection{Deskriptive Ergebnisse}
+\begin{table}[H]
+    \renewcommand*{\arraystretch}{1.6}
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|} 
+    \hline
+    \diagbox{\textbf{Fragen}}{\textbf{Ergebnisse}} & \textbf{Durchschnitt } & \textbf{SD} & \textbf{Median } & \textbf{Min.} & \textbf{Max.}  \\ 
+    \hline
+    \textbf{Alter }                                & 22.200                 & 0.837       & 22.000           & 21            & 23             \\ 
+    \hline
+    \textbf{PRE1 }                                 & 3.600                  & 2.300       & 3.000            & 1             & 6              \\ 
+    \hline
+    \textbf{PRE2 }                                 & 2.600                  & 1.670       & 3.000            & 1             & 5              \\ 
+    \hline
+    \textbf{PRE3 }                                 & 2.600                  & 0.894       & 2.000            & 2             & 4              \\ 
+    \hline
+    \textbf{PRE4 }                                 & 2.600                  & 1.820       & 2.000            & 1             & 5              \\ 
+    \hline
+    \textbf{PAST1 }                                & 2.600                  & 1.520       & 2.000            & 1             & 5              \\ 
+    \hline
+    \textbf{PAST2 }                                & 3.200                  & 1.300       & 4.000            & 1             & 4              \\ 
+    \hline
+    \textbf{PAST3 }                                & 3.800                  & 1.790       & 5.000            & 1             & 5              \\ 
+    \hline
+    \textbf{PAST4 }                                & 2.200                  & 1.100       & 3.000            & 1             & 3              \\ 
+    \hline
+    \textbf{PAST5 }                                & 3.800                  & 2.170       & 3.000            & 1             & 6              \\
+    \hline
+    \end{tabular}
+\end{table}

@@ -10,7 +10,7 @@ Programmieraufgaben (Anleitungen, Fehlerbeschreibungen, Aufbau,
 Schwierigkeit, ...) gefunden, behoben und für zukünftige Aufgaben berücksichtigt
 werden. \parencite{studie-testkonzept}
 
-\subsection{Testaufbau}
+\subsection{Methode}
 Um für jeden Durchlauf gleiche Testbedingungen sicherzustellen, wird ein
 Testkonzept ausgearbeitet. Bei jeder Durchführung wird sich auf die Regeln
 und den Ablauf des Testkonzepts bezogen.
@@ -19,7 +19,7 @@ Das Testkonzept legt im Grunde die Meta-Daten der Studie fest. Neben der
 Zielsetzung, der Zielgruppe und der Dauer des Tests wird in dem Konzept auch die
 Methodik festgelegt.
 
-\subsubsection{Zielgruppe}
+\subsubsection{Teilnehmende}
 Die Zielgruppe der Studie lässt sich durch wenige Parameter definieren. Sie
 ist äquivalent zur Zielgruppe des Zusatzstudiums Digital Skills. Gesucht sind
 folglich Studierende, welche keine Studiengänge der Fakultät Informatik und
@@ -29,43 +29,52 @@ Anteilnahme an der folgenden Studie.
 
 Um eine gleichmäßig verteilte Stichprobenmenge zu erhalten, werden mindestens
 fünf Testpersonen aus fünf unterschiedlichen Studiengängen für die Durchführung
-benötigt.
+benötigt. Wie in Tabelle \ref{table:studie-teilnehmende} absolut dargestellt,
+ist das Geschlechterverhältnis mit zwei Drittel männlichen Teilnehmern sehr
+ausgeglichen. In folgender Tabelle ist neben dem Geschlecht auch das jeweilige
+Alter der Testpersonen, sowie der Studiengang und das Semester visualisiert.
 
-\subsubsection{Dauer des Tests}
-% TODO: Quelle Feldstudie?
-Die Dauer des Tests wird zwar als groben Leitfaden auf 30 bis 60 Minuten
-festgelegt, soll jedoch keine harten Limits festlegen. Der Test soll möglichst
-naturgemäß ablaufen und kann bei möglichen Unverständnissen auch deutlich länger
-dauern. Gemäß einer Feldstudie darf das Ergebnis der Studie nicht durch eine
-mögliche Manipulation, durch beispielsweise einer zeitlichen Barriere,
-verfälscht werden.
+\begin{table}[H]
+\renewcommand*{\arraystretch}{1.6}
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Geschlecht} & \textbf{Alter} & \textbf{Studiengang}                      & \textbf{Semester} \\ \hline
+Weiblich            & 22             & Betriebswirtschaftslehre (B.A.)           & 5                 \\ \hline
+Weiblich            & 21             & Bauingenieurwesen (B.Eng.)                & 5                 \\ \hline
+Weiblich            & 22             & Psychologie (M.Sc.)                       & 3                 \\ \hline
+Männlich            & 23             & Brauwesen und Getränketechnologie (M.Sc.) & 1                 \\ \hline
+Männlich            & 23             & Regenerative Energietechnik (B. Eng.)     & 6                 \\ \hline
+\end{tabular}
+\caption{Studienteilnehmer:innen}
 
-\subsubsection{Methodik}
-Die Durchführung der Tests geschieht zur Vereinfachung online über eine Software
-für Videokonferenzen. Am Anfang wird vom Beobachter der Durchführung der
-Studie, Andreas Huber, das Zusatzstudium Digital Skills anhand einer
-einseitigen Infografik vorgestellt.
+\label{table:studie-teilnehmende}
+\end{table}
+
+\subsubsection{Ablauf des Tests}
+Die Studienbefragungen finden zwischen dem 11. Februar 2022 und dem 6. März
+2022 statt. Die Tests werden als Interview online über eine Software für
+Videokonferenzen durchgeführt.
+
+Am Anfang wird vom Beobachter der Durchführung der Studie, Andreas Huber, das
+Zusatzstudium Digital Skills anhand einer einseitigen Infografik vorgestellt.
 
 Danach wird dem Teilnehmer die folgende Agenda vorgetragen und anschließend
-werden der Person vier Fragen gestellt. Folgende Fragen müssen mit Schulnoten
-von 1 bis 6 beantwortet werden. Sechs bedeuted hier immer eine gänzliche
+werden der Person vier Fragen gestellt. Die Fragen müssen jeweils mit Schulnoten
+von 1 bis 6 beantwortet werden. Sechs bedeutet hier immer eine gänzliche
 negative Neigung, während eins einer völligen Zusage entspricht. Die restlichen
 Noten bilden wie gewohnt Zwischenwerte.
-\begin{itemize}
-    \item Hast du schon einmal erwägt eine Programmierausbildung anzustreben?
-    \item Hast du schon einmal programmiert?
-    \item Wie fit fühlst du dich am PC?
-    \item Würde für dich das Zusatzstudium Digital Skills in Frage kommen?
-\end{itemize}
 
 Nachdem die Fragen von der teilnehmenden Person beantwortet wurden, muss diese
-die Bildschirmübertragung starten. Währendessen schreibt der Beobachter die
+die Bildschirmübertragung starten. Währen dessen notiert der Beobachter die
 Ergebnisse der Fragen in eine vorher angelegte Tabelle.
 
 % TODO: Quelle Think-Aloud-Methodik
-Der Teilnehmer wird anschließend darauf hingewiesen, dass die Studie dem Think-Aloud-Methodik folgt. Die Think-Aloud-Methode ist eine Forschungsmethode
+Der Teilnehmer wird anschließend darauf hingewiesen, dass die Studie der
+Think-Aloud-Methodik folgt. Die Think-Aloud-Methode ist eine Forschungsmethode,
 bei der der Testteilnehmer darum gebeten wird, seine Gedanken laut
-auszusprechen. Mit dieser Methode können mögliche Aufhänger und Probleme in den Anleitungen der Aufgaben leichter gefunden werden. Der Beobachter des Tests
+auszusprechen. Mit dieser Methode können mögliche Aufhänger und Probleme in den
+Anleitungen der Aufgaben leichter gefunden werden. Der Beobachter des Tests
 schreibt alle Anomalien kategorisiert nach Fortschritt und Teilnehmer des Tests
 auf.
 
@@ -74,27 +83,68 @@ Frage bzw. Aufgabe unlösbar erscheinen, gibt es am Ende jeder Aufgabe ein
 Lösungsvorschlag. Dieser sollte jedoch nur aufgeklappt werden, wenn keine
 realistische Chance der selbstständigen Lösung des Problems besteht.
 
-Folgend werden die im folgenden Kapitel \ref{studie-aufgaben} erläuterten
+Als Nächstes werden die im folgenden Kapitel \ref{studie-materialien} erläuterten
 Aufgaben durch den Testteilnehmer bearbeitet. Während der Bearbeitung wird
 die dafür benötigte Zeit durch den Beobachter mit einer Stoppuhr gestoppt.
 
 Abschließend kann der Studierende die Bildschirmübertragung wieder beenden und
 sich auf das Nachgespräch konzentrieren. Hierbei werden dem Teilnehmer noch
-folgende fünf Fragen gestellt. Die Fragen müssen wie vorher in Schulnoten von 1
+fünf weitere Fragen gestellt. Die Fragen müssen wie vorher in Schulnoten von 1
 bis 6 beantwortet werden.
+
+Der Beobachter notiert, wie gewohnt, die Ergebnisse der Fragen in der
+vorher erwähnten Datentabelle.
+
+% TODO: Quelle Feldstudie?
+Die Dauer des Tests wird zwar als groben Leitfaden auf 30 bis 60 Minuten
+festgelegt, soll jedoch keine harten Limits festlegen. Der Test soll möglichst
+unabhängig ablaufen und kann bei möglichen Unverständnissen auch deutlich länger
+dauern. Gemäß einer Feldstudie darf das Ergebnis der Studie nicht durch eine
+mögliche Manipulation, wie beispielsweise durch eine zeitliche Barriere,
+verfälscht werden.
+
+Auf eine Entschädigung der Teilnehmenden wird aufgrund mangelnder Budgets
+verzichtet. Alle Teilnehmenden absolvieren die Studie freiwillig.
+
+\subsubsection{Materialien}\label{studie-materialien}
+\paragraph{Fragen}
+Folgende Fragen werden den Teilnehmenden vor Beginn der Bearbeitung gestellt:
+
 \begin{itemize}
-    \item Wie schwer kam dir die Einrichtung, bis zu dem Punkt, an dem du die erste Aufgabe heruntergeladen hast, vor?
-    \item Hattest du Schwierigkeiten mit Aufgabe 1?
-    \item Hattest du Schwierigkeiten mit Aufgabe 2?
-    \item Hast du verstanden was du in den Aufgaben genau gemacht hast?
-    \item Würdest du nach Abschluss des Tests deine Meinung zur Frage am
-    Interesse eines Zusatzstudiums für Digital Skills ändern?
+    \item Hast du schon einmal erwägt eine Programmierausbildung anzustreben?
+    (1: will ich definitiv noch machen; 6: noch nie) \textbf{[PRE1]}
+    \item Hast du schon einmal programmiert? (1: ständig; 6: noch nie)
+    \textbf{[PRE2]}
+    \item Wie fit fühlst du dich am PC? (1: sehr fit; 6: gar nicht)
+    \textbf{[PRE3]}
+    \item Würde für dich das Zusatzstudium Digital Skills in Frage kommen?
+    (1: unbedingt; 6: auf keinen Fall) \textbf{[PRE4]}
 \end{itemize}
 
-Die Ergebnisse der Fragen werden, wie gewohnt, vom Beobachter in der Tabelle
-notiert.
+Nach Bearbeitung der Aufgaben müssen die Studierenden noch folgende fünf
+Fragen beantworten:
 
-\subsubsection{Die Aufgaben}\label{studie-aufgaben}
+\begin{itemize}
+    \item Wie schwer kam dir die Einrichtung, bis zu dem Punkt, an dem du die
+    erste Aufgabe heruntergeladen hast, vor? (1: sehr leicht; 6: sehr schwer)
+    \textbf{[PAST1]}
+    \item Hattest du Schwierigkeiten mit Aufgabe 1? (1: nein, keine; 6: zu
+    komplex) \textbf{[PAST2]}
+    \item Hattest du Schwierigkeiten mit Aufgabe 2? (1: nein, keine; 6: zu
+    komplex) \textbf{[PAST3]}
+    \item Hast du verstanden was du in den Aufgaben genau gemacht hast? (1: ja
+    vollkommen; 6: nein, gar nichts) \textbf{[PAST4]}
+    \item Würdest du nach Abschluss des Tests deine Meinung zur Frage am
+    Interesse eines Zusatzstudiums für Digital Skills ändern? (1: unbedingt;
+    6: auf keinen Fall) \textbf{[PAST5]}
+\end{itemize}
+
+Alle aufgezeigten Fragen wurden durch den Beobachter und Initiator der Studie,
+Andreas Huber, selbst erfunden. Die in eckigen Klammern stehenden
+Bezeichnungen dienen zur Identifikation der jeweiligen Fragen für die
+Auswertung. % TODO: komischer Satz
+
+\paragraph{Aufgaben}
 Der Test besteht aus vier für die Studie vereinfachten Aufgaben. Die erste
 Aufgabe beschäftigt sich lediglich mit der Einrichtung des Arbeitsplatzes in
 Replit und GitHub-Classroom. Die Studierenden sind dazu aufgefordert, das in 
@@ -186,7 +236,7 @@ Größenangaben erkennen und ignorieren soll. Aufgrund der erhöhten Schwierigke
 dieser Aufgabe wurde entschieden, die letzte Aufgabe für die Studie zu
 verwerfen.
 
-\subsubsection{Test-Classroom}
+\paragraph{Test-Classroom}
 Für die Vorbereitung der Studie wird eine neue GitHub-Organisation, sowie ein
 neuer GitHub-Classroom angelegt. Sowohl das Replit-Template als auch die im
 vorherigen Kapitel beschriebenen Aufgaben werden als Template-Repositories in
@@ -201,6 +251,64 @@ Bilder geschrieben. Nach der Erstellung von Vorschaubildern können diese in der
 auch später produktiv genutzten, Plattform Tutors hochgeladen werden. Die
 Studienteilnehmer erhalten zu Beginn des Probelaufs einen Link zur Übersicht der benötigten Anleitungen in Tutors.
 
-\subsection{Ergebnisse}
-Die Studie wird mit fünf Testprobanden aus unterschiedlichen Studiengängen
-durchgeführt. Neben den 
+\newpage
+\subsection{Deskriptive Ergebnisse}
+Nach Verarbeitung der Ergebnisse der Fragen, können nun die einzelnen Resultate
+beobachtet und analysiert werden. Die folgende Tabelle \ref{table:studie}
+enthält in Spalte 1 Identifikationsbezeichnung der Frage. Spalte 2 und 3
+beinhaltet den Durchschnitt und die dazugehörige Standardabweichung (SD).
+Die 4., 5. und 6. Spalte enthalten den Medianwert, das Minimum und 
+schließlich das Maximum der Antworten.
+
+\begin{table}[H]
+    \renewcommand*{\arraystretch}{1.6}
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|} 
+    \hline
+    \diagbox{\textbf{Fragen}}{\textbf{Ergebnisse}} & \textbf{Durchschnitt } & \textbf{SD} & \textbf{Median } & \textbf{Min.} & \textbf{Max.}  \\ 
+    \hline
+    \textbf{Alter }                                & 22.200                 & 0.837       & 22.000           & 21            & 23             \\ 
+    \hline
+    \textbf{PRE1 }                                 & 3.600                  & 2.300       & 3.000            & 1             & 6              \\ 
+    \hline
+    \textbf{PRE2 }                                 & 2.600                  & 1.670       & 3.000            & 1             & 5              \\ 
+    \hline
+    \textbf{PRE3 }                                 & 2.600                  & 0.894       & 2.000            & 2             & 4              \\ 
+    \hline
+    \textbf{PRE4 }                                 & 2.600                  & 1.820       & 2.000            & 1             & 5              \\ 
+    \hline
+    \textbf{PAST1 }                                & 2.600                  & 1.520       & 2.000            & 1             & 5              \\ 
+    \hline
+    \textbf{PAST2 }                                & 3.200                  & 1.300       & 4.000            & 1             & 4              \\ 
+    \hline
+    \textbf{PAST3 }                                & 3.800                  & 1.790       & 5.000            & 1             & 5              \\ 
+    \hline
+    \textbf{PAST4 }                                & 2.200                  & 1.100       & 3.000            & 1             & 3              \\ 
+    \hline
+    \textbf{PAST5 }                                & 3.800                  & 2.170       & 3.000            & 1             & 6              \\
+    \hline
+    \end{tabular}
+
+    \caption{Auswertung der Studienergebnisse}
+    \label{table:studie}
+\end{table}
+
+% Alter
+Wie man der Alterszeile entnehmen kann, sind alle Teilnehmenden im Schnitt 22
+Jahre alt. Dieses Ergebnis lässt sich vor allem aus der Anforderung schließen,
+dass alle Teilnehmenden immatrikulierte Studierende sein müssen.
+
+% PRE4 - PAST5
+Die Frage PRE4 bezieht sich auf das Interesse an einem Zusatzstudium für
+Digital Skills. Der Durchschnitt der Antworten auf diese Frage liegt bei 2.600,
+der Median noch besser bei 2.000. Das heißt, dass die die Mehrheit der
+Testpersonen, vor der Bearbeitung der Aufgaben, einer Teilnahme an einem solchen
+Zusatzstudium nicht abgeneigt wären. Nach der Absolvierung der
+Programmieraufgaben werden die Teilnehmer erneut nach ihrer Meinung bzw. einer
+Änderung dieser Einschätzung gefragt (Frage: PAST5). Hier wird anhand des
+Durchschnitts, sowie des Medians eine deutliche negative Tendenz ersichtlich.
+Durch die hohe Standardabweichung bei der Frage PAST5, kann man nicht auf eine
+vollständige Abneigung der Studierenden schließen. Trotzdem kann die negative
+Tendenz des Interesses auf zu schwere oder dürftig erklärte Aufgaben hindeuten.
+Ein weiterer Interpretationsversuch ist, dass die Studierenden nach der
+Präsentation des Zusatzstudiums andere Vorstellungen zu den Modulen hatten.
