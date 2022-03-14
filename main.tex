@@ -21,7 +21,16 @@
 
 % Packet für Seitenrandabstände und Einstellung für Seitenränder
 \usepackage{geometry}
-\geometry{left=3.5cm, right=2.5cm, top=2.5cm, bottom=2cm}
+% Internet
+%\geometry{left=3.5cm, right=2.5cm, top=2.5cm, bottom=2cm}
+% Kern
+\geometry{a4paper, top=27mm, left=20mm, right=20mm, bottom=35mm, headsep=10mm, footskip=12mm}
+
+% Abstände Überschrift (Kern)
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{12pt plus 4pt minus 2pt}{8pt plus 2pt minus 2pt}
+\titlespacing{\subsection}{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
+\titlespacing{\subsubsection}{0pt}{12pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
 
 % bricht lange URLs "schön" um
 \usepackage[hyphens,obeyspaces,spaces]{url}
@@ -93,6 +102,10 @@
 
 % Titelseite
 \input{pages/deckblatt}
+\newpage
+
+% Einverständniserklärung
+\input{pages/x_erklaerung}
 \newpage
 
 % Römische Nummerierung
