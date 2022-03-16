@@ -7,12 +7,7 @@ betreut wird. Der Kurs wurde aufgrund seines Erfolgs digitalisiert und wird nun
 als CS50x auf der Lernplattform edX angeboten. Folgende Recherchen und Aussagen
 sind jeweils immer auf die Online-Version CS50x bezogen.
 
-Der Kurs CS50 lehrt Schüler\footnote{Aus Gründen der besseren Lesbarkeit wird
-in der gesamten Arbeit auf die gleichzeitige Verwendung der Sprachformen
-männlich, weiblich und divers (m/w/d) verzichtet. Sämtliche
-Personenbezeichnungen gelten gleichermaßen für alle Geschlechter. Ist eine
-spezifische Geschlechtergruppe gemeint, wird das entsprechende Adjektiv
-vorangestellt (z.B. \glqq männliche Studenten\grqq)} die Grundlagen der
+Der Kurs CS50 lehrt Schüler die Grundlagen der
 Informatik. Dabei werden diverse Programmierübungen abgefragt. Aufgrund der
 hohen Anzahl an Teilnehmern besitzt der Kurs ein automatisiertes Abgabe- und Benotungssystem.
 
@@ -21,7 +16,6 @@ einem universalen Online-Lernsystem erweitert. Jeder kann sich durch eine
 Authentifizierung über die Plattform GitHub im Abgabesystem von CS50 einloggen
 und eigene Kurse erstellen. \parencite{cs50}
 
-\newpage
 \paragraph{Ablauf für Studierende}
 Dem Teilnehmer wird jede Woche ein neues Kapitel präsentiert. Er kann sich dabei
 sowohl durch ein Vorlesungsvideo, als auch durch geschriebene Materialien über
@@ -43,6 +37,30 @@ namens \glqq check50\grqq{} überprüfen zu lassen. Außerdem gibt es viele weit
 Werkzeuge, ein Beispiel hierfür ist \glqq style50\grqq{}, welches die Qualität
 und den Style des Programmcodes überprüft und bewertet. \parencite{submit50}
 
+\paragraph{Ablauf für Lehrende}
+Um eigene Programmierkurse auf Basis der CS50-Technik zu erstellen, stellt
+Harvard die me50-Plattform kostenfrei zur Verfügung. Hierzu müssen Lehrende
+genau folgenden Link in ihrem Browser eingeben:
+\url{https://submit.cs50.io/courses/new}. Der Link führt zu
+einer Seite, um einen neuen Kurs anzulegen. Auf die Erstellungsseite gelangt man
+nur, über den Direktlink. Einen Knopf gibt es dafür nicht. Nach der Eingabe
+eines neuen Kursnamens öffnet sich die Einstellungsseite des neu angelegten
+Kurses. Dort können neben dem gerade festgelegten Namen auch die Beschreibung
+des Kurses, die beinhaltenden Aufgaben sowie die zuständigen Admin-Accounts der
+Dozenten festgelegt und geändert werden.
+
+Neue Aufgaben bzw. Probleme können mithilfe der folgenden Anleitung
+erstellt werden:
+\url{https://cs50.readthedocs.io/projects/check50/en/latest/check_writer}. Nach
+der Erstellung eines Problems kann der sogenannte Slug (Name des Problems) in
+den Kurseinstellungen referenziert werden. Dadurch wird die Aufgabe automatisch
+im Kurs angezeigt.
+
+In der Kursübersicht können Lehrende die Abgaben und Versuche der Studierenden
+sehen. Bei jedem Eintrag ist jeweils die erreichte Punktzahl von check50 und
+style50 sichtbar. Eine Übersicht der Abgaben können Dozenten jederzeit in Form
+einer .csv- oder als .json-Datei pro Aufgabe heruntergeladen werden.
+
 \paragraph{Architektur}
 Die Harvard University hält den Aufbau von CS50 weitestgehend transparent.
 Viele der eingesetzten Werkzeuge sind öffentlich als Open-Source-Projekte unter
@@ -57,8 +75,6 @@ befinden sich unter anderem folgende Projekte:
 \item compare50: Plagiatserkennung von abgegebenen Projekten
 \item server50: Webserver
 \end{itemize}
-
-\newpage
 
 In Abbildung \ref{fig:cs50-architektur} ist der Aufbau der Lernplattform CS50
 vereinfacht grafisch dargestellt. Die Rechtecke und Menschen sind die
@@ -86,13 +102,15 @@ Entwicklungsumgebung (IDE) die Aufgaben auf der Plattform CS50-Plattform
 (https://cs50.harvard.edu/) lösen. Das Korrigieren und Abgeben der Aufgabe
 benötigt mindestens die Kommandozeilen-Tools \texttt{check50} und
 \texttt{submit50}. Diese sind über den Python-Paketmanager frei verfügbar.
-Harvard stellt außerdem eine kostenlose Online-IDE bereit, welche die genannten Python-Programme bereits zur Verfügung stellt.
+Harvard stellt außerdem eine kostenlose Online-IDE bereit, welche die genannten
+Python-Programme bereits zur Verfügung stellt.
 
 Sobald der Studierende eine Aufgabe erfolgreich gelöst hat, kann er mithilfe des
 Namen der Aufgabe die Lösung überprüfen und schließlich abgeben. Hierfür wird
-lediglich der Name der Aufgabe benötigt. Eine Abgabe über die Konsole kann dann beispielsweise so aussehen:
+lediglich der Name der Aufgabe benötigt. Eine Abgabe über die Konsole kann dann
+beispielsweise so aussehen:
 
-\begin{lstlisting}
+\begin{lstlisting}[style=Bash]
     ~/hello/ $ submit50 cs50/problems/2021/x/hello
     Connecting......
     Authenticating...
@@ -105,6 +123,12 @@ lediglich der Name der Aufgabe benötigt. Eine Abgabe über die Konsole kann dan
     .......
     Go to https://submit.cs50.io/users/ndhbr/cs50/problems/2021/x/hello to see your results.
 \end{lstlisting}
+
+Der Parameter \texttt{cs50/problems/20212/x/hello} im Aufruf von submit50 ist
+der im vorherigen Abschnitt erläuterte Slug. Das Programm check50 wird
+beispielsweise ebenfalls mit dem Slug als Parameter aufgerufen. Mit dieser
+Information wissen die Werkzeuge, mit welcher Aufgabe sie die Lösung des
+Teilnehmenden vergleichen sollen.
 
 Die letzte Zeile verlinkt erneut auf die me50-Plattform und zeigt dem
 Kursteilnehmer seine Abgaben dieser Aufgabe und seine damit erreichte
@@ -120,13 +144,15 @@ kann man später den Verlauf der Versuche nachverfolgen.
 \paragraph{Probleme beim Einsatz für die OTH}
 Die Toolchain von CS50 wäre adäquat für den Einsatz an der OTH-Regensburg.
 Eines der Projekte ist aktuell noch nicht Open-Source: die Website zur
-Erstellung von neuen Kursen, Abgaben und Mitgliederverwaltung. Dieses Projekt
-ist essenziell für die Verwendung der Werkzeuge an der Regensburger Hochschule.
-Nach Rücksprache mit Herrn Carter Zenke der Harvard University ist ein Neuaufbau
-dieser Website mit einhergehender Veröffentlichung als Open-Source-Projekt
-gerade in Planung. Einen genauen öffentlichen Zeitplan hierfür gibt es aktuell
-nicht. Infolgedessen ist ein Einsatz des CS50-Systems an der OTH zum heutigen
-Datum nicht möglich.
+Erstellung von neuen Kursen, Abgaben und Mitgliederverwaltung.
+
+Dieses Projekt ist gleichzeitig der größte Bestandteil des Netzwerks und ist
+deshalb essenziell für die Verwendung der Werkzeuge an der Regensburger
+Hochschule. Nach Rücksprache mit Herrn Carter Zenke der Harvard University ist
+ein Neuaufbau dieser Website mit einhergehender Veröffentlichung als
+Open-Source-Projekt gerade in Planung. Einen genauen öffentlichen Zeitplan
+hierfür gibt es aktuell nicht. Infolgedessen ist ein Einsatz des CS50-Systems an
+der OTH zum heutigen Datum nicht möglich.
 
 \newpage
 \subsubsection{Code FREAK der Fachhochschule Kiel}\label{code-freak}
@@ -149,16 +175,38 @@ anlegen müssen. Sie können sich direkt mit ihrem gewohnten Zugang anmelden.
 Studierende können nach Anmeldung am System, an für sie sichtbaren Kursen
 (Assignments) teilnehmen. Dies geschieht meist durch einen vom Dozenten
 generierten Einladungslink. Jedes Assignment kann mehrere Aufgaben (Tasks)
-enthalten. Die einzelnen Aufgaben können dann entweder über die integrierte
+enthalten. Sobald der Einladungslink zum Assignment akzeptiert
+wurde, kann die teilnehmende Person alle Tasks aus dem Assignment sehen und
+bearbeiten. Die einzelnen Aufgaben können dann entweder über die integrierte
 Online-Entwicklungsumgebung, durch Hochladen der Lösung, oder durch die Angabe
 eines Git-Repository-Links bearbeitet werden.
 
 Mit dem Klick auf den Knopf \glqq Start Evaluation\grqq{} wird hochgeladene
 Lösung der Aufgabe überprüft. Die Ergebnisse der einzelnen Test-Schritte können
-dann in einem weiteren Tab eingesehen werden. Wenn alle Tests der Aufgabe
-bestanden wurden, wird der Task mit einem grünen Haken versehen. So sieht der
-Schüler in der Assignment-Ansicht auf einen Blick, welche Aufgaben er bereits
-gelöst hat.
+dann in einem weiteren Tab eingesehen werden. Zu den Test-Schritten können neben
+üblichen Unit-Tests auch Stylechecks gehören. Ein Stylecheck kann zum Beispiel
+überprüfen, ob der geschriebene Code nach den für die Programmiersprache
+üblichen Konventionen formatiert ist. Die Evaluation einer Aufgabe kann beliebig
+oft wiederholt werden. Wenn alle Tests der Aufgabe bestanden wurden, wird der
+Task mit einem grünen Haken versehen. So sieht der Schüler in der
+Assignment-Ansicht auf einen Blick, welche Aufgaben er bereits gelöst hat.
+
+\paragraph{Ablauf für Lehrende}
+Lehrende haben in Code FREAK die Möglichkeit Aufgaben im Task Pool zu
+erstellen. Im Task Pool können beliebig viele Tasks angelegt werden. In der
+Aufgabenkonfiguration können neben der Anleitung auch die einzelnen
+Test-Schritte festgelegt werden. Es können mehrere Testabläufe erstellt werden,
+um beispielsweise neben dem Ergebnis auch auf die Code-Qualität zu testen.
+
+Anschließend können Lehrende Assignments erstellen, welche aus den vorher
+angelegten Tasks im Task Pool bestehen. Der Task Pool hat den Vorteil, dass
+mehrere Kurse dieselben Aufgaben anbieten können, ohne diese redundant anlegen
+zu müssen. Dieses Vorgehen erhöht die Wartbarkeit der Aufgaben ungemein. In der
+Einzelansicht eines Kurses können Dozenten eine optionale Deadline, sowie eine
+maximale Bearbeitungsdauer angeben. Außerdem können Ergebnisse und Bewertungen
+der Studierenden als .CSV-Datei exportiert werden. Die Lösungsversuche der
+Studierenden können wiederum als .ZIP- oder als .TAR-Datei heruntergeladen
+werden.
 
 \paragraph{Architektur}
 Code FREAK wird als fertiger Docker-Container ausgeliefert. Docker ist eine
@@ -226,6 +274,20 @@ Sobald der Studierende eine Lösung zur Korrektur abgeben möchte, kann er per
 Push die Änderungen in das Remote-Repository hochladen. Je nach Konfiguration
 der Aufgabe starten daraufhin serverseitig ein oder mehrere Tests. Wenn alle
 Tests bestanden sind, hat der Studierende die Aufgabe erfolgreich abgeschlossen.
+
+\paragraph{Ablauf für Lehrende}
+Um einen Aufgabe in GitHub Classroom zur Verfügung zu stellen, bedarf es zuerst
+einer GitHub Organisation, sowie einem Kurs in GitHub Classroom. Sobald beides
+erstellt ist, können Lehrende neue Assignments (Aufgaben) mithilfe von
+bestehenden Vorlage-Repositories erstellen. In der Vorlage befindet sich in der
+Regel ein Ordner mit Tests, welche das Ergebnis des Programms prüfen sollen.
+In GitHub Classroom kann demnach eine Reihe an Kommandozeilenbefehle festgelegt
+werden, die dann diese Tests ausführen und je nach Ergebnis bepunkten.
+
+Eine Übersicht über die Abgaben und erreichten Punktzahlen der Studierenden,
+kann sich der Dozent jederzeit beim Klick auf eine Aufgabe anzeigen lassen.
+Gleichzeitig ist es in dieser Ansicht möglich alle Noten als .CSV-Datei und
+alle Repositories als .ZIP-Datei herunterzuladen.
 
 \paragraph{Architektur} % TODO: Zitieren?
 GitHub Classroom ist ein Bildungsservice der Firma GitHub Inc. und ist Stand

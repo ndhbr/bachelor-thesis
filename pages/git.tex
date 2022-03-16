@@ -23,12 +23,15 @@ genauen Verlauf des Quellcodes, können Fehlerursachen schneller analysiert,
 gefunden und verifiziert werden. Um die einzelnen Snapshots bzw. Schnappschüsse
 des aktuellen Standes zu markieren, gibt es in Git die sogenannten Commits.
 
+Die folgenden Begriffsklärungen rund um Git sind wichtig, um den Rest der Arbeit
+besser zu verstehen.
+
 \subsubsection{Repositories und Commits}
 Das Git-Repository ist der Kern des Projekts und umfasst alle Dateien, die von
 Git getracked werden sollen. Es ist sozusagen das Projekt an dem die Entwickler
 arbeiten. Um ein Repository anzulegen braucht es nur einen Ordner in dem man
 in der Konsole folgenden Befehl ausführt:
-\begin{lstlisting}
+\begin{lstlisting}[style=Bash]
     $ git init
 \end{lstlisting}
 Daraufhin wird in diesem Verzeichnis ein neuer \texttt{.git}-Ordner erstellt,
@@ -45,13 +48,13 @@ jeweils erstellt werden müssen, ist dem Entwickler selbst überlassen. In diese
 Fall kann er beispielsweise nach jedem Absatz einen Commit erstellen. Zuerst
 kann er in der Konsole alle geänderten Dateien abfragen mit:
 
-\begin{lstlisting}
+\begin{lstlisting}[style=Bash]
     $ git status
 \end{lstlisting}
 
 Die Ausgabe sieht in dem Beispiel dann ungefähr so aus:
 
-\begin{lstlisting}
+\begin{lstlisting}[style=Bash]
     On branch main
 
     No commits yet
@@ -69,7 +72,7 @@ verrät sie, dass die Datei \texttt{hallo-welt.txt} angelegt wurde, bisher jedoc
 nicht getracked wird. Nun kann der Entwickler die Änderung tracken, indem er
 folgenden Befehl ausführt:
 
-\begin{lstlisting}
+\begin{lstlisting}[style=Bash]
     $ git add hallo-welt.txt
 \end{lstlisting}
 
@@ -77,7 +80,7 @@ Durch den Befehl \code{git add .} kann er auch mit einem Befehl alle
 \glqq untracked\grqq{} Änderungen in den neuen Commit hinzufügen. Jetzt weiß
 Git welche Änderungen commited werden sollen. Mit dem Befehl
 
-\begin{lstlisting}
+\begin{lstlisting}[style=Bash]
     $ git commit -m "Neue Hallo Welt Datei angelegt"
 \end{lstlisting}
 
@@ -86,6 +89,37 @@ angelegt. Dies ist nun ein neuer Snapshot, welcher in der Commit-Historie
 gespeichert wird. Sollte der Programmierer die Datei nun verändern, kann er die
 neuen Änderungen erneut tracken und wieder committen. An diesem Punkt könnte er
 jedoch jederzeit zu dem alten bereits committeten Zustand zurückkehren.
+
+Damit Repositories im Internet verfügbar sind, benötigt man einen Server auf dem
+eine Version des lokalen Repositories gespeichert ist. Diese Repositories nennt
+man auch Remote-Repositories. Der bekannteste Dienstleister für die Speicherung
+von Remote-Repositories ist GitHub. Der Vorteil von einer Online-Version des
+eigenen Repositories ist, dass andere Entwickler das Projekt klonen und
+schließlich mitarbeiten können. Nach dem Klonvorgang haben diese Personen
+ebenfalls eine lokale Kopie des Repositories auf ihrem Endgerät. Um nun einen
+lokalen Commit online verfügbar zu machen, muss dieser \emph{gepushed} werden.
+Zuerst muss über folgenden Befehl geprüft werden, ob im lokalen Repository das
+richtige Remote-Repository referenziert wird:
+
+\begin{lstlisting}[style=Bash]
+    $ git remote -v
+    origin	https://github.com/user/repository-name (fetch)
+    origin	https://github.com/user/repository-name (push)
+\end{lstlisting}
+
+Sollten die Adressen zum richtigen Online-Repository verweisen, kann mit
+folgendem Befehl ein Commit hochgeladen werden:
+
+\begin{lstlisting}[style=Bash]
+    $ git push
+\end{lstlisting}
+
+Um mögliche Änderungen durch andere Mitarbeitende in das lokale Repository zu
+laden benötigt man einen sogenannten \emph{Pull}:
+
+\begin{lstlisting}[style=Bash]
+    $ git pull
+\end{lstlisting}
 
 Der Git-Workflow umfasst noch viele weitere Befehle und kann für Unerfahrene
 schnell sehr kompliziert werden. Aus diesem Grund enthalten die meisten gängigen
