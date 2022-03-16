@@ -13,9 +13,10 @@ git-Datenbank-Dateien. Programmierer können dadurch in ihren Teams genau
 analysieren, wer welche Zeile wann geändert oder neu eingesetzt hat.
 
 Durch Git können mehrere Entwickler an demselben Projekt bzw. Repository
-arbeiten und sogar dieselben Dateien ändern. Git bietet hierfür Prozesse um
-solche Konflikte sauber lösen zu können. Beim Zusammenführen der beiden
-Zustände, kann man entscheiden welche Zeile man aus welcher Änderung übernimmt.
+arbeiten und sogar dieselben Dateien gleichzeitig ändern. Git bietet hierfür
+Prozesse um solche Konflikte sauber lösen zu können. Beim Zusammenführen der
+beiden Zustände kann man entscheiden welche Zeile man aus welcher Änderung
+übernimmt.
 
 Git bietet durch die Speicherung jeder Änderung nicht nur den Vorteil vom
 gemeinsamen Arbeiten, sondern auch eine Art \glqq Backup\grqq{}. Durch den
@@ -23,8 +24,11 @@ genauen Verlauf des Quellcodes, können Fehlerursachen schneller analysiert,
 gefunden und verifiziert werden. Um die einzelnen Snapshots bzw. Schnappschüsse
 des aktuellen Standes zu markieren, gibt es in Git die sogenannten Commits.
 
-Die folgenden Begriffsklärungen rund um Git sind wichtig, um den Rest der Arbeit
-besser zu verstehen.
+\newpage
+
+Die folgenden Begriffsklärungen und Anleitungen rund um das
+Versionskontrollsystem Git sind wichtig, um den Rest der Arbeit besser verstehen
+zu können.
 
 \subsubsection{Repositories und Commits}
 Das Git-Repository ist der Kern des Projekts und umfasst alle Dateien, die von
@@ -36,23 +40,27 @@ in der Konsole folgenden Befehl ausführt:
 \end{lstlisting}
 Daraufhin wird in diesem Verzeichnis ein neuer \texttt{.git}-Ordner erstellt,
 welcher alle Informationen über das gerade erstellte Repository enthält. Sobald
-man nun beispielsweise eine neue Textdatei anlegt, wird die Handlung im
+man nun beispielsweise eine neue Textdatei anlegt, wird diese Handlung im
 \texttt{.git}-Ordner getracked.
 
 Git arbeitet mit Snapshots, die man manuell anlegen muss. Wenn der Entwickler
 nun täglich einen Absatz in die Textdatei schreibt, gibt es hierfür keine
 Historie. Git weiß nur, dass im ersten Snapshot keine Datei vorhanden war und
-nun eine Datei mit gefülltem Text vorliegt. Um einen Verlauf der Erstellung
-zu speichern, muss der Entwickler sogenannte Commits erstellen. Wann die Commits
-jeweils erstellt werden müssen, ist dem Entwickler selbst überlassen. In diesem
-Fall kann er beispielsweise nach jedem Absatz einen Commit erstellen. Zuerst
-kann er in der Konsole alle geänderten Dateien abfragen mit:
+nun eine Datei mit gefülltem Text vorliegt.
+
+Um einen Verlauf der Erstellung zu speichern, muss der Entwickler sogenannte
+Commits mit aktuellen Zeitstempeln erstellen. Wann die Commits jeweils erstellt
+werden, ist dem Entwickler selbst überlassen. In der Regel werden Commits immer
+nach dem Erreichen eines Meilensteins erstellt. In diesem Fall wäre ein
+täglicher Meilenstein das Abschließen eines neuen Absatzes in der Textdatei.
+Zuerst können alle geänderten Dateien in der Konsole mit folgendem Befehl
+abgerufen werden:
 
 \begin{lstlisting}[style=Bash]
     $ git status
 \end{lstlisting}
 
-Die Ausgabe sieht in dem Beispiel dann ungefähr so aus:
+Die Ausgabe sieht in erläuterten Beispiel ungefähr so aus:
 
 \begin{lstlisting}[style=Bash]
     On branch main
@@ -66,7 +74,6 @@ Die Ausgabe sieht in dem Beispiel dann ungefähr so aus:
     nothing added to commit but untracked files present (use "git add" to track)
 \end{lstlisting}
 
-\newpage
 Wie die Ausgabe bereits verrät, wurde bisher noch kein Commit angelegt. Außerdem
 verrät sie, dass die Datei \texttt{hallo-welt.txt} angelegt wurde, bisher jedoch
 nicht getracked wird. Nun kann der Entwickler die Änderung tracken, indem er
@@ -76,9 +83,9 @@ folgenden Befehl ausführt:
     $ git add hallo-welt.txt
 \end{lstlisting}
 
-Durch den Befehl \code{git add .} kann er auch mit einem Befehl alle
-\glqq untracked\grqq{} Änderungen in den neuen Commit hinzufügen. Jetzt weiß
-Git welche Änderungen commited werden sollen. Mit dem Befehl
+Durch den Befehl \code{git add .} kann er auch mit einem Kommando alle
+\emph{untracked} (nicht verfolgte) Änderungen in den neuen Commit hinzufügen.
+Jetzt weiß Git welche Änderungen commited werden sollen. Mit dem Befehl
 
 \begin{lstlisting}[style=Bash]
     $ git commit -m "Neue Hallo Welt Datei angelegt"
@@ -90,12 +97,12 @@ gespeichert wird. Sollte der Programmierer die Datei nun verändern, kann er die
 neuen Änderungen erneut tracken und wieder committen. An diesem Punkt könnte er
 jedoch jederzeit zu dem alten bereits committeten Zustand zurückkehren.
 
-Damit Repositories im Internet verfügbar sind, benötigt man einen Server auf dem
-eine Version des lokalen Repositories gespeichert ist. Diese Repositories nennt
-man auch Remote-Repositories. Der bekannteste Dienstleister für die Speicherung
+Damit Repositories im Internet verfügbar sind, benötigt man einen Server mit
+einer Kopie des lokalen Repositories. Diese Repositories nennt man auch
+Remote-Repositories. Der bekannteste Dienstleister für die Speicherung
 von Remote-Repositories ist GitHub. Der Vorteil von einer Online-Version des
 eigenen Repositories ist, dass andere Entwickler das Projekt klonen und
-schließlich mitarbeiten können. Nach dem Klonvorgang haben diese Personen
+anschließend mitarbeiten können. Nach dem Klonvorgang haben diese Personen
 ebenfalls eine lokale Kopie des Repositories auf ihrem Endgerät. Um nun einen
 lokalen Commit online verfügbar zu machen, muss dieser \emph{gepushed} werden.
 Zuerst muss über folgenden Befehl geprüft werden, ob im lokalen Repository das
@@ -114,12 +121,14 @@ folgendem Befehl ein Commit hochgeladen werden:
     $ git push
 \end{lstlisting}
 
-Um mögliche Änderungen durch andere Mitarbeitende in das lokale Repository zu
-laden benötigt man einen sogenannten \emph{Pull}:
+Um mögliche Änderungen durch andere Mitarbeitende in das eigene lokale
+Repository zu laden, benötigt man einen sogenannten \emph{Pull}:
 
 \begin{lstlisting}[style=Bash]
     $ git pull
 \end{lstlisting}
+
+% TODO: Hier weitermachen
 
 Der Git-Workflow umfasst noch viele weitere Befehle und kann für Unerfahrene
 schnell sehr kompliziert werden. Aus diesem Grund enthalten die meisten gängigen
