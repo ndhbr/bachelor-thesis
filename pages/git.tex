@@ -134,17 +134,18 @@ Der Git-Workflow umfasst noch viele weitere Befehle und kann für Unerfahrene
 schnell sehr kompliziert werden. Aus diesem Grund enthalten die meisten gängigen
 Entwicklungsumgebungen grafische Oberflächen für die Verwendung von Git. So
 benötigt der Entwickler weder Konsole, noch tieferes Fachwissen über die genaue
-Verwendung der Befehle.
+Verwendung bzw. Syntax der Befehle.
 
 \subsubsection{Branches}
 Git bietet neben der Kontrolle und Verfolgung von Commits und Änderungen auch
-die Möglichkeit echt parallel zu arbeiten. In einem großen Softwareprojekt gibt
-es neben der Entwicklung von neuen Features meist auch zur Laufzeit auftretende
-Fehler, welche Behoben werden müssen.
+die Möglichkeit echt parallel zu arbeiten. In einem großen Softwareprojekt sind
+zur Laufzeit auftretende Fehler in der Regel unumgänglich. Um keine Kunden zu
+verlieren, müssen einige diese Fehler gegebenenfalls schnellstmöglich behoben
+werden.
 
 In diesem beispielhaften Fall, dass in einer Software ein gravierender Fehler
 auftritt, sollte möglichst schnell ein Update mit einer Lösung ausgearbeitet
-werden. Es kann jedoch sein, dass ein Teil des Entwicklungsteam gerade an einem
+werden. Es kann jedoch sein, dass ein Teil des Entwicklungsteams gerade an einem
 sehr großen neuen Feature arbeitet, welches nicht halbfertig veröffentlicht
 werden darf. Es muss also eine Lösung geben, dass eine neue Version mit dem
 behobenen Fehler veröffentlicht werden kann, ohne, dass die Arbeit an dem neuen
@@ -164,18 +165,18 @@ Zustände. Standardmäßig arbeitet man bei Git auf dem \texttt{Main}-Branch. De
 Hauptzweig sozusagen (siehe Abbildung \ref{fig:git-branch}, der weiße Strang).
 Die weißen Kugeln stellen in Abbildung \ref{fig:git-branch} jeweils einzelne
 Commits dar. Sobald ein neues Feature entwickelt wird, möchte der zuständige
-Programmierer nicht, dass sich während der Entwicklung etwas am
+Programmierer nicht, dass sich während der Entwicklung der Funktion etwas am
 restlichen Code ändert. Aus diesem Grund eröffnet der Feature-Programmierer, wie
 in Abbildung \ref{fig:git-branch} ersichtlich, einen neuen Branch auf den
-aktuellen Commit des Hauptzweigs. Wenn sich der Hauptzweig jetzt durch
-Änderungen von anderen Kollegen ändert, merkt der Feature-Programmierer nichts
-davon, weil er sich auf einem neuen Ast befindet und dabei seine ganz eigene
-Kopie des Projekts bearbeitet. Sobald er mit dem Feature fertig ist, kann er
-seinen Branch mit dem \texttt{Main}-Branch wieder zusammenführen. Falls sich in
-der Zwischenzeit die Dateien und Zeilen, die er auch bearbeitet hat, geändert
-haben, müssen die Konflikte in aller Regel manuell gelöst werden. Sollten nicht
-dieselben Zeilen bearbeitet worden sein, löst Git die Konflikte selbst und führt
-die zwei Zustände selbst zusammen.
+aktuellen Commit des Hauptzweigs (blauer Zweig). Wenn sich der Hauptzweig jetzt
+durch Änderungen von anderen Kollegen ändert, merkt der Feature-Programmierer
+nichts davon, weil er sich auf einem anderen Ast (Branch) befindet und dabei
+seine ganz eigene Kopie des Projekts bearbeitet. Sobald er mit dem Feature
+fertig ist, kann er seinen Branch mit dem \texttt{Main}-Branch wieder
+zusammenführen. Falls sich in der Zwischenzeit die Dateien und Zeilen, die auch
+er bearbeitet hat, geändert haben, müssen die Konflikte in aller Regel manuell
+gelöst werden. Sollten nicht dieselben Zeilen bearbeitet worden sein, löst Git
+die Konflikte selbst und führt die zwei Zustände automatisch zusammen.
 
 Eine bekannte Konvention unter Programmierern ist es, dass der
 \texttt{Main}-Branch immer eine lauffähige Version der Software hält. Es darf
@@ -191,20 +192,21 @@ lauffähigen Basis aufbauen.
     \label{fig:git-branch-fehler}
 \end{figure}
 
-Wie in Abbildung \ref{fig:git-branch-fehler} zu erkennen, werden auch Bugfixes
-meist in einem anderen Branch behandelt. Nun lässt sich auch die anfangs
-erläuterte Problemstellung leicht erklären. Wenn ein gravierender Softwarefehler
-auftritt, kann das Team ausgehend vom lauffähigen \texttt{Main}-Branch einen
-neuen Zweig zur Fehlerbehebung eröffnen (siehe Abbildung
-\ref{fig:git-branch-fehler}, roter Kreis). Auf diesem Zweig können sie
+Wie in Abbildung \ref{fig:git-branch-fehler} zu erkennen, werden auch
+Fehlerbehebungen (Bugfixes) meist in einem anderen Branch behandelt. Nun lässt
+sich auch die anfangs erläuterte Problemstellung leicht erklären. Wenn ein 
+gravierender Softwarefehler auftritt, kann das Team ausgehend vom lauffähigen
+\texttt{Main}-Branch einen neuen Zweig zur Fehlerbehebung eröffnen (siehe
+Abbildung \ref{fig:git-branch-fehler}, roter Kreis). Auf diesem Zweig können sie
 unabhängig von der Entwicklung eines neuen Features den Fehler beheben, mit dem
 Hauptzweig zusammenführen und das Update veröffentlichen. Wenn das Feature
-fertig ist, wird es mit dem Hauptzweig zusammengeführt und der Fehler auch darin automatisch behoben. Sollte der Fehler so gravierend sein, dass er die
-Entwicklung des \texttt{Feature}-Branches hindert, kann man jederzeit den
-\texttt{Main}-Branch in den \texttt{Feature}-Branch mergen und den
+fertig ist, wird es mit dem Hauptzweig zusammengeführt und der Fehler auch darin
+automatisch behoben. Sollte der Fehler so gravierend sein, dass er die
+Entwicklung des \texttt{Feature}-Branches hindert, kann man jederzeit den nun
+fehlerfreien \texttt{Main}-Branch in den \texttt{Feature}-Branch mergen und den
 \texttt{Feature}-Branch somit wieder auf den aktuellen Stand bringen. Mergen
 heißt hier nichts anderes als das Zusammenführen zweier Codebasen. Dies ist auch
 sinnvoll, wenn die Entwicklung eines Features einen längeren Zeitraum
 beansprucht. Ansonsten geht man die Gefahr ein, dass sich der Hauptzweig bei der
 Zusammenführung so sehr verändert hat, dass er dem \texttt{Feature}-Zweig zu
-sehr differenziert und eine Zusammenführung sehr viel manuelle Arbeit erfordert.
+sehr differenziert und ein Merge sehr viel manuelle Arbeit erfordert.

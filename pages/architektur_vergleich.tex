@@ -4,12 +4,12 @@
 CS50 ist die ursprüngliche Bezeichnung eines Lernkurses über Informatik,
 welcher von der Harvard University ins Leben gerufen wurde und weiterhin
 betreut wird. Der Kurs wurde aufgrund seines Erfolgs digitalisiert und wird nun
-als CS50x auf der Lernplattform edX angeboten. Folgende Recherchen und Aussagen
-sind jeweils immer auf die Online-Version CS50x bezogen.
+als CS50x auf der Online-Lernplattform edX angeboten. Folgende Recherchen und
+Aussagen über CS50 sind jeweils immer auf die Online-Version CS50x bezogen.
 
-Der Kurs CS50 lehrt Schüler die Grundlagen der
-Informatik. Dabei werden diverse Programmierübungen abgefragt. Aufgrund der
-hohen Anzahl an Teilnehmern besitzt der Kurs ein automatisiertes Abgabe- und Benotungssystem.
+Der Kurs CS50 lehrt Schülerinnen und Schüler die Grundlagen der Informatik.
+Dabei werden diverse Programmierübungen abgefragt. Aufgrund der hohen Anzahl an
+Teilnehmenden besitzt der Kurs ein automatisiertes Abgabe- und Benotungssystem.
 
 Das System hinter CS50 wird mittlerweile vielfältig eingesetzt und wurde zu
 einem universalen Online-Lernsystem erweitert. Jeder kann sich durch eine
@@ -17,29 +17,31 @@ Authentifizierung über die Plattform GitHub im Abgabesystem von CS50 einloggen
 und eigene Kurse erstellen. \parencite{cs50}
 
 \paragraph{Ablauf für Studierende}
-Dem Teilnehmer wird jede Woche ein neues Kapitel präsentiert. Er kann sich dabei
-sowohl durch ein Vorlesungsvideo, als auch durch geschriebene Materialien über
-das Thema der Woche informieren. Mit Beginn der Woche bekommt der Teilnehmer
-neben den Materialien auch Programmieraufgaben, welche er mit dem vorher
-genannten System bearbeiten kann. \parencite{cs50-edx}
+Den Teilnehmerinnen und Teilnehmern wird jede Woche ein neues Kapitel
+präsentiert. Dabei können sie sich sowohl durch ein Vorlesungsvideo, als auch
+durch geschriebene Materialien über das Thema der Woche informieren. Mit Beginn
+der Woche bekommen die Teilnehmenden neben den Materialien auch
+Programmieraufgaben, welche sie mit dem vorher genannten System bearbeiten
+können. \parencite{cs50-edx}
 
 Die Programmieraufgaben können wahlweise über die, auf AWS Cloud9 basierenden,
-Online-Entwicklungsumgebung \glqq CS50-IDE\grqq{} von Harvard oder in jeder
-anderen beliebigen Entwicklungsumgebung der Wahl bearbeitet werden. Dies
-wird durch die Architektur des Systems ermöglicht. Jede Funktionalität der
-Automatisierung geschieht durch Kommandozeilen-Tools. Dieses System hat den
-Vorteil, dass es unabhängig von der eingesetzten IDE funktioniert, es wird
-lediglich ein Terminal mit den jeweiligen Tools benötigt. \parencite{cs50-ide}
+Online-Entwicklungsumgebung \emph{CS50-IDE} von Harvard oder in jeder anderen
+beliebigen Entwicklungsumgebung der Wahl bearbeitet werden. Dies wird durch die
+flexible Architektur des Systems ermöglicht. Jede Funktionalität des
+vollautomatisierten Kurses geschieht durch öffentlich bereitgestellte
+Kommandozeilen-Tools. Dieses System hat den Vorteil, dass es unabhängig von der
+eingesetzten IDE (Entwicklungsumgebung) funktioniert, es wird lediglich ein
+Terminal mit den jeweiligen Tools benötigt. \parencite{cs50-ide}
 
-Vor der Abgabe der endgültigen Lösung mit dem sogenannten Werkzeug
-\glqq submit50\grqq{}, ist es möglich den Code mit einem weiteren Werkzeug
-namens \glqq check50\grqq{} überprüfen zu lassen. Außerdem gibt es viele weitere
-Werkzeuge, ein Beispiel hierfür ist \glqq style50\grqq{}, welches die Qualität
-und den Style des Programmcodes überprüft und bewertet. \parencite{submit50}
+Um einen Lösungsversuch abzugeben wird das sogenannte Werkzeug \emph{submit50}
+verwendet. Um den Code vor Abgabe auf Fehler zu überprüfen, stellt Harvard das
+Tool \emph{check50} bereit. Auch die Sauberkeit und Qualität des Codes kann
+mithilfe eines Werkzeugs überprüft werden. Hierfür heißt die Softwarelösung
+\emph{style50}. \parencite{submit50}
 
 \paragraph{Ablauf für Lehrende}
 Um eigene Programmierkurse auf Basis der CS50-Technik zu erstellen, stellt
-Harvard die me50-Plattform kostenfrei zur Verfügung. Hierzu müssen Lehrende
+Harvard die \emph{me50-Plattform} kostenfrei zur Verfügung. Hierzu müssen Lehrende
 genau folgenden Link in ihrem Browser eingeben:
 \url{https://submit.cs50.io/courses/new}. Der Link führt zu
 einer Seite, um einen neuen Kurs anzulegen. Auf die Erstellungsseite gelangt man
@@ -56,16 +58,17 @@ der Erstellung eines Problems kann der sogenannte Slug (Name des Problems) in
 den Kurseinstellungen referenziert werden. Dadurch wird die Aufgabe automatisch
 im Kurs angezeigt.
 
-In der Kursübersicht können Lehrende die Abgaben und Versuche der Studierenden
-sehen. Bei jedem Eintrag ist jeweils die erreichte Punktzahl von check50 und
-style50 sichtbar. Eine Übersicht der Abgaben können Dozenten jederzeit in Form
-einer .csv- oder als .json-Datei pro Aufgabe heruntergeladen werden.
+In der Kursübersicht der me50-Plattform können Lehrende die Abgaben und Versuche
+der Studierenden sehen. Bei jedem Eintrag ist jeweils die erreichte Punktzahl
+von check50 und style50 sichtbar. Eine Übersicht der Abgaben können Dozenten
+jederzeit in Form einer .csv- oder als .json-Datei pro Aufgabe heruntergeladen
+werden.
 
 \paragraph{Architektur}
 Die Harvard University hält den Aufbau von CS50 weitestgehend transparent.
 Viele der eingesetzten Werkzeuge sind öffentlich als Open-Source-Projekte unter
-der GitHub-Organisation \glqq CS50\grqq{} zu finden \parencite{cs50-github}. Darunter
-befinden sich unter anderem folgende Projekte:
+der GitHub-Organisation \glqq CS50\grqq{} zu finden \parencite{cs50-github}.
+Darunter befinden sich unter anderem folgende Projekte:
 \begin{itemize}
 \item submit50: Abgabe von Code
 \item check50: Funktionalitätstests des Codes
@@ -79,7 +82,8 @@ befinden sich unter anderem folgende Projekte:
 In Abbildung \ref{fig:cs50-architektur} ist der Aufbau der Lernplattform CS50
 vereinfacht grafisch dargestellt. Die Rechtecke und Menschen sind die
 beteiligten Komponenten. Die Pfeile zwischen den Komponenten beschreiben die
-verbindende Relation. Von der \glqq CS50-Programm\grqq-Komponente ausgehende gestrichelte Pfeile zeigen, je nach ausgeführtem Befehl, mögliche Relationen.
+verbindende Relation. Von der \texttt{CS50-Programm}-Komponente ausgehende
+gestrichelte Pfeile zeigen, je nach ausgeführtem Befehl, mögliche Relationen.
 
 \begin{figure}[h]
     \centering
@@ -90,7 +94,7 @@ verbindende Relation. Von der \glqq CS50-Programm\grqq-Komponente ausgehende ges
 \end{figure}
 
 Teilnehmer dieses Online-Lehrangebots erhalten von den Dozenten einen
-Einladungslink zum Kurs. Dieser Links führt sie zur me50-Plattform
+Einladungslink zum Kurs. Dieser Link führt sie zur me50-Plattform
 (https://submit.cs50.io/), welche gleichzeitig als Aufgabenübersicht dient.
 Auf dieser Plattform können Studierende sowohl ihre Abgaben, als auch ihre Kurse
 übersichtlich verwalten. Neben der Weiterleitung zur me50-Plattform wird
@@ -98,17 +102,16 @@ gleichzeitig in der me50-GitHub-Organisation ein leeres Repository mit dem
 GitHub-Username des Teilnehmers angelegt.
 
 Nach Annahme des Einladungslinks können Studierende in jeder beliebigen
-Entwicklungsumgebung (IDE) die Aufgaben auf der Plattform CS50-Plattform
+Entwicklungsumgebung die Aufgaben auf der CS50-Plattform
 (https://cs50.harvard.edu/) lösen. Das Korrigieren und Abgeben der Aufgabe
-benötigt mindestens die Kommandozeilen-Tools \texttt{check50} und
-\texttt{submit50}. Diese sind über den Python-Paketmanager frei verfügbar.
-Harvard stellt außerdem eine kostenlose Online-IDE bereit, welche die genannten
-Python-Programme bereits zur Verfügung stellt.
+benötigt mindestens Zugriff auf die Kommandozeilen-Tools check50 und submit50.
+Diese sind über den Python-Paketmanager frei verfügbar. Harvard stellt außerdem
+eine kostenlose Online-IDE bereit, welche die genannten Python-Programme bereits
+vorinstalliert zur Verfügung stellt.
 
 Sobald der Studierende eine Aufgabe erfolgreich gelöst hat, kann er mithilfe des
-Namen der Aufgabe die Lösung überprüfen und schließlich abgeben. Hierfür wird
-lediglich der Name der Aufgabe benötigt. Eine Abgabe über die Konsole kann dann
-beispielsweise so aussehen:
+Namens der Aufgabe die Lösung überprüfen und schließlich abgeben. Eine Abgabe
+über die Konsole kann dann beispielsweise so aussehen:
 
 \begin{lstlisting}[style=Bash]
     ~/hello/ $ submit50 cs50/problems/2021/x/hello
@@ -125,10 +128,10 @@ beispielsweise so aussehen:
 \end{lstlisting}
 
 Der Parameter \texttt{cs50/problems/20212/x/hello} im Aufruf von submit50 ist
-der im vorherigen Abschnitt erläuterte Slug. Das Programm check50 wird
-beispielsweise ebenfalls mit dem Slug als Parameter aufgerufen. Mit dieser
-Information wissen die Werkzeuge, mit welcher Aufgabe sie die Lösung des
-Teilnehmenden vergleichen sollen.
+der im vorherigen Abschnitt erläuterte Slug. Das Programm check50 wird ebenfalls
+mit dem Slug als Parameter aufgerufen. Mit dieser Information wissen die
+Programme, mit welcher Aufgabe sie die Lösung des Teilnehmenden vergleichen
+sollen.
 
 Die letzte Zeile verlinkt erneut auf die me50-Plattform und zeigt dem
 Kursteilnehmer seine Abgaben dieser Aufgabe und seine damit erreichte
@@ -139,12 +142,11 @@ Beispiels hätte die Plattform folgenden Branch in dem Repository angelegt
 \texttt{cs50/problems/2021/x/hello}. Durch die Commit-History in diesem Branch 
 kann man später den Verlauf der Versuche nachverfolgen.
 
-% TODO: Branch, Commit erklären?
-
 \paragraph{Probleme beim Einsatz für die OTH}
-Die Toolchain von CS50 wäre adäquat für den Einsatz an der OTH-Regensburg.
-Eines der Projekte ist aktuell noch nicht Open-Source: die Website zur
-Erstellung von neuen Kursen, Abgaben und Mitgliederverwaltung.
+Die Toolchain von CS50 wäre grundsätzlich adäquat für den Einsatz an der
+OTH-Regensburg. Jedoch ist eines der Projekte aktuell noch nicht Open-Source:
+die Website zur Erstellung von neuen Kursen, Abgaben und Mitgliederverwaltung. 
+Das heißt, dass der Quellcode dieses Projekts nicht öffentlich zugänglich ist.
 
 Dieses Projekt ist gleichzeitig der größte Bestandteil des Netzwerks und ist
 deshalb essenziell für die Verwendung der Werkzeuge an der Regensburger
@@ -164,12 +166,12 @@ machen. Die Zielgruppe von Code FREAK bezieht sich hierbei explizit auf
 Universitäten und Einrichtungen einer höheren Bildung.
 \parencite{codefreak-startseite}
 
-Des Weiteren wirbt Code FREAK mit einer LMS-Integration. LMS ist die englische
-Abkürzung für Learning Management System (dt. Lernplattform). Viele Schulen und
-Universitäten verwenden bekannte LMS-Systeme, wie Moodle, um Kurse, Fächer und
-Studierende zu verwalten \parencite{moodle}.
-Dies hat den Vorteil, dass Studierende kein extra Nutzerkonto für Code FREAK
-anlegen müssen. Sie können sich direkt mit ihrem gewohnten Zugang anmelden.
+Des Weiteren wirbt Code FREAK mit einer \emph{LMS-Integration}. LMS ist die
+englische Abkürzung für Learning Management System (Lernplattform). Viele
+Schulen und Universitäten verwenden bekannte LMS-Systeme, wie Moodle, um Kurse,
+Fächer und Studierende zu verwalten \parencite{moodle}. Dies hat den Vorteil,
+dass Studierende kein extra Nutzerkonto für Code FREAK anlegen müssen. Sie
+können sich direkt mit ihrem gewohnten Hochschulzugang anmelden.
 
 \paragraph{Ablauf für Studierende}
 Studierende können nach Anmeldung am System, an für sie sichtbaren Kursen
@@ -179,9 +181,11 @@ enthalten. Sobald der Einladungslink zum Assignment akzeptiert
 wurde, kann die teilnehmende Person alle Tasks aus dem Assignment sehen und
 bearbeiten. Die einzelnen Aufgaben können dann entweder über die integrierte
 Online-Entwicklungsumgebung, durch Hochladen der Lösung, oder durch die Angabe
-eines Git-Repository-Links bearbeitet werden.
+eines Git-Remote-Repository-Links bearbeitet werden.
 
-Mit dem Klick auf den Knopf \glqq Start Evaluation\grqq{} wird hochgeladene
+% TODO: Unit Tests erklären?
+‚
+Mit dem Klick auf den \glqq Start Evaluation\grqq{} Knopf wird die hochgeladene
 Lösung der Aufgabe überprüft. Die Ergebnisse der einzelnen Test-Schritte können
 dann in einem weiteren Tab eingesehen werden. Zu den Test-Schritten können neben
 üblichen Unit-Tests auch Stylechecks gehören. Ein Stylecheck kann zum Beispiel
@@ -193,10 +197,11 @@ Assignment-Ansicht auf einen Blick, welche Aufgaben er bereits gelöst hat.
 
 \paragraph{Ablauf für Lehrende}
 Lehrende haben in Code FREAK die Möglichkeit Aufgaben im Task Pool zu
-erstellen. Im Task Pool können beliebig viele Tasks angelegt werden. In der
-Aufgabenkonfiguration können neben der Anleitung auch die einzelnen
-Test-Schritte festgelegt werden. Es können mehrere Testabläufe erstellt werden,
-um beispielsweise neben dem Ergebnis auch auf die Code-Qualität zu testen.
+erstellen. Im Task Pool können beliebig viele Tasks angelegt werden. Bei der
+Aufgabenkonfiguration ist es neben dem Erstellen der Anleitung auch möglich die
+einzelnen Test-Schritte festgelegzulegen. Außerdem können mehrere nacheinander
+ablaufende Testabläufe erstellt werden. So kann beispielsweise neben dem
+Ergebnis auch die Code-Qualität getestet werden.
 
 Anschließend können Lehrende Assignments erstellen, welche aus den vorher
 angelegten Tasks im Task Pool bestehen. Der Task Pool hat den Vorteil, dass
@@ -210,38 +215,39 @@ werden.
 
 \paragraph{Architektur}
 Code FREAK wird als fertiger Docker-Container ausgeliefert. Docker ist eine
-Software um mithilfe von Containervirtualisierung einzelne Anwendungen
+Software, um mithilfe von Containervirtualisierung einzelne Anwendungen
 voneinander zu isolieren. Durch die Containervirtualisierung werden unter
-anderem viele Abhängigkeits- und Einrichtungsprobleme beseitigt. Der Container
-enthält alle Bibliotheken und Abhängigkeiten, die die Software für die Laufzeit
-benötigt \parencite{docker}. Docker entstand auf Basis von Linux-Containern, welche
-ein oder mehrere Prozesse vom restlichen System isolieren können 
+anderem viele Abhängigkeits-, Sicherheits-, Netzwerk- und Einrichtungsprobleme
+beseitigt. Der Container enthält alle Bibliotheken und Abhängigkeiten, die die
+Software für die Laufzeit benötigt \parencite{docker}. Docker entstand auf Basis
+von Linux-Containern, welche ein oder mehrere Prozesse vom restlichen System
+isolieren können 
 \parencite{linux-container}.
 
 Durch diese Handhabung kann Code FREAK mit nur einem Befehl in der
 Kommandozeile installiert und gestartet werden. Die Software benötigt
 grundsätzlich nur einen Container. Benutzt ein Studierender jedoch die
-integrierte Online-Entwicklungsumgebung (Online-IDE), muss für jede Instanz ein
-zusätzlicher Container mit der Laufzeitumgebung der IDE gestartet werden. Jeder
-weitere Container benötigt weiteren Arbeitsspeicher.
+integrierte Online-Entwicklungsumgebung, muss für jede Instanz ein zusätzlicher
+Container mit der Laufzeitumgebung der IDE gestartet werden. Jeder weitere
+Container benötigt weiteren Arbeitsspeicher und erhöht dabei die Prozessorlast.
 
 \paragraph{Probleme beim Einsatz für die OTH}
 Beim Einsatz von Code FREAK an der Hochschule Regensburg gibt es einige
 Probleme. Das erste Problem bezieht sich auf den vorher erwähnten
 Arbeitsspeicher. Die Praxis zeigt, dass eine Instanz der Online-IDE schon nach
-wenigen Dateien ~3 Gigabytes an Arbeitsspeicher verwendet. Um eine reibungslose
-und parallele Nutzung für alle Studierende des Kurses gewährleisten zu können,
-werden dementsprechend sehr hohe Serverkosten fällig. 
+wenigen Quellcodedateien rund drei Gigabytes an Arbeitsspeicher verwendet. Um
+eine reibungslose und parallele Nutzung für alle Studierenden des Kurses
+gewährleisten zu können, werden dementsprechend sehr hohe Serverkosten fällig. 
 \parencite{codefreak-memory-problem}
 
 Eine weitere Hürde ist die Stabilität der Software. Code FREAK befindet sich,
 Stand heute, mitten in der Entwicklung, weshalb einige Funktionen und Features
-noch nicht ordnungsgemäß funktionieren. Darunter die vorher geworbene
+noch nicht ordnungsgemäß funktionieren. Darunter die vorher angeworbene
 LMS-Integration \parencite{codefreak-docs}. Zum heutigen Zeitpunkt ist LDAP die
 einzige Möglichkeit sich mit dem System zu authentifizieren. Ein eigenes
-Anmeldeverfahren gibt es nicht.
+Anmeldeverfahren gibt es bisher noch nicht.
 
-LDAP steht für \glqq Lightweight Directory Access Protocol\grqq{} und ist ein
+\emph{LDAP} steht für Lightweight Directory Access Protocol und ist ein
 Netzwerkprotokoll zur Durchführung von Abfragen und Änderungen in einem 
 verteilten Verzeichnisdienst. LDAP ist der De-facto Industriestandard für
 Authentifizierung und Autorisierung. \parencite{ldap}
@@ -265,10 +271,10 @@ zu benoten. Dabei enthalten die von GitHub Classroom erstellten
 Aufgaben-Repositories bereits vorkonfigurierte Zugriffskontrollen. \parencite{github-classroom-startseite}
 
 \paragraph{Ablauf für Studierende}
-Studierende bekommen pro Programmieraufgabe einen Einladungslink.
-Nach Annahme der Einladung wird pro Studierenden automatisch ein Repository für
-die jeweilige Aufgabe angelegt. Dieses Repository enthält die Vorlage,
-welche zum Bearbeiten der Aufgabe benötigt wird.
+Studierende bekommen pro Programmieraufgabe einen Einladungslink. Nach Annahme
+der Einladung wird pro Studierenden automatisch ein Repository für die jeweilige
+Aufgabe angelegt. Dieses Repository enthält die Vorlage, welche zum Bearbeiten
+der Aufgabe benötigt wird.
 
 Sobald der Studierende eine Lösung zur Korrektur abgeben möchte, kann er per
 Push die Änderungen in das Remote-Repository hochladen. Je nach Konfiguration
@@ -293,7 +299,7 @@ alle Repositories als .ZIP-Datei herunterzuladen.
 GitHub Classroom ist ein Bildungsservice der Firma GitHub Inc. und ist Stand
 heute kostenfrei \parencite{github-classroom-kostenlos}. Die Software basiert
 auf der Automatisierung von Repositories. Jeder bei GitHub registrierte Nutzer,
-kann einen sogenannten \glqq Classroom\grqq erstellen und darin Aufgaben auf
+kann einen sogenannten \emph{Classroom} erstellen und darin Aufgaben auf
 Basis vorhandener öffentlichen GitHub-Repositories erstellen.
 
 \paragraph{Probleme beim Einsatz für die OTH}
@@ -301,7 +307,7 @@ Es gibt keine Möglichkeit das System von GitHub Classroom auf einen lokalen
 Git-Server zu replizieren. Aufgrund dessen schafft man sich durch die
 Verwendung von Classroom eine externe Abhängigkeit an GitHub. Dies kann unter
 Umständen zu erheblichen Problemen führen, wenn der Dienst beispielsweise
-nicht erreichbar oder aufgelöst wird. Ersteres ist durch die Größe und
+nicht erreichbar oder aufgelöst wird. Beides ist durch die Größe und
 Infrastruktur des Unternehmens nicht (häufig) zu erwarten.
 
 Eine weitere Hürde ist der Bedarf an weiterer Software. GitHub Classroom alleine
@@ -310,8 +316,8 @@ Skills geeignet zu sein. Hier bietet es sich an, eine eigene statische Website
 mit Anleitungen und Erklärungen zu bauen, welche dann jeweils auf Classroom
 Einladungslinks verweist. Als Online-Entwicklungsumgebung kann der Dienst Replit
 verwendet werden. In Replit ist es möglich, ein vorhandenes Git-Repository als
-Template für eine neue Umgebung zu verwenden. Dieses Template könnte
-Wrapper-Programme für den git-Workflow enthalten. Der Vorteil daran:
+Template (Vorlage) für eine neue Umgebung zu verwenden. Dieses Template könnte
+dann Hilfsprogramme für den Git-Workflow enthalten. Der Vorteil daran:
 Studierende bekommen erste Erfahrungen mit der Kommandozeile, müssen jedoch
 keine komplexen Git-Kommandos absetzen.
 
@@ -328,8 +334,8 @@ aus der Sicht der Lehrenden wider.
 Die erste Spalte enthält die Namen der Anforderungen, während die zweite Spalte
 eine jeweilige Gewichtung der Anforderung enthält. Der valide Bereich dieser
 Spalte befindet sich zwischen, einschließlich 0,00 und einschließlich 1,00. Eine
-1,00 bedeutet, dass die Anforderung sehr wichtig ist. Je niedriger der Wert,
-desto unwichtiger die Anforderung.
+1,00 bedeutet, dass die Anforderung für den Einsatz an der Hochschule sehr
+wichtig ist. Je niedriger der Wert, desto unwichtiger die Anforderung.
 
 Die Spalten drei, vier und fünf enthalten die Benotungen der Systeme zu den
 Anforderungen. Hierbei gilt ähnlich wie bei der Gewichtung: je höher der Wert,
@@ -346,6 +352,7 @@ mit der in der zweiten Spalte enthaltenen Gewichtung.
     \label{fig:systemvergleich}
 \end{figure}
 
-Zusammenfassend befinden sich in der letzten Zeile der Tabelle die Summen der Benotungen. In diesem Fall hat das System mit GitHub Classroom die meisten
-Punkte erreicht und wird somit als geeigneter Kandidat für die
-Programmierplattform des Zusatzstudiums Digital Skills weiter evaluiert.
+Zusammenfassend befinden sich in der letzten Zeile die Summen der Benotungen. In
+diesem Fall hat das System mit GitHub Classroom die meisten Punkte erreicht und
+wird somit als geeigneter Kandidat für die Programmierplattform des
+Zusatzstudiums Digital Skills weiter evaluiert.
