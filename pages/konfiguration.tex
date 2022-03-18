@@ -63,59 +63,69 @@ nicht geplanten Eingaben vergeben. \parencite{github-assignment-erstellen}
 
 % TODO: Hier weitermachen
 
+\newpage
+
 % Replit
 \subsection{Erstellung eines Replit-Starter-Templates}\label{replit-template}
 \subsubsection{Template-Repository}\label{replit-template-repository}
 % TODO: Quelle?
-Projekte in Replit heißen Repls. Ein Projekt ist in Replit ein vollumfänglicher
-Arbeitsbereich, um neue oder bestehende Software zu entwickeln. Neben einer
-Dateiübersicht, einem Texteditor und einer Konsole enthält der Arbeitsbereich
-viele weitere Funktionen. Dazu zählt unter anderem eine eingebaute Oberfläche
-für die Versionskontrolle git, ein Debugger, eine lokale Key-Value-Datenbank,
-private Umgebungsvariablen, sowie ein spezieller Bereich für Unit-Tests.
+Projekte in Replit heißen \emph{Repls}. Ein Projekt ist in Replit ein
+vollumfänglicher Arbeitsbereich, um neue oder bestehende Software zu entwickeln.
+Neben einer Dateiübersicht, einem Texteditor und einer Konsole enthält der
+Arbeitsbereich viele weitere Funktionen. Dazu zählt unter anderem eine
+eingebaute Oberfläche für die Versionskontrolle Git, ein Quellcode-Debugger,
+eine lokale Key-Value-Datenbank, private Umgebungsvariablen, sowie ein
+spezieller Bereich für Unit-Tests.
 
 Repls können auf Basis von bestehenden GitHub Repositories erzeugt werden. Durch
 den Import eines Repositories, werden alle im Repository vorhandenen Dateien
 in den neuen Arbeitsbereich kopiert. Diese Funktionalität ermöglicht das
 Bereitstellen von Hilfsprogrammen und Dateien, die die Bearbeitung der
-Kursaufgaben erleichtern.
+Kursaufgaben für den Teilnehmenden erleichtern.
 
 Aus diesem Grund wurde ein öffentliches Repository in der vorher erstellten
 GitHub Organisation angelegt. Dies ist das Template, welches später von den
-Studierenden als Starter-Vorlage verwendet wird. Replit versteckt Dateien,
-welche sich in einem Ordner namens \texttt{/node\_modules} befinden.
+Studierenden als Starter-Vorlage verwendet wird. Replit versteckt alle Dateien,
+welche sich in einem Ordner namens \texttt{node\_modules} befinden.
 Normalerweise wird der Ordner automatisch im Kontext mit externen Modulen der
 JavaScript-Bibliothek Node.js verwendet \parencite{nodejs}. Das ist auch der Grund
 weshalb Replit diesen Ordner automatisch versteckt. Dieses Verhalten nutzen wir,
 um Hilfsprogramme und Konfigurationen zu verstecken.
 
-Studierende werden den ganzen Kurs in einem Repl absolvieren. Jede
-Programmieraufgabe wird als Ordner im Projekt-Repl abgespeichert werden. Um die
-Aufgaben herunterladen, prüfen und schließlich abgeben zu können, benötigt
-man git-Kenntnisse, sowie Erfahrungen mit Test-Frameworks, wie zum Beispiel 
-pytest. Im \texttt{/node\_modules}-Ordner des Starter-Templates befinden sich
-diverse Wrapper-Tools, welche dem Studierenden die Arbeit abnehmen und sie dabei
+Studierende werden den ganzen Kurs in einem einzigen Repl absolvieren. Jede
+Programmieraufgabe wird als Ordner im Repl Arbeitsbereich abgespeichert. Um die
+Aufgaben herunterladen, prüfen und schließlich abgeben zu können, benötigt man
+Git-Kenntnisse, sowie Erfahrungen mit Test-Frameworks, wie zum Beispiel pytest.
+Im \texttt{node\_modules}-Ordner des Starter-Templates befinden sich diverse
+Hilfsprogramme, welche den Studierenden die Arbeit abnehmen und sie dabei
 unterstützen.
 
-\subsubsection{Wrapper-Tools (get, check, submit)}
+\subsubsection{Hilfsprogramme (get, check, submit)}
 \label{replit-template-wrapper-tools}
-Die Wrapper-Tools \texttt{get}, \texttt{check} und \texttt{submit} sind
-Bash-Skripte. Über den Konsolenbefehl \texttt{get <PROJEKT-REPOSITORY>} kann der
-Studierende die Aufgabe in seinen Arbeitsbereich laden. Das Skript durchsucht
-die im Code definierte Organisation nach einem Repository mit dem Namen und
-lädt es schließlich über den Befehl \code{git clone} in den Arbeitsbereich.
+Die Kommandozeilen-Tools \texttt{get}, \texttt{check} und \texttt{submit} sind
+\emph{Bash}-Skripte. Über den Konsolenbefehl \texttt{get <PROJEKT-REPOSITORY>} kann der
+Studierende die Aufgabe in seinen Arbeitsbereich (Repl) laden. Das Skript
+durchsucht die im Code definierte Organisation nach einem Repository mit dem
+Namen und lädt es schließlich über den Befehl \code{git clone} in den
+Arbeitsbereich.
 
-Der Befehl \texttt{check <PROJEKT-REPOSITORY>} erlaubt es die Aufgabe auf Fehler zu
-überprüfen. In jedem Aufgabenrepository befindet sich eine
+Der Befehl \texttt{check <PROJEKT-REPOSITORY>} erlaubt es die Aufgabe auf Fehler
+überprüfen zu lassen. In jedem Aufgabenrepository befindet sich eine
 \texttt{.language}-Datei, welche die für die Aufgabe verwendete
 Programmiersprache enthält. Das \texttt{check}-Skript liest die
 \texttt{.language}-Datei aus und entscheidet daraufhin, welche Befehle zum
 Ausführen der Tests nötig sind. Python ist die vom Zusatzstudium Digital Skills
 verwendete Programmiersprache. In diesem Fall installiert das Skript zuerst die
-nötigen Abhängigkeiten mit \code{pip3 install pytest --quiet}. Der Parameter
-\code{--quiet} verhindert für den Teilnehmer unübersichtliche Konsolenausgaben.
-Sobald das Testframework für Python installiert ist, führt das Skript den Befehl
-\code{pytest} aus und startet somit die Ausführung der Korrekturtests.
+nötigen Abhängigkeiten mit
+
+\begin{lstlisting}[style=Bash]
+    $ pip3 install pytest --quiet
+\end{lstlisting}
+
+Der Parameter \code{-{}-quiet} verhindert für den Teilnehmer unübersichtliche
+Konsolenausgaben. Sobald das Testframework für Python installiert ist, führt das
+Skript den Befehl \code{pytest} aus und startet somit die Ausführung der
+Unit-Tests.
 
 Schließlich pusht der Befehl \texttt{submit <PROJEKT-REPOSITORY>}
 den Lösungsversuch in das GitHub Classroom Aufgabenrepository des
@@ -127,14 +137,19 @@ in die GitHub-Organisation des Kurses hoch.
 Damit die Skripte Ordnerunabhängig ausgeführt werden können, werden
 Konsolenaliase benötigt. Konsolenaliase können in einer Bash-Konsole
 beispielsweise über das Anhängen folgender Zeile an die \texttt{.bashrc}-Datei
-erstellt werden: \texttt{alias befehl="echo Hallo"}. Bash ist eine Art
-\glqq Standard-Shell\grqq{} unter Linux und wird auch von Replit als Konsole
-eingesetzt \parencite{bash}. Bei jeder neuen Konsolensitzung wird dann der Alias aus
-der Datei eingelesen und angewendet. Die genannte Datei befindet sich in der
-Regel im Benutzerverzeichnis, welches außerhalb des Arbeitsbereiches in Replit
-liegt. Alle Änderungen außerhalb des Arbeitsbereiches werden jedoch von Replit
-nach jeder Sitzung zurückgesetzt. Um dieses Problem zu beheben, wurde die nun
-folgende OTH-Console eingeführt.
+erstellt werden:
+
+\begin{lstlisting}[style=Bash]
+    $ alias befehl="echo Hallo"
+\end{lstlisting}
+
+Bash ist eine Art \glqq Standard-Shell\grqq{} unter Linux und wird auch von
+Replit als Konsole eingesetzt \parencite{bash}. Bei jeder neuen Konsolensitzung
+wird dann der Alias aus der Datei eingelesen und angewendet. Die genannte Datei
+befindet sich in der Regel im Benutzerverzeichnis, welches außerhalb des
+Arbeitsbereiches in Replit liegt. Alle Änderungen außerhalb des Arbeitsbereiches
+werden jedoch von Replit nach jeder Sitzung zurückgesetzt. Um dieses Problem zu
+umgehen, wurde die nun folgende \emph{OTH-Console} entwickelt.
 
 \subsubsection{OTH-Console}\label{replit-template-oth-console}
 Sobald der Student in seinem Repl auf den Run-Knopf drückt, startet die
@@ -142,30 +157,31 @@ sogenannte OTH-Console in der Konsole. Dies ist eine neue
 modifizierte Konsoleninstanz, welche alle für die Arbeit benötigten
 Konfigurationen enthält.
 
-Sobald der Run-Knopf gedrückt wird, startet das Einrichtungsskript
+Beim Start der OTH-Console beginnt die Ausführung des Einrichtungsskripts
 \texttt{setup.py}, welches die benötigten Dateien in das Benutzerverzeichnis
 schreibt.
 
-Zuerst wird eine Konfigurationsdatei für Bash angelegt. In diese
-werden alle benötigten Aliase (\texttt{get}, \texttt{submit}, \texttt{check}
-und \texttt{github}) geschrieben. Außerdem wird GitHub, falls noch
-nicht vorhanden, zu den sogenannten \glqq Known Hosts\grqq{} im SSH-Ordner
-hinzugefügt. Der Vorteil daran ist, dass der Student bei der ersten Verbindung
-mit GitHub (bspw. durch den \texttt{get}-Befehl) keine Authentizitätsprüfung
-bestätigen muss \parencite{ssh}. Als letztes wird in der Konfigurationsdatei noch das
-Aussehen des Bash Promptes festgelegt.
+Zuerst wird eine Konfigurationsdatei für Bash angelegt. In diese werden alle
+benötigten Aliase (\texttt{get}, \texttt{submit}, \texttt{check} und
+\texttt{github}) geschrieben. Außerdem wird GitHub, falls noch nicht vorhanden,
+zu den sogenannten \emph{Known Hosts} im SSH-Ordner hinzugefügt. Der Vorteil
+daran ist, dass der Student bei der ersten Verbindung mit GitHub (bspw. durch
+den \texttt{get}-Befehl) keine Authentizitätsprüfung bestätigen muss
+\parencite{ssh}. Als letztes wird in der Konfigurationsdatei noch das Aussehen
+des \emph{Bash Promptes} festgelegt.
 
 Im nächsten Schritt wird die passwortlose Authentifizierung mit GitHub
-eingerichtet. Hierzu benötigt man ein SSH-Schlüssle-Paar, welches automatisch,
+eingerichtet. Hierzu benötigt man ein SSH-Schlüssel-Paar, welches automatisch,
 falls nicht vorhanden, durch das Einrichtungsskript erzeugt wird. Nach der
 Erzeugung wird es neben dem SSH-Ordner auch in die Repl-Nutzer-Datenbank
 geschrieben. Die Datebank ist ein simpler Key-Value-Speicher, welcher jeweils
 pro Replit-Projekt existiert \parencite{replit-database}. Sobald der Studierende
-Replit neustartet und das Benutzerverzeichnis gelöscht wurde, holt sich das Einrichtungsskript die SSH-Keys aus der Datenbank und schreibt sie wieder
-zurück in die jeweiligen Dateien. Dasselbe Verfahren wird für die Konfiguration
-von Git angewandt. Git benötigt, um Änderungen zu pushen, einen Namen mit
-zugehöriger E-Mail Adresse \parencite{git-config}. Diese Daten werden zusammen mit
-den SSH-Keys in der Replit-Datenbank gespeichert.
+Replit neu startet und das Benutzerverzeichnis gelöscht wurde, holt sich das
+Einrichtungsskript die SSH-Keys aus der Datenbank und schreibt sie wieder
+zurück in die jeweiligen Dateien. Dasselbe Verfahren wird ebenfalls für die
+Konfiguration von Git angewandt. Git benötigt, um Commits zu pushen, einen 
+Namen mit zugehöriger E-Mail-Adresse \parencite{git-config}. Diese Daten werden
+zusammen mit den SSH-Keys in der Replit-Datenbank gespeichert.
 
 Nach der Ausführung des Einrichtungsskripts, wird eine neue
 Bash-Konsolen-Instanz, mit der gerade angelegten Konfigurationsdatei als
@@ -175,16 +191,17 @@ Parameter, gestartet.
 Um das vorher generierte SSH-Schlüsselpaar für die Authentifizierung gegen
 GitHub zu verwenden, muss der öffentliche Schlüssel noch zu dem GitHub Profil
 des Studierenden hinzugefügt werden. Hierfür enthält das Starter-Template ein
-weiteres Programm, welches mit dem Befehl \texttt{github} in der OTH-Console
-ausgeführt werden kann. Dieses weitere Pythonprogramm lädt den im SSH-Ordner
-gespeicherten öffentlichen Schlüssel und gibt ihn zusammen mit einem Link
-zum Hinzufügen von SSH-Keys in GitHub aus.
+weiteres Programm auf Basis von Python, welches mit dem Befehl \texttt{github}
+in der OTH-Console ausgeführt werden kann. Dieses weitere Tool lädt den im
+SSH-Ordner gespeicherten öffentlichen Schlüssel und gibt ihn zusammen mit einem
+Link zum Hinzufügen von SSH-Keys in GitHub aus.
 
 Des Weiteren überprüft das Programm, ob Git bereits konfiguriert ist. Um Commits
-zu erstellen, benötigt Git einen Namen sowie eine E-Mail-Adresse. Sind die
-benötigten Werte nicht in der Replit-Datenbank vorhanden, fragt das Programm den
-Nutzer nach dem Namen und der studentischen E-Mail-Adresse. Nach gültiger
-Eingabe der Daten werden diese Werte in der nutzerspezifischen Replit-Datenbank
-des Arbeitsbereiches hinterlegt. Damit Git die Werte übernehmen kann, werden
-sie, wie beim Einrichtungsskript auch, in eine dafür vorgesehene
-Git-Konfigurationsdatei geschrieben.
+zu erstellen, benötigt Git wie vorher bereits erwähnt einen Namen sowie eine
+dazugehörige E-Mail-Adresse. Sind die benötigten Werte nicht in der
+Replit-Datenbank vorhanden, fragt das Programm den Nutzenden nach dem Namen und
+der studentischen E-Mail-Adresse. Nach gültiger Eingabe der Daten werden diese
+Werte in der nutzerspezifischen Replit-Datenbank des Arbeitsbereiches
+hinterlegt. Damit Git die Werte übernehmen kann, werden sie, wie beim
+Einrichtungsskript auch, in eine dafür vorgesehene Git-Konfigurationsdatei
+geschrieben.

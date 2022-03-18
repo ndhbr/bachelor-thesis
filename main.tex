@@ -24,13 +24,8 @@
 % Internet
 %\geometry{left=3.5cm, right=2.5cm, top=2.5cm, bottom=2cm}
 % Kern
-\geometry{a4paper, top=27mm, left=20mm, right=20mm, bottom=35mm, headsep=10mm, footskip=12mm}
-
-% Abstände Überschrift (Kern)
-% \usepackage{titlesec}
-% \titlespacing{\section}{0pt}{12pt plus 4pt minus 2pt}{8pt plus 2pt minus 2pt}
-% \titlespacing{\subsection}{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
-% \titlespacing{\subsubsection}{0pt}{12pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+\geometry{a4paper, top=27mm, left=20mm, right=20mm, bottom=35mm, headsep=10mm,
+footskip=12mm}
 
 % bricht lange URLs "schön" um
 \usepackage[hyphens,obeyspaces,spaces]{url}
@@ -45,7 +40,10 @@
 \setlength{\parskip}{1em}
 
 % Paket für Zeilenabstand
-\usepackage[onehalfspacing]{setspace}
+\usepackage{setspace}
+\onehalfspacing
+% Kern:
+% \setstretch{1.15}
 
 % für Bildbezeichner
 \usepackage{capt-of}
@@ -65,17 +63,6 @@
 % Konfiguriere das Inhaltsverzeichnis
 \usepackage{tocbasic}
 
-% \DeclareTOCStyleEntries[
-%   raggedentrytext,
-%   numwidth=0pt,
-%   numsep=1ex,
-%   dynnumwidth,
-% ]{tocline}{chapter,section,subsection,subsubsection,paragraph,subparagraph}
-% \DeclareTOCStyleEntries[
-%   indent=0pt,
-%   linefill=\TOCLineLeaderFill,
-% ]{tocline}{section,subsection,subsubsection,paragraph,subparagraph}
-
 % subsubsubsection durch paragraph
 \usepackage{titlesec}
 \setcounter{secnumdepth}{4}
@@ -83,6 +70,10 @@
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}
 {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% Kern:
+\titlespacing{\section}{0pt}{12pt plus 4pt minus 2pt}{8pt plus 2pt minus 2pt}
+\titlespacing{\subsection}{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
+\titlespacing{\subsubsection}{0pt}{12pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
 
 % Titel
 \title{Bachelorarbeit}
