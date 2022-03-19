@@ -1,0 +1,94 @@
+\subsection{Softwaretests}
+\subsubsection{Allgemein}
+Um Programmieraufgaben vollständig automatisiert bewerten zu können, benötigt
+man eine Methode, welche es ermöglicht einzelne Funktionen oder Klassen eines
+Quellcodes auf ihre Funktionalität zu testen. In professionellen Softwareteams
+kommen oft \emph{Unit-Tests}, oder auch Modultests oder Komponententests, zum
+Einsatz. Sie dienen dazu, mit einer gewissen \emph{Code Coverage}
+(Testabdeckung) sicherstellen zu können, dass alle Komponenten einer Applikation
+ordnungsgemäß funktionieren.
+
+\subsubsection{Unit-Testing}
+Unit-Testing ist eine Methode, um Software-Quellcode zu testen. Bei dieser
+Methode werden einzelne Komponenten bzw. Einheiten (Units) des Programms
+unabhängig voneinander mit allen erforderlichen Abhängigkeiten getestet. Meist
+werden Unit-Tests von den Entwicklern geschrieben, die auch das jeweilige
+Modul des Programms entwickelt haben. In dem Fall des Online-Programmierkurses
+werden die Unit-Tests durch den Aufgabensteller erstellt. Der Studierende kann
+dann seinen Lösungsversuch der jeweiligen Übung mithilfe der bereits gegebenen
+Komponententests (Unit-Tests) überprüfen. \parencite{unit-test}
+
+In folgendem Beispiel wird mithilfe der Python Unit-Test-Bibliothek Pytest
+ein einfacher Komponententest durchgeführt:
+
+\begin{lstlisting}[style=Python]
+    # test_my_name_is.py
+
+    def my_name_is(name):
+        return f'Hallo, mein Name ist {name}'
+
+    def test_my_name_is():
+        assert my_name_is('Andreas') == 'Hallo, mein Name ist Andreas'
+\end{lstlisting}
+
+In diesem Code-Ausschnitt wird die Methode \texttt{my\_name\_is(name)} mithilfe
+der Unit-Test Funktion \code{test\_my\_name\_is()} getestet. Die Methode 
+\code{my\_name\_is(name)} in Zeile 3 hat die Aufgabe abhängig des, in der
+Variable \code{name}, übergebenen Namens die Nachricht \glqq Hallo, mein Name
+ist X \grqq{} auszugeben. Das X ist in diesem Fall der Platzhalter für die
+Variable \code{name}.
+
+Die Unit-Test Funktion \code{test\_my\_name\_is()} ruft die Methode
+\texttt{my\_name\_is(name)} mit dem Namen \glqq Andreas\grqq{} auf und
+vergleicht das Ergebnis der Funktion mit dem erwarteten Ergebnis. Entscheidend
+für diesen Vergleich ist das Keyword \code{assert}. Nun kann der Test mit
+Pytest gestartet werden. Hierfür benötigt man lediglich folgenden
+Kommandozeilen-Befehl:
+
+\begin{lstlisting}[style=Bash]
+    $ pytest test_my_name_is.py
+\end{lstlisting}
+
+Daraufhin erhält man bei bestehen des Tests folgende Ausgabe:
+
+\begin{lstlisting}[style=Bash]
+collected 1 item                                                               
+
+test_my_name_is.py .                                                                  [100%]
+
+================================ 1 passed in 0.00s =================================
+\end{lstlisting}
+
+Würde man die Methode \texttt{my\_name\_is(name)} verändern und in das
+\glqq Hallo\grqq{} ein weiteres \glqq a\grqq{} einsetzen, würde der
+Komponententest wie folgt aussehen:
+
+\begin{lstlisting}[style=Bash]
+collected 1 item                                                                                                                      
+
+test_my_name_is.py F                                                                  [100%]
+
+===================================== FAILURES =====================================
+__________________________________ test_my_name_is _________________________________
+
+    def test_my_name_is():
+>     assert my_name_is('Andreas') == 'Hallo, mein Name ist Andreas'
+E     AssertionError: assert 'Haallo, mein...e ist Andreas' == 'Hallo, mein Name ist Andreas'
+E       - Hallo, mein Name ist Andreas
+E       + Haallo, mein Name ist Andreas
+E       ?  +
+
+test_my_name_is.py:6: AssertionError
+============================= short test summary info =============================
+FAILED test_my_name_is.py::test_my_name_is - AssertionError: assert 'Haallo, mein...e ist Andreas' == 'Hallo, mein Name ist Andreas'
+================================= 1 failed in 0.01s ================================
+\end{lstlisting}
+
+Pytest schlüsselt den Fehler genau auf und visualisiert, wie in der Ausgabe
+zu erkennen, die Fehlerstelle auf das Zeichen genau. Direkt unter die erwartete
+Ausgabe gibt Pytest die tatsächliche Ausgabe aus. So kann man den entstandenen
+Fehler sehr schnell finden und beheben.
+
+Die Genauigkeit und Lesbarkeit der Ausgabe ist wichtig, dass die Studierenden
+bei den Programmierübungen wenig bis keine Schwierigkeiten bei der Bearbeitung
+haben. 
