@@ -24,9 +24,11 @@ ein einfacher Komponententest durchgeführt:
 \begin{lstlisting}[style=Python]
     # test_my_name_is.py
 
+    # Zu testende Funktion
     def my_name_is(name):
         return f'Hallo, mein Name ist {name}'
 
+    # Unit-Test Funktion
     def test_my_name_is():
         assert my_name_is('Andreas') == 'Hallo, mein Name ist Andreas'
 \end{lstlisting}
@@ -35,7 +37,7 @@ In diesem Code-Ausschnitt wird die Methode \texttt{my\_name\_is(name)} mithilfe
 der Unit-Test Funktion \code{test\_my\_name\_is()} getestet. Die Methode 
 \code{my\_name\_is(name)} in Zeile 3 hat die Aufgabe abhängig des, in der
 Variable \code{name}, übergebenen Namens die Nachricht \glqq Hallo, mein Name
-ist X \grqq{} auszugeben. Das X ist in diesem Fall der Platzhalter für die
+ist X\grqq{} auszugeben. Das X ist in diesem Fall der Platzhalter für die
 Variable \code{name}.
 
 Die Unit-Test Funktion \code{test\_my\_name\_is()} ruft die Methode
@@ -49,7 +51,7 @@ Kommandozeilen-Befehl:
     $ pytest test_my_name_is.py
 \end{lstlisting}
 
-Daraufhin erhält man bei bestehen des Tests folgende Ausgabe:
+Daraufhin erhält man beim erfolgreichen Bestehen des Tests folgende Ausgabe:
 
 \begin{lstlisting}[style=Bash]
 collected 1 item                                                               
@@ -84,11 +86,11 @@ FAILED test_my_name_is.py::test_my_name_is - AssertionError: assert 'Haallo, mei
 ================================= 1 failed in 0.01s ================================
 \end{lstlisting}
 
-Pytest schlüsselt den Fehler genau auf und visualisiert, wie in der Ausgabe
+Pytest schlüsselt den Fehler sehr genau auf und visualisiert, wie in der Ausgabe
 zu erkennen, die Fehlerstelle auf das Zeichen genau. Direkt unter die erwartete
 Ausgabe gibt Pytest die tatsächliche Ausgabe aus. So kann man den entstandenen
 Fehler sehr schnell finden und beheben.
 
 Die Genauigkeit und Lesbarkeit der Ausgabe ist wichtig, dass die Studierenden
 bei den Programmierübungen wenig bis keine Schwierigkeiten bei der Bearbeitung
-haben. 
+haben.
