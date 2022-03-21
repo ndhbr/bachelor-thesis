@@ -69,7 +69,6 @@ Nachdem die Fragen von der teilnehmenden Person beantwortet wurden, muss diese
 die Bildschirmübertragung starten. Währenddessen notiert der Beobachter die
 Ergebnisse der Fragen in eine vorher angelegte Tabelle.
 
-% TODO: Quelle Think-Aloud-Methodik
 Der Teilnehmer wird anschließend darauf hingewiesen, dass die Studie der
 Think-Aloud-Methodik folgt. Die Think-Aloud-Methode ist eine Forschungsmethode,
 bei der der Testteilnehmer darum gebeten wird, seine Gedanken laut
@@ -94,7 +93,6 @@ fünf weitere Fragen gestellt. Die Fragen müssen wie vorher in Schulnoten von 1
 bis 6 beantwortet werden. Die Ergebnisse der Fragen werden wie gewohnt vom
 Beobachter notiert und in die vorher erwähnte Datentabelle eingetragen.
 
-% TODO: Quelle Feldstudie?
 Als grober Leitfaden wird die Dauer von 30 bis 60 Minuten festgelegt, dies soll
 jedoch kein hartes Zeitlimit darstellen. Der Test soll möglichst unabhängig
 ablaufen und kann bei möglichen Unverständnissen auch deutlich länger dauern.
@@ -162,8 +160,9 @@ werden. Diese Aufgabe kann der Teilnehmer mit einer einzigen Codezeile lösen.
 Die Ausgabe der Lösung sieht dann so aus:
 
 \begin{lstlisting}[style=Bash]
-    Wie ist dein Name? Andreas
-    Hallo, mein Name ist Andreas!
+$ python main.py
+Wie ist dein Name? Andreas
+Hallo, mein Name ist Andreas!
 \end{lstlisting}
 
 Der ausgegebene Name ist wie vorher beschrieben flexibel und abhängig von der
@@ -183,13 +182,14 @@ wird. Der Name und die Anzahl an Ausgaben wird wieder per Funktion als Parameter
 übergeben. Die Ausgabe in der Konsole soll wie folgt aussehen:
 
 \begin{lstlisting}[style=Bash]
-    Wie ist dein Name? Andreas
-    Wie oft soll der Name ausgegeben werden? 5
-    Andi 0
-    Andi 1
-    Andi 2
-    Andi 3
-    Andi 4
+$ python main.py
+Wie ist dein Name? Andreas
+Wie oft soll der Name ausgegeben werden? 5
+Andi 0
+Andi 1
+Andi 2
+Andi 3
+Andi 4
 \end{lstlisting}
 
 Falls die Aufgaben reibungslos funktioniert haben, kann der Studierende
@@ -198,20 +198,20 @@ Bonusaufgabe zu lösen, muss der Teilnehmer die vorherige Aufgabe modifizieren,
 sodass die Ausgabe in der Konsole wie folgt aussieht:
 
 \begin{lstlisting}[style=Bash]
-    Wie ist dein Name? Andreas
-    Wie oft soll der Name ausgegeben werden? 5
-    Andi 1
-    Andi 2
-    Andi 3
-    Andi 4
-    Andi 5
+$ python main.py
+Wie ist dein Name? Andreas
+Wie oft soll der Name ausgegeben werden? 5
+Andi 1
+Andi 2
+Andi 3
+Andi 4
+Andi 5
 \end{lstlisting}
 
 Der Unterschied hier ist die Nummerierung. Im Standardfall zählt das Programm
 von 0 bis n - 1. Um die Bonusaufgabe zu bewältigen, muss das Programm von 1 bis
 n zählen.
 
-% TODO: Super Mario Quelle
 Die vierte und letzte Aufgabe beschäftigt sich mit der Generierung von
 Text-Pyramiden, welche der ursprünglichen Version des Videospiels Super Mario
 Bros.\copyright\footnote{Super Mario Bros.\copyright ist eine geschützte Marke
@@ -223,15 +223,16 @@ sieht beispielhaft so aus:
 
 % TODO: Höhe geht irgendwie nicht
 \begin{lstlisting}[style=Bash]
-    Height: -1
-    Height: 0
-    Height: 6
-         #
-        ##
-       ###
-      ####
-     #####
-    ######
+$ python main.py
+Höhe: -1
+Höhe: 0
+Höhe: 6
+     #
+    ##
+   ###
+  ####
+ #####
+######
 \end{lstlisting}
 
 Das Beispiel zeigt neben der Pyramide auch, dass das Skript ungültige

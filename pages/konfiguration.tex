@@ -1,13 +1,11 @@
 \section{Konfiguration und Implementierung}\label{konfiguration-u-impl}
 
-% TODO: Hier weiter machen
-
 % Tutors.dev
 \subsection{Tutors als Aufgabensammlung}\label{tutors-als-aufgabensammlung}
 % TODO: Vielleicht nachfragen?
 Da der Programmierkurs nur ein Teil eines ganzen Modulkatalogs des Kurses
 Digital Skills ist, übernimmt die Konfiguration von Tutors die hierfür
-zuständigen wissenschaftlichen Mitarbeiter des Zusatzstudiums.
+zuständigen wissenschaftlichen Mitarbeitenden des Zusatzstudiums.
 
 Für die Einpflegung der Aufgaben werden lediglich Anleitungen sowie
 jeweils dazugehörige Thumbnails (Vorschaubilder) benötigt. Die Anleitungen
@@ -44,7 +42,7 @@ Verfügung stehen. Für jedes vorher angelegte Aufgabenrepository wird ein
 Assignment erstellt. Bei der Erstellung gibt man verschiedene
 Konfigurationsparameter an. Dazu gehört die Auswahl, ob eine Aufgabe von
 Einzelpersonen, oder einer Gruppe bearbeitet werden kann, oder ob die jeweiligen
-Versuche für alle Studierenden oder nur für die Lehrer sichtbar sind. Ferner
+Versuche für alle Studierenden oder nur für die Lehrenden sichtbar sind. Ferner
 gibt es die Möglichkeit eine Deadline, sowie den Starter Code anzugeben. Für den
 Starter Code wird in diesem Fall jeweils das Aufgabenrepository ausgewählt.
 \parencite{github-assignment-erstellen}
@@ -60,8 +58,6 @@ vorkonfigurierte Punktzahl. Durch Classroom ist es außerdem möglich, jedem
 Test eine individuelle Punktzahl zuzuweisen. So kann man dem Schüler neben der
 erfolgreichen Ausführung beispielsweise noch Bonuspunkte für das Fangen von
 nicht geplanten Eingaben vergeben. \parencite{github-assignment-erstellen}
-
-% TODO: Hier weitermachen
 
 \newpage
 
@@ -119,7 +115,7 @@ verwendete Programmiersprache. In diesem Fall installiert das Skript zuerst die
 nötigen Abhängigkeiten mit
 
 \begin{lstlisting}[style=Bash]
-    $ pip3 install pytest --quiet
+$ pip3 install pytest --quiet
 \end{lstlisting}
 
 Der Parameter \code{-{}-quiet} verhindert für den Teilnehmer unübersichtliche
@@ -140,7 +136,7 @@ beispielsweise über das Anhängen folgender Zeile an die \texttt{.bashrc}-Datei
 erstellt werden:
 
 \begin{lstlisting}[style=Bash]
-    $ alias befehl="echo Hallo"
+$ alias befehl="echo Hallo"
 \end{lstlisting}
 
 Bash ist eine Art \glqq Standard-Shell\grqq{} unter Linux und wird auch von
@@ -152,7 +148,7 @@ werden jedoch von Replit nach jeder Sitzung zurückgesetzt. Um dieses Problem zu
 umgehen, wurde die nun folgende \emph{OTH-Console} entwickelt.
 
 \subsubsection{OTH-Console}\label{replit-template-oth-console}
-Sobald der Student in seinem Repl auf den Run-Knopf drückt, startet die
+Sobald der Studierende in seinem Repl auf den Run-Knopf drückt, startet die
 sogenannte OTH-Console in der Konsole. Dies ist eine neue
 modifizierte Konsoleninstanz, welche alle für die Arbeit benötigten
 Konfigurationen enthält.
@@ -165,7 +161,7 @@ Zuerst wird eine Konfigurationsdatei für Bash angelegt. In diese werden alle
 benötigten Aliase (\texttt{get}, \texttt{submit}, \texttt{check} und
 \texttt{github}) geschrieben. Außerdem wird GitHub, falls noch nicht vorhanden,
 zu den sogenannten \emph{Known Hosts} im SSH-Ordner hinzugefügt. Der Vorteil
-daran ist, dass der Student bei der ersten Verbindung mit GitHub (bspw. durch
+daran ist, dass der Studierende bei der ersten Verbindung mit GitHub (bspw. durch
 den \texttt{get}-Befehl) keine Authentizitätsprüfung bestätigen muss
 \parencite{ssh}. Als letztes wird in der Konfigurationsdatei noch das Aussehen
 des \emph{Bash Promptes} festgelegt.
