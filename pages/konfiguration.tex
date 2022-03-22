@@ -2,27 +2,27 @@
 
 % Tutors.dev
 \subsection{Tutors als Aufgabensammlung}\label{tutors-als-aufgabensammlung}
-% TODO: Vielleicht nachfragen?
 Da der Programmierkurs nur ein Teil eines ganzen Modulkatalogs des Kurses
-Digital Skills ist, übernimmt die Konfiguration von Tutors die hierfür
-zuständigen wissenschaftlichen Mitarbeitenden des Zusatzstudiums.
+Digital Skills ist, übernimmt die Einrichtung Konfiguration von Tutors die
+hierfür zuständigen wissenschaftlichen Mitarbeitenden des Zusatzstudiums.
 
 Für die Einpflegung der Aufgaben werden lediglich Anleitungen sowie
 jeweils dazugehörige Thumbnails (Vorschaubilder) benötigt. Die Anleitungen
-werden im standardisierten und weit verbreiteten Format Markdown verfasst.
+werden, wie in Kapitel \ref{finale-architektur-tutors} genauer erläutert, im
+standardisierten und weit verbreiteten Format Markdown verfasst.
 
-% TODO: Markdown Quelle? Readme erklären?
-Anleitungen können mit verhältnismäßig wenig Aufwand verfasst werden und
-schließlich als \code{README.md}-Datei im Aufgaben-Repository abgelegt
-werden. Dies hat den Vorteil, dass die Anleitung auch in der Versionskontrolle
-der Aufgabe enthalten sind. Außerdem können GitHub und Replit beim Klick auf die
-Aufgabe die Anleitung neben Tutors auch zusätzlich formatiert anzeigen.
+Anleitungen können durch Markdown mit verhältnismäßig wenig Aufwand verfasst
+werden und schließlich als \code{README.md}-Datei im Aufgaben-Repository
+abgelegt werden. Dies hat den Vorteil, dass die Anleitung auch in der
+Versionskontrolle der Aufgabe enthalten sind. Außerdem können GitHub und Replit
+beim Klick auf die Aufgabe die Anleitung neben Tutors auch zusätzlich
+formatiert anzeigen.
 
 % GitHub Classroom
 \subsection{GitHub Classroom}\label{github-classroom}
 \subsubsection{Konfiguration}\label{classroom-konfiguration}
 Für die Einrichtung wird eine GitHub Organisation erstellt. GitHub
-Organisationen können von jedem Nutzer GitHub-Nutzer erstellt werden und
+Organisationen können von jedem GitHub-Nutzenden erstellt werden und
 benötigen lediglich einen Namen und eine Kontakt-E-Mail-Adresse
 \parencite{github-organisation-erstellen}. Die Organisation dieses Kurses
 beherbergt alle Aufgabenvorlagen, die später näher erläuterte Vorlage für
@@ -56,8 +56,8 @@ dass GitHub nach jedem Push zum Repository des Studierenden die pytest-Tests
 gestartet werden. Wenn alle Tests erfolgreich sind, erhält der Studierende eine
 vorkonfigurierte Punktzahl. Durch Classroom ist es außerdem möglich, jedem
 Test eine individuelle Punktzahl zuzuweisen. So kann man dem Schüler neben der
-erfolgreichen Ausführung beispielsweise noch Bonuspunkte für das Fangen von
-nicht geplanten Eingaben vergeben. \parencite{github-assignment-erstellen}
+erfolgreichen Ausführung beispielsweise noch Bonuspunkte für das Berücksichtigen
+von nicht geplanten Eingaben vergeben. \parencite{github-assignment-erstellen}
 
 \newpage
 
@@ -99,10 +99,10 @@ unterstützen.
 \subsubsection{Hilfsprogramme (get, check, submit)}
 \label{replit-template-wrapper-tools}
 Die Kommandozeilen-Tools \texttt{get}, \texttt{check} und \texttt{submit} sind
-\emph{Bash}-Skripte. Über den Konsolenbefehl \texttt{get <PROJEKT-REPOSITORY>} kann der
-Studierende die Aufgabe in seinen Arbeitsbereich (Repl) laden. Das Skript
-durchsucht die im Code definierte Organisation nach einem Repository mit dem
-Namen und lädt es schließlich über den Befehl \code{git clone} in den
+\ac{bash} Skripte. Über den Konsolenbefehl \texttt{get <PROJEKT-REPOSITORY>}
+kann der Studierende die Aufgabe in seinen Arbeitsbereich (Repl) laden. Das
+Skript durchsucht die im Code definierte Organisation nach einem Repository mit
+dem Namen und lädt es schließlich über den Befehl \code{git clone} in den
 Arbeitsbereich.
 
 Der Befehl \texttt{check <PROJEKT-REPOSITORY>} erlaubt es die Aufgabe auf Fehler

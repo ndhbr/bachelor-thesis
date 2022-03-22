@@ -24,14 +24,14 @@ der Woche bekommen die Teilnehmenden neben den Materialien auch
 Programmieraufgaben, welche sie mit dem vorher genannten System bearbeiten
 können. \parencite{cs50-edx}
 
-Die Programmieraufgaben können wahlweise über die, auf AWS Cloud9 basierenden,
-Online-Entwicklungsumgebung \emph{CS50-IDE} von Harvard oder in jeder anderen
-beliebigen Entwicklungsumgebung der Wahl bearbeitet werden. Dies wird durch die
-flexible Architektur des Systems ermöglicht. Jede Funktionalität des
-vollautomatisierten Kurses geschieht durch öffentlich bereitgestellte
-Kommandozeilen-Tools. Dieses System hat den Vorteil, dass es unabhängig von der
-eingesetzten IDE (Entwicklungsumgebung) funktioniert, es wird lediglich ein
-Terminal mit den jeweiligen Tools benötigt. \parencite{cs50-ide}
+Die Programmieraufgaben können entweder mit der, auf AWS Cloud9 basierten,
+\ac{ide} \emph{CS50-IDE} von Harvard, oder in jeder anderen beliebigen
+Entwicklungsumgebung bearbeitet werden. Dies wird durch die flexible Architektur
+des Systems ermöglicht. Jede Funktionalität des vollautomatisierten Kurses
+geschieht durch öffentlich bereitgestellte Kommandozeilen-Tools. Dieses System
+hat den Vorteil, dass es unabhängig von der eingesetzten IDE
+(Entwicklungsumgebung) funktioniert, es wird lediglich ein Terminal mit den
+jeweiligen Tools benötigt. \parencite{cs50-ide}
 
 Um einen Lösungsversuch abzugeben wird das sogenannte Werkzeug \emph{submit50}
 verwendet. Um den Code vor Abgabe auf Fehler zu überprüfen, stellt Harvard das
@@ -61,8 +61,7 @@ im Kurs angezeigt.
 In der Kursübersicht der me50-Plattform können Lehrende die Abgaben und Versuche
 der Studierenden sehen. Bei jedem Eintrag ist jeweils die erreichte Punktzahl
 von check50 und style50 sichtbar. Eine Übersicht der Abgaben können Dozierende
-jederzeit in Form einer .csv- oder als .json-Datei pro Aufgabe heruntergeladen
-werden.
+jederzeit in Form einer .csv- oder als .json-Datei pro Aufgabe herunterladen.
 
 \paragraph{Architektur}
 Die Harvard University hält den Aufbau von CS50 weitestgehend transparent.
@@ -241,16 +240,16 @@ gewährleisten zu können, werden dementsprechend sehr hohe Serverkosten fällig
 Eine weitere Hürde ist die Stabilität der Software. Code FREAK befindet sich,
 Stand heute, mitten in der Entwicklung, weshalb einige Funktionen und Features
 noch nicht ordnungsgemäß funktionieren. Darunter die vorher angeworbene
-LMS-Integration \parencite{codefreak-docs}. Zum heutigen Zeitpunkt ist LDAP die
-einzige Möglichkeit sich mit dem System zu authentifizieren. Ein eigenes
-Anmeldeverfahren gibt es bisher noch nicht.
+LMS-Integration \parencite{codefreak-docs}. Zum heutigen Zeitpunkt ist das
+\ac{ldap} die einzige Möglichkeit sich mit dem System zu authentifizieren. Ein
+eigenes Anmeldeverfahren gibt es bisher noch nicht.
 
-\emph{LDAP} steht für Lightweight Directory Access Protocol und ist ein
+LDAP steht für Lightweight Directory Access Protocol und ist ein
 Netzwerkprotokoll zur Durchführung von Abfragen und Änderungen in einem 
 verteilten Verzeichnisdienst. LDAP ist der De-facto Industriestandard für
 Authentifizierung und Autorisierung. \parencite{ldap}
 
-Der Kurs Digital Skills soll den Teilnehmern einen Überblick über den
+Der Kurs Digital Skills soll den Teilnehmenden einen Überblick über den
 Arbeitsalltag eines Informatikers geben. Dazu gehört unter anderem die
 Kommandozeile. Eine Anforderung der Lernplattform ist deshalb, dass man
 (optional) neue Aufgaben herunterladen und Lösungsversuche über Befehle in der
@@ -285,7 +284,7 @@ einer GitHub Organisation, sowie einem Kurs in GitHub Classroom. Sobald beides
 erstellt ist, können Lehrende neue Assignments (Aufgaben) mithilfe von
 bestehenden Vorlage-Repositories erstellen. In der Vorlage befindet sich in der
 Regel ein Ordner mit Tests, welche das Ergebnis des Programms prüfen sollen.
-In GitHub Classroom kann demnach eine Reihe an Kommandozeilenbefehle festgelegt
+In GitHub Classroom kann demnach eine Reihe an Kommandozeilenbefehlen festgelegt
 werden, die dann diese Tests ausführen und je nach Ergebnis bepunkten.
 
 Eine Übersicht über die Abgaben und erreichten Punktzahlen der Studierenden,
@@ -331,9 +330,9 @@ aus der Sicht der Lehrenden wider.
 
 Die erste Spalte enthält die Namen der Anforderungen, während die zweite Spalte
 eine jeweilige Gewichtung der Anforderung enthält. Der valide Bereich dieser
-Spalte befindet sich zwischen, einschließlich 0,00 und einschließlich 1,00. Eine
-1,00 bedeutet, dass die Anforderung für den Einsatz an der Hochschule sehr
-wichtig ist. Je niedriger der Wert, desto unwichtiger die Anforderung.
+Spalte befindet sich zwischen, einschließlich 0,00 und 1,00. Eine 1,00 bedeutet,
+dass die Anforderung für den Einsatz an der Hochschule sehr wichtig ist. Je
+niedriger der Wert, desto unwichtiger die Anforderung.
 
 Die Spalten drei, vier und fünf enthalten die Benotungen der Systeme zu den
 Anforderungen. Hierbei gilt ähnlich wie bei der Gewichtung: je höher der Wert,

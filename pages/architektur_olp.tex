@@ -1,5 +1,5 @@
 \subsection{Finale Architektur Online-Learning Platform}
-\subsubsection{Tutors als Aufgabensammlung}
+\subsubsection{Tutors als Aufgabensammlung}\label{finale-architektur-tutors}
 Das freie Open-Source-Projekt Tutors ist eine Sammlung von Softwarepaketen,
 die entwickelt wurden, um Online-Kurse mit Vorlesungen, Übungen, Videos und
 Kursmaterialien zu erstellen und durchzuführen. \parencite{tutors}
@@ -12,28 +12,27 @@ jede Aufgabe jeweils auf den Einladungslink der GitHub-Classroom-Aufgabe.
 
 Neue Anleitungsseiten können mithilfe der in Informatik üblichen
 Dokumentensprache Markdown angelegt, formatiert und präsentiert werden. Wie in
-Abbildung \ref{fig:markdown} zu sehen, kann eine Markdown-Anleitung in jedem
-beliebigen Text-Editor geschrieben werden.
+Abbildung \ref{fig:markdown} auf der nächsten Seite zu sehen, kann eine 
+Markdown-Anleitung in jedem beliebigen Text-Editor geschrieben werden.
 
 In diesem Fall befindet sich links der Text-Editor und rechts die Vorschau des
 daraus interpretierbaren Dokuments. Grundsätzlich bleibt eine Markdown-Datei
-unkompiliert, das heißt die geschriebene Textdatei ist alles was man für das
-Dokument benötigt. Es gibt jedoch einige Programme und Tools, die die Dateien
-nach einem gewissen Standard interpretieren.
+unkompiliert. Es gibt jedoch einige Programme und Tools, die die Dateien
+nach dem Markdown-Standard interpretieren und für den Betrachter formatiert
+ausgeben.
 
-Zeile 11 des Markdown-Dokuments in Abbildung \ref{fig:markdown} zeigt eine
-Überschrift, welche durch zwei Rautezeichen (\code{\#\#}) markiert wird. Diese
-Überschrift ist bereits eine Unterüberschrift. Der Titelüberschrift wird
-lediglich ein Rautezeichen vorangesetzt, währenddessen eine
-Unterunterüberschrift drei Rautezeichen benötigt (siehe Zeile 29 in Abbildung
-\ref{fig:markdown}).
+Zeile 11 des Markdown-Dokuments im Text-Editor zeigt eine Überschrift, welche
+durch zwei Rautezeichen (\code{\#\#}) markiert wird. Diese Überschrift ist
+bereits eine Unterüberschrift. Der Titelüberschrift wird lediglich ein
+Rautezeichen vorangesetzt, währenddessen eine Unterunterüberschrift drei
+Rautezeichen benötigt (siehe Zeile 29 in Abbildung \ref{fig:markdown}).
 
 Projekte, wie Tutors, interpretieren diese Rautezeichen als Überschrift und
 können so die Schriftgröße und Abstände für alle hinter den Rautezeichen
 stehenden Wörter anpassen. Das Rautezeichen ist nur ein Beispiel für eines von
 vielen verschiedenen Formatierungszeichen. Aus diesen simplen
 Formatierungszeichen entsteht später für den Teilnehmenden ein gut lesbares
-Online-Dokument.
+Online-Dokument. \parencite{markdown}
 
 \begin{figure}[H]
     \centering
@@ -48,7 +47,7 @@ Der Programmierkurs soll für jeden Teilnehmer ohne komplizierte Installationen
 durchführbar sein. Aus diesem Grund wurde die Entscheidung gefällt, eine
 Online Entwicklungsumgebung einzusetzen.
 
-Der Vorteil an Replit ist, dass man dem Studierenden durch ein
+Der Vorteil an Replit ist, dass man den Studierenden durch ein
 Vorlagenrepository alle nötigen Konfigurationen und Programme im Vorhinein
 bereitstellen kann. Sobald ein sogenanntes \emph{Repl} (Bezeichnung für
 ein Projekt in Replit) mit der erwähnten Vorlage erstellt wurde, kann der
