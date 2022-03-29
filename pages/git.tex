@@ -166,14 +166,14 @@ Programmierer nicht, dass sich während der Entwicklung der Funktion etwas am
 restlichen Code ändert. Aus diesem Grund eröffnet der Feature-Programmierer, wie
 in Abbildung \ref{fig:git-branch} ersichtlich, einen neuen Branch auf den
 aktuellen Commit des Hauptzweigs (blauer Zweig). Wenn sich der Hauptzweig jetzt
-durch Änderungen von anderen Kollegen ändert, merkt der Feature-Programmierer
-nichts davon, weil er sich auf einem anderen Ast (Branch) befindet und dabei
-seine ganz eigene Kopie des Projekts bearbeitet. Sobald er mit dem Feature
-fertig ist, kann er seinen Branch mit dem \texttt{Main}-Branch wieder
-zusammenführen. Falls sich in der Zwischenzeit die Dateien und Zeilen, die auch
-er bearbeitet hat, geändert haben, müssen die Konflikte in aller Regel manuell
-gelöst werden. Sollten nicht dieselben Zeilen bearbeitet worden sein, löst Git
-die Konflikte selbst und führt die zwei Zustände automatisch zusammen.
+durch Überarbeitungen von anderen Kollegen ändert, merkt der
+Feature-Programmierer nichts davon, weil er sich auf einem anderen Ast (Branch)
+befindet und dabei seine ganz eigene Kopie des Projekts bearbeitet. Sobald er
+mit dem Feature fertig ist, kann er seinen Branch mit dem \texttt{Main}-Branch
+wieder zusammenführen. Falls sich in der Zwischenzeit die Dateien und Zeilen,
+die auch er bearbeitet hat, geändert haben, müssen die Konflikte in aller Regel
+manuell gelöst werden. Sollten nicht dieselben Zeilen bearbeitet worden sein,
+löst Git die Konflikte selbst und führt die zwei Zustände automatisch zusammen.
 
 Eine bekannte Konvention unter Programmierern ist es, dass der
 \texttt{Main}-Branch immer eine lauffähige Version der Software hält. Es darf

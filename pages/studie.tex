@@ -1,9 +1,11 @@
 \section{Studie: Test an fachfremden Studierenden}\label{studie}
 \subsection{Allgemein}
-In einer Studie sollen Fehler und schwierig gestaltete Stellen der
+In einer Studie sollen Fehler und mögliche Hindernisse in den Aufgaben der
 Programmierplattform gefunden und analysiert werden. Damit die Studie möglichst
 realitätsnah ist, fällt die Wahl hierbei auf eine Feldstudie mit fachfremden
-Studierenden. \parencite{feldstudie}
+Studierenden. Wie im späteren Anwendungsfall auch werden Studierende mithilfe
+der Online-Programmierplattform selbstständig Aufgaben lösen.
+\parencite{feldstudie}
 
 Nach Vollendung der Tests sollen Schwachstellen und Lücken der
 Programmieraufgaben (Anleitungen, Fehlerbeschreibungen, Aufbau, Schwierigkeit,
@@ -30,7 +32,7 @@ Anteilnahme an der folgenden Studie.
 Um eine gleichmäßig verteilte Stichprobenmenge zu erhalten, werden mindestens
 fünf Testpersonen aus fünf unterschiedlichen Studiengängen für die Durchführung
 benötigt. Wie in Tabelle \ref{table:studie-teilnehmende} absolut dargestellt,
-ist das Geschlechterverhältnis mit zwei Drittel männlichen Teilnehmern sehr
+ist das Geschlechterverhältnis mit 40 \% männlichen Teilnehmern sehr
 ausgeglichen. In folgender Tabelle ist neben dem Geschlecht auch das jeweilige
 Alter der Testpersonen, sowie der Studiengang und das Semester visualisiert.
 
@@ -52,9 +54,9 @@ Männlich            & 23             & Regenerative Energietechnik (B.Eng.)    
 \end{table}
 
 \subsubsection{Ablauf des Tests}
-Die Studienbefragungen finden zwischen dem 11. Februar 2022 und dem 6. März
-2022 statt. Die Tests werden in Form eines Interviews online über eine Software
-für Videokonferenzen durchgeführt.
+Die Studienbefragungen fanden zwischen dem 11. Februar 2022 und dem 6. März 2022
+statt. Die Tests wurden in Form eines Interviews online über eine Software für
+Videokonferenzen durchgeführt.
 
 Am Anfang wird vom Beobachter der Studie, Andreas Huber, das Zusatzstudium
 Digital Skills anhand eines einseitigen Infodokuments vorgestellt.
@@ -62,8 +64,8 @@ Digital Skills anhand eines einseitigen Infodokuments vorgestellt.
 Danach wird dem Teilnehmer die folgende Agenda vorgetragen und anschließend
 werden der Person vier Fragen gestellt. Die Fragen müssen jeweils mit Schulnoten
 von 1 bis 6 beantwortet werden. Sechs bedeutet hier immer eine gänzliche
-negative Neigung, während eins einer völligen Zusage entspricht. Die restlichen
-Noten bilden wie gewohnt lineare Zwischenwerte.
+negative Neigung, während eins einer völligen Zustimmung entspricht. Die
+restlichen Noten bilden wie gewohnt lineare Zwischenwerte.
 
 Nachdem die Fragen von der teilnehmenden Person beantwortet wurden, muss diese
 die Bildschirmübertragung starten. Währenddessen notiert der Beobachter die
@@ -78,7 +80,7 @@ schreibt alle Anomalien kategorisiert nach Fortschritt und Teilnehmer des Tests
 auf. \parencite{think-aloud}
 
 Aufkommende Fragen können vom Beobachter beantwortet werden. Sollte eine Frage
-bzw. Aufgabe unlösbar erscheinen, gibt es am Ende jeder Aufgabe ein
+bzw. Aufgabe unlösbar erscheinen, gibt es am Ende jeder Aufgabe einen
 Lösungsvorschlag. Dieser sollte jedoch nur aufgeklappt werden, wenn keine
 realistische Chance der selbstständigen Lösung des Problems besteht.
 
@@ -108,7 +110,7 @@ verzichtet. Alle Teilnehmenden absolvieren die Studie freiwillig.
 Folgende Fragen werden den Teilnehmenden vor Beginn der Bearbeitung gestellt:
 
 \begin{itemize}
-    \item Hast du schon einmal erwägt eine Programmierausbildung anzustreben?
+    \item Hast du schon einmal erwägt, eine Programmierausbildung anzustreben?
     (1: will ich definitiv noch machen; 6: noch nie) \textbf{[PRE1]}
     \item Hast du schon einmal programmiert? (1: ständig; 6: noch nie)
     \textbf{[PRE2]}
@@ -129,7 +131,7 @@ Fragen beantworten:
     komplex) \textbf{[PAST2]}
     \item Hattest du Schwierigkeiten mit Aufgabe 2? (1: nein, keine; 6: zu
     komplex) \textbf{[PAST3]}
-    \item Hast du verstanden was du in den Aufgaben genau gemacht hast? (1: ja
+    \item Hast du verstanden, was du in den Aufgaben genau gemacht hast? (1: ja
     vollkommen; 6: nein, gar nicht) \textbf{[PAST4]}
     \item Würdest du nach Abschluss des Tests deine Meinung zur Frage am
     Interesse eines Zusatzstudiums für Digital Skills ändern? (1: unbedingt;
@@ -137,9 +139,9 @@ Fragen beantworten:
 \end{itemize}
 
 Alle aufgezeigten Fragen wurden durch den Beobachter und Initiator der Studie,
-Andreas Huber, selbst erfunden. Die in eckigen Klammern stehenden Bezeichnungen
-dienen zur Identifikation der jeweiligen Fragen für die später folgende
-Auswertung.
+Andreas Huber, selbst entwickelt. Die in eckigen Klammern stehenden
+Bezeichnungen dienen zur Identifikation der jeweiligen Fragen für die später
+folgende Auswertung.
 
 \paragraph{Aufgaben}
 Der Test besteht aus vier für die Studie vereinfachten Aufgaben. Die erste
@@ -152,12 +154,12 @@ das Herunterladen der ersten Aufgabe.
 Die zweite Aufgabe ist eine Programmieraufgabe mit der Sprache Python. Es
 handelt sich hierbei um eine vereinfachte Version der später in produktiv
 eingesetzten Aufgabe \glqq Lab 4: Hello\grqq{}. Die bereits gegebene Vorlage der
-Aufgabe fragt den Nutzenden nach seinem Namen. Nach der Eingabe schließt sich
-das Programm wieder. Die Aufgabe des Teilnehmenden ist es nun den Namen in
-folgendem Format wieder auszugeben: \code{Hallo, mein Name ist <NAME>}. Der
-Platzhalter \code{<NAME>} soll dabei durch den vorher abgefragten Namen ersetzt
-werden. Diese Aufgabe kann der Teilnehmer mit einer einzigen Codezeile lösen.
-Die Ausgabe der Lösung sieht dann so aus:
+Aufgabe fragt den User nach seinem Namen. Nach der Eingabe schließt sich das
+Programm wieder. Die Aufgabe des Teilnehmenden ist es nun den Namen in folgenden
+Format wieder auszugeben: \code{Hallo, mein Name ist <NAME>}. Der Platzhalter
+\code{<NAME>} soll dabei durch den vorher abgefragten Namen ersetzt werden.
+Diese Aufgabe kann der Teilnehmer mit einer einzigen Codezeile lösen. Die
+Ausgabe der Lösung sieht dann so aus:
 
 \begin{lstlisting}[style=Bash]
 $ python main.py
@@ -177,7 +179,7 @@ ist. Dieses Mal wird der Nutzer nach Start des Programms nicht nur nach seinem
 Namen gefragt, sondern auch nach der Anzahl, wie oft der Name ausgegeben werden
 soll. Wie auch in der vorherigen Aufgabe schließt sich standardmäßig das
 Python-Skript gleich wieder. Der Testteilnehmer muss nun eine Schleife
-programmieren, dass der Name mit der aktuellen Zählvariable n-mal ausgegeben
+programmieren, sodass der Name mit der aktuellen Zählvariable n-mal ausgegeben
 wird. Der Name und die Anzahl an Ausgaben wird wieder per Funktion als Parameter
 übergeben. Die Ausgabe in der Konsole soll wie folgt aussehen:
 
@@ -216,10 +218,10 @@ Die vierte und letzte Aufgabe beschäftigt sich mit der Generierung von
 Text-Pyramiden, welche der ursprünglichen Version des Videospiels Super Mario
 Bros.\copyright\footnote{Super Mario Bros.\copyright ist eine geschützte Marke
 der Nintendo Co., Ltd.} entsprechen sollen. Der Nutzer wird beim Start des
-Programms nach der gewünschten Größe bzw. Höhe der Pyramide. Nach Eingabe eines
-gültigen  Werts liefert das Skript, ausgegeben mit Raute-Zeichen, die linke
-Seite einer klassischen Super Mario Pyramide. Die Ausgabe der gelösten Aufgabe
-sieht beispielhaft so aus:
+Programms nach der gewünschten Größe bzw. Höhe der Pyramide gefragt. Nach
+Eingabe eines gültigen Werts liefert das Skript, ausgegeben mit Raute-Zeichen,
+die linke Seite einer klassischen Super Mario Pyramide. Die Ausgabe der gelösten
+Aufgabe sieht beispielhaft so aus:
 
 \begin{lstlisting}[style=Bash]
 $ python main.py
@@ -247,13 +249,13 @@ der Test-Organisation abgelegt.
 
 Für die Aufgaben werden mithilfe des Test-Frameworks pytest Benotungstests
 programmiert und in GitHub-Classroom konfiguriert. Jede gelöste Aufgabe belohnt
-den Studienteilnehmenden pauschal mit 10 Punkten.
+den Studienteilnehmenden pauschal mit zehn Punkten.
 
-Neben den Programmieraufgaben werden auch ausführliche Anleitungen mit Bilder
+Neben den Programmieraufgaben werden auch ausführliche Anleitungen mit Bildern
 geschrieben. Nach der Erstellung von Vorschaubildern können diese in der,
 auch später produktiv genutzten, Plattform Tutors hochgeladen werden. Die
-Studienteilnehmer:innen erhalten zu Beginn des Probelaufs einen Link zur
-Übersicht der benötigten Anleitungen in Tutors.
+Studienteilnehmenden erhalten zu Beginn des Probelaufs einen Link zur Übersicht
+der benötigten Anleitungen in Tutors.
 
 \newpage
 \subsection{Deskriptive Ergebnisse}
@@ -298,7 +300,7 @@ Maximum der Antworten.
 \end{table}
 
 % Alter
-Wie man der Alterszeile entnehmen kann, sind alle Teilnehmenden im Schnitt 22
+Wie man der Alterszeile entnehmen kann, sind die Teilnehmenden im Schnitt 22
 Jahre alt. Dieses Ergebnis lässt sich vor allem aus der Anforderung schließen,
 dass alle Teilnehmenden immatrikulierte Studierende sein müssen.
 
@@ -314,12 +316,12 @@ Das Wohlbefinden am Computer wurde mit der Frage PRE3 abgefragt. Ein
 Interpretationsversuch der Minima und Maxima ist, dass die Teilnehmenden aus
 Angst später Fehler zu machen niemals die Note 1 vergeben haben. Damit ist diese
 Frage auch die einzige mit Schulnoten zu bewertende Frage, welche in der Umfrage
-keine Note 1 als Minimum enthält.
+keine Note 1 als Minimum erhalten hat.
 
 % PRE4 - PAST5
 Die Frage PRE4 bezieht sich auf das Interesse an einem Zusatzstudium für
 Digital Skills. Der Durchschnitt der Antworten auf diese Frage liegt bei 2,600,
-der Median noch besser bei 2,000. Das heißt, dass die Mehrheit der Testpersonen,
+der Median noch besser bei 2,000. Das heißt, dass die Mehrheit der Testpersonen
 vor der Bearbeitung der Aufgaben, einer Teilnahme an einem solchen Zusatzstudium
 nicht abgeneigt wären. Nach der Absolvierung der Programmieraufgaben werden die 
 Teilnehmer erneut nach ihrer Meinung bzw. einer Änderung dieser Einschätzung

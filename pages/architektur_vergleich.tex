@@ -198,8 +198,8 @@ Lehrende haben in Code FREAK die Möglichkeit, Aufgaben im Task Pool zu
 erstellen. Im Task Pool können beliebig viele Tasks angelegt werden. Bei der
 Aufgabenkonfiguration ist es neben dem Erstellen der Anleitung auch möglich, die
 einzelnen Test-Schritte festgelegzulegen. Außerdem können mehrere nacheinander
-ablaufende Testabläufe erstellt werden. So kann beispielsweise neben dem
-Ergebnis auch die Code-Qualität getestet werden.
+ablaufende Tests erstellt werden. So kann beispielsweise neben dem Ergebnis auch
+die Code-Qualität getestet werden.
 
 Anschließend können Lehrende Assignments erstellen, welche aus den vorher
 angelegten Tasks im Task Pool bestehen. Der Task Pool hat den Vorteil, dass
@@ -218,7 +218,7 @@ voneinander zu isolieren. Durch die Containervirtualisierung werden unter
 anderem viele Abhängigkeits-, Sicherheits-, Netzwerk- und Einrichtungsprobleme
 beseitigt. Der Container enthält alle Bibliotheken und Abhängigkeiten, die die
 Software für die Laufzeit benötigt \parencite{docker}. Docker entstand auf Basis
-von Linux-Containern, welche ein oder mehrere Prozesse vom restlichen System
+von Linux-Containern, welche einen oder mehrere Prozesse vom restlichen System
 isolieren können 
 \parencite{linux-container}.
 
@@ -227,33 +227,33 @@ Kommandozeile installiert und gestartet werden. Die Software benötigt
 grundsätzlich nur einen Container. Benutzt ein Studierender jedoch die
 integrierte Online-Entwicklungsumgebung, muss für jede Instanz ein zusätzlicher
 Container mit der Laufzeitumgebung der IDE gestartet werden. Jeder weitere
-Container benötigt weiteren Arbeitsspeicher und erhöht dabei die Prozessorlast.
+Container benötigt weiteren Arbeitsspeicher und erhöht die Prozessorlast.
 
 \paragraph{Probleme beim Einsatz für die OTH}
 Beim Einsatz von Code FREAK an der Hochschule Regensburg gibt es einige
-Probleme. Das erste Problem bezieht sich auf den vorher erwähnten
+Probleme. Das erste Hindernis bezieht sich auf den vorher erwähnten
 Arbeitsspeicher. Die Praxis zeigt, dass eine Instanz der Online-IDE schon nach
-wenigen Quellcodedateien rund drei Gigabytes an Arbeitsspeicher verwendet. Um
+wenigen Quellcodedateien rund drei Gigabyte an Arbeitsspeicher verwendet. Um
 eine reibungslose und parallele Nutzung für alle Studierenden des Kurses
 gewährleisten zu können, werden dementsprechend sehr hohe Serverkosten fällig. 
 \parencite{codefreak-memory-problem}
 
 Eine weitere Hürde ist die Stabilität der Software. Code FREAK befindet sich,
 Stand heute, mitten in der Entwicklung, weshalb einige Funktionen und Features
-noch nicht ordnungsgemäß funktionieren. Darunter die vorher angeworbene
+noch nicht ordnungsgemäß funktionieren -- darunter die vorher angeworbene
 LMS-Integration \parencite{codefreak-docs}. Zum heutigen Zeitpunkt ist das
-\ac{ldap} die einzige Möglichkeit sich mit dem System zu authentifizieren. Ein
+\ac{ldap} die einzige Möglichkeit, sich mit dem System zu authentifizieren. Ein
 eigenes Anmeldeverfahren gibt es bisher noch nicht.
 
 LDAP steht für Lightweight Directory Access Protocol und ist ein
 Netzwerkprotokoll zur Durchführung von Abfragen und Änderungen in einem 
-verteilten Verzeichnisdienst. LDAP ist der De-facto Industriestandard für
+verteilten Verzeichnisdienst. LDAP ist der de facto Industriestandard für
 Authentifizierung und Autorisierung. \parencite{ldap}
 
 Der Kurs Digital Skills soll den Teilnehmenden einen Überblick über den
 Arbeitsalltag eines Informatikers geben. Dazu gehört unter anderem die
 Kommandozeile. Eine Anforderung der Lernplattform ist deshalb, dass man
-(optional) neue Aufgaben herunterladen und Lösungsversuche über Befehle in der
+optional neue Aufgaben herunterladen und Lösungsversuche über Befehle in der
 Kommandozeile testen und abgeben kann. In Code FREAK kann man Aufgaben lediglich
 über die Oberfläche testen und abgeben.
 
@@ -270,9 +270,9 @@ Aufgaben-Repositorys bereits vorkonfigurierte Zugriffskontrollen. \parencite{git
 
 \paragraph{Ablauf für Studierende}
 Studierende bekommen pro Programmieraufgabe einen Einladungslink. Nach Annahme
-der Einladung wird pro Studierenden automatisch ein Repository für die jeweilige
-Aufgabe angelegt. Dieses Repository enthält die Vorlage, welche zum Bearbeiten
-der Aufgabe benötigt wird.
+der Einladung wird für jeden Studierenden automatisch ein Repository für die
+jeweilige Aufgabe angelegt. Dieses Repository enthält die Vorlage, welche zum
+Bearbeiten der Aufgabe benötigt wird.
 
 Sobald der Studierende eine Lösung zur Korrektur abgeben möchte, kann er per
 Push die Änderungen in das Remote-Repository hochladen. Je nach Konfiguration
@@ -280,37 +280,37 @@ der Aufgabe starten daraufhin serverseitig ein oder mehrere Tests. Wenn alle
 Tests bestanden sind, hat der Studierende die Aufgabe erfolgreich abgeschlossen.
 
 \paragraph{Ablauf für Lehrende}
-Um einen Aufgabe in GitHub Classroom zur Verfügung zu stellen, bedarf es zuerst
-einer GitHub Organisation, sowie einem Kurs in GitHub Classroom. Sobald beides
+Um eine Aufgabe in GitHub Classroom zur Verfügung zu stellen, bedarf es zuerst
+einer GitHub Organisation, sowie eines Kurses in GitHub Classroom. Sobald beides
 erstellt ist, können Lehrende neue Assignments (Aufgaben) mithilfe von
 bestehenden Vorlage-Repositorys erstellen. In der Vorlage befindet sich in der
 Regel ein Ordner mit Tests, welche das Ergebnis des Programms prüfen sollen.
 In GitHub Classroom kann demnach eine Reihe an Kommandozeilenbefehlen festgelegt
 werden, die dann diese Tests ausführen und je nach Ergebnis bepunkten.
 
-Eine Übersicht über die Abgaben und erreichten Punktzahlen der Studierenden,
-kann sich der Dozierende jederzeit beim Klick auf eine Aufgabe anzeigen lassen.
-Gleichzeitig ist es in dieser Ansicht möglich alle Noten als .CSV-Datei und
+Eine Übersicht über die Abgaben und erreichten Punktzahlen der Studierenden kann
+sich der Dozierende jederzeit beim Klick auf eine Aufgabe anzeigen lassen.
+Gleichzeitig ist es in dieser Ansicht möglich, alle Noten als .CSV-Datei und
 alle Repositorys als .ZIP-Datei herunterzuladen.
 
 \paragraph{Architektur} % TODO: Zitieren?
 GitHub Classroom ist ein Bildungsservice der Firma GitHub Inc. und ist Stand
 heute kostenfrei \parencite{github-classroom-kostenlos}. Die Software basiert
-auf der Automatisierung von Repositorys. Jeder bei GitHub registrierte Nutzer,
+auf der Automatisierung von Repositorys. Jeder bei GitHub registrierte Nutzer
 kann einen sogenannten \emph{Classroom} erstellen und darin Aufgaben auf
 Basis vorhandener öffentlichen GitHub-Repositorys erstellen.
 
 \paragraph{Probleme beim Einsatz für die OTH}
-Es gibt keine Möglichkeit das System von GitHub Classroom auf einen lokalen
+Es gibt keine Möglichkeit, das System von GitHub Classroom auf einem lokalen
 Git-Server zu replizieren. Aufgrund dessen schafft man sich durch die
 Verwendung von Classroom eine externe Abhängigkeit an GitHub. Dies kann unter
 Umständen zu erheblichen Problemen führen, wenn der Dienst beispielsweise
-nicht erreichbar oder aufgelöst wird. Beides ist durch die Größe und
+nicht erreichbar oder eingestellt wird. Beides ist durch die Größe und
 Infrastruktur des Unternehmens nicht (häufig) zu erwarten.
 
 Eine weitere Hürde ist der Bedarf an weiterer Software. GitHub Classroom alleine
 ist nicht ausreichend, um als vollständige Lernplattform für den Kurs Digital
-Skills geeignet zu sein. Hier bietet es sich an, eine eigene statische Website
+Skills zu fungieren. Hier bietet es sich an, eine eigene statische Website
 mit Anleitungen und Erklärungen zu bauen, welche dann jeweils auf Classroom
 Einladungslinks verweist. Als Online-Entwicklungsumgebung kann der Dienst Replit
 verwendet werden. In Replit ist es möglich, ein vorhandenes Git-Repository als
@@ -322,25 +322,25 @@ keine komplexen Git-Kommandos absetzen.
 \subsubsection{Bewertung und Entscheidung der vorhandenen Systeme}
 Die folgende Abbildung \ref{fig:systemvergleich} visualisiert die erläuterten
 Systeme und bewertet diese anhand der vorher definierten Anforderungen (siehe 
-Kapitel \ref{anforderungsanalyse}). Wie man der Grafik entnehmen kann,
-repräsentieren alle blau hinterlegten Zeilen die nichtfunktionalen
-Anforderungen. Alle rosa hinterlegten Zeilen wiederum repräsentieren die
-funktionalen Anforderungen aus der Sicht des Teilnehmers. Der letzte Teil,
-welcher gelb hinterlegt ist, spiegelt schließlich die funktionalen Anforderungen
-aus der Sicht der Lehrenden wider.
+Kapitel \ref{anforderungsanalyse}). Die blau hinterlegten Zeilen repräsentieren
+die nichtfunktionalen Anforderungen. Alle rosa hinterlegten Zeilen wiederum
+repräsentieren die funktionalen Anforderungen aus der Sicht des Teilnehmers. Der
+letzte Teil, welcher gelb hinterlegt ist, spiegelt schließlich die funktionalen
+Anforderungen aus der Sicht der Lehrenden wider.
 
-Die erste Spalte enthält die Namen der Anforderungen, während die zweite Spalte
-eine jeweilige Gewichtung der Anforderung enthält. Der valide Bereich dieser
-Spalte befindet sich zwischen, einschließlich 0,00 und 1,00. Eine 1,00 bedeutet,
-dass die Anforderung für den Einsatz an der Hochschule sehr wichtig ist. Je
-niedriger der Wert, desto unwichtiger die Anforderung.
+Die erste Spalte enthält die Namen der Anforderungen, während in der zweiten
+Spalte die Gewichtungen der Anforderungen aufgeführt sind. Der valide Bereich
+dieser Spalte befindet sich zwischen einschließlich 0,00 und 1,00. Eine 1,00
+bedeutet, dass die Anforderung für den Einsatz an der Hochschule sehr wichtig
+ist. Je niedriger der Wert, desto unwichtiger die Anforderung.
 
-Die Spalten drei, vier und fünf enthalten die Benotungen der Systeme zu den
-Anforderungen. Hierbei gilt ähnlich wie bei der Gewichtung: je höher der Wert,
-desto besser. Der valide Bereich befindet sich hier jedoch zwischen 0,0 und 3,0.
-Der Wert 0 bedeutet, dass das Feature nicht vorhanden ist, oder nicht zutrifft.
-Die Spalten enthalten hierbei das Ergebnis der Multiplikation aus der Bepunktung
-mit der in der zweiten Spalte enthaltenen Gewichtung.
+Die Spalten drei, vier und fünf enthalten die Bewertungen, in welchem Grad die
+Systeme die Anforderungen erfüllen. Hierbei gilt ähnlich wie bei der Gewichtung:
+je höher der Wert, desto besser. Der valide Bereich befindet sich hier jedoch
+zwischen 0,0 und 3,0. Der Wert 0 bedeutet, dass das Feature nicht vorhanden ist,
+oder nicht zutrifft. Die Spalten enthalten hierbei das Ergebnis der
+Multiplikation aus der Bepunktung mit der in der zweiten Spalte enthaltenen
+Gewichtung.
 
 \begin{figure}[H]
     \centering
