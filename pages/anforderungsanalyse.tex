@@ -1,37 +1,39 @@
 \section{Anforderungsanalyse}\label{anforderungsanalyse}
-Funktionale Anforderungen beschreiben, was das Projekt tun soll. Diese
-Informationen sind wichtig, um die richtigen Werkzeuge und Programme für die
-Umsetzung auszuwählen. Dabei geht es meist um sehr konkret formulierte Wünsche.
-Nichtfunktionale Bedingungen sind wiederum Bedingungen, wie zum Beispiel
-Zuverlässigkeit, Verfügbarkeit oder diverse Sicherheitsanforderungen. Sie lassen
-sich eher als Qualitätseigenschaften beschreiben.
+Funktionale Anforderungen beschreiben, welche Features und Funktionen das
+Projekt bieten muss. Diese Informationen sind wichtig, um die richtigen
+Werkzeuge und Programme für die Umsetzung auszuwählen. Dabei geht es meist um
+sehr konkret formulierte Wünsche. Nichtfunktionale Bedingungen sind wiederum
+Bedingungen, wie zum Beispiel Zuverlässigkeit, Verfügbarkeit oder diverse
+Sicherheitsanforderungen. Sie lassen sich eher als Qualitätseigenschaften
+beschreiben.
 
 \subsection{Funktionale Anforderungen}\label{anforderungsanalyse-funktional}
 \subsubsection{Studierende}\label{anforderungsanalyse-funktional-stud}
-Studierende sollen eine Kursübersicht mit allen Aufgaben haben. Der persönliche
-Fortschritt der jeweiligen Aufgaben sollte dabei leicht ersichtlich sein.
-Mögliche Deadlines oder Abgabefristen sollen bei jeder Aufgabe deutlich
-erkennbar sein.
+Den Studierenden sollte eine Kursübersicht mit allen Aufgaben zur Verfügung
+gestellt werden. Der persönliche Fortschritt der jeweiligen Aufgaben sollte
+dabei leicht ersichtlich sein. Mögliche Deadlines oder Abgabefristen sollen bei
+jeder Aufgabe deutlich erkennbar sein.
 
-Des Weiteren müssen Studierende die Möglichkeit haben, ohne die Installation von zusätzlichen Programmen, die Aufgaben online bearbeiten, prüfen und abgeben
-zu können. Trotzdem sollen sie die Option haben, die Aufgaben in der
+Des Weiteren muss es Studierenden möglich sein, ohne die Installation von
+zusätzlichen Programmen, die Aufgaben online bearbeiten, prüfen und abgeben zu
+können. Trotzdem sollen ihnen die Option offen stehen, die Aufgaben in der
 Entwicklungsumgebung ihrer Wahl lösen zu können.
 
 Eine weitere wichtige Anforderung bei der Prüfung der Aufgaben ist es, dass
 die Bearbeiter der Aufgaben sogenannte \emph{human-readable} (für den Menschen
 lesbare) Fehlermeldungen erhalten müssen. Das bedeutet, dass die Fehlermeldungen
-bei der Überprüfung auch für nicht-technische Studierende leicht verständlich
-sein müssen. Fehlermeldungen bzw. konstruktives Feedback muss dabei
-automatisiert und jederzeit generiert werden können.
+bei der Überprüfung auch für fachfremde Studierende leicht verständlich sein
+müssen. Fehlermeldungen bzw. konstruktives Feedback muss dabei automatisiert und
+jederzeit generiert werden können.
 
-Die Möglichkeit Aufgabenversuche abzugeben, muss ebenfalls mit wenig Aufwand
+Die Möglichkeit, Aufgabenversuche abzugeben, muss ebenfalls mit wenig Aufwand
 behaftet sein. Falls ein Versuch fehlschlägt, oder nicht die volle Punktzahl
-erhält, sollte der Teilnehmende jederzeit die Möglichkeit haben, einen neuen
-Versuch hochladen zu können.
+erreicht wird, sollte der Teilnehmende jederzeit die Möglichkeit haben, einen
+neuen Versuch hochladen zu können.
 
 \subsubsection{Lehrende}\label{anforderungsanalyse-funktional-lehrende}
 Lehrende müssen neue Aufgaben anlegen und konfigurieren können, dazu gehört
-unter anderem die Festlegung einer Deadline bzw. eines Abgabedatums.
+unter anderem die Festlegung eines Abgabedatums.
 
 Des Weiteren müssen Dozierende eine Übersicht an Aufgaben des jeweiligen Kurses
 haben.
@@ -39,14 +41,14 @@ haben.
 Einzelne Aufgaben sollten durch Lehrende temporär versteckt oder deaktiviert
 werden können.
 
-Überdies hinaus muss es möglich sein, mehrere Administratoren zu den Kursen
-hinzuzufügen. Dadurch ist es möglich, dass verschiedene Personen die Aufgaben
-erstellen und die abgegebenen Lösungen herunterladen können. Dies ist
-gleichzeitig die nächste Anforderung: Administratoren müssen mit wenig
-Aufwand alle Abgaben der Teilnehmenden herunterladen können.
+Darüber hinaus muss es möglich sein, mehrere Administratoren zu den Kursen
+hinzuzufügen. Dadurch können verschiedene Personen Aufgaben erstellen und die
+abgegebenen Lösungen herunterladen. Dies ist gleichzeitig die nächste
+Anforderung: Administratoren müssen mit wenig Aufwand alle Abgaben der
+Teilnehmenden herunterladen können.
 
-Ferner müssen die Aufgaben und die jeweiligen Deadlines auch nach der Erstellung
-editierbar sein.
+Ferner müssen sowohl die Aufgaben, als auch die jeweiligen Deadlines nach der
+Erstellung editierbar sein.
 
 Lehrende müssen den Aufgaben-Fortschritt der Teilnehmer je nach Kurs 
 übersichtlich einsehen können.
@@ -69,19 +71,19 @@ externe Tools, um bei einem Ausfall oder Außerbetriebnahme eines einzelnen Tool
 noch einen Notbetrieb gewährleisten zu können. Der Austausch gegen eine andere
 neue Softwarekomponente gestaltet sich dadurch leichter.
 
-Die Ressourcenlast und damit verbundenen Kosten spielen eine weitere wichtige
-Rolle bei der Entscheidungsfindung. Wenn Teile der Lernplattform auf OTH-Servern
-gehostet werden müssen, sollten diese möglichst ressourcenschonend sein.
-Serverressourcen sind teuer und können das Projekt im Zweifelsfall unrentabel
-machen, wenn das System bei paralleler Nutzung durch mehrere Studierende eine
-inadäquate Serverlast voraussetzen würde. Selbiges gilt für Lizenzgebühren
-möglicher Tools und Werkzeuge.
+Die Ressourcenlast und die damit verbundenen Kosten spielen eine weitere
+wichtige Rolle bei der Entscheidungsfindung. Wenn Teile der Lernplattform auf
+OTH-Servern gehostet werden müssen, sollten diese möglichst ressourcenschonend
+sein. Serverressourcen sind teuer und können das Projekt im Zweifelsfall
+unrentabel machen, wenn das System bei paralleler Nutzung durch mehrere
+Studierende eine inadäquate Serverlast voraussetzen würde. Selbiges gilt für
+Lizenzgebühren möglicher Tools und Werkzeuge.
 
 Neben den Kosten ist es auch wichtig, dass die Plattform zusammen mit dem
 \ac{lms} bzw. der Lernplattform der Hochschule arbeiten kann. Der Vorteil einer
 LMS-Integration wird später im Kapitel \ref{code-freak} näher erläutert.
 
-Zu guter Letzt ist es wünschenswert, dass der Programmierkurs mit der Auswahl
+Zu guter Letzt ist es wünschenswert, dass der Programmierkurs bei der Auswahl
 der Programmiersprache flexibel ist. So sollte es beispielsweise möglich sein,
 dass die erste Aufgabe mit der Programmiersprache Java gelöst wird,
 während die zweite mit Python gelöst werden muss.

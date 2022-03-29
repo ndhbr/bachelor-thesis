@@ -1,6 +1,6 @@
 edX
 LMS-Integration
 Deploymentprobleme
-Repositories
-Remote-Repositories
+Repositorys
+Remote-Repositorys
 Bash-Skripte

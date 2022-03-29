@@ -1,6 +1,6 @@
 \subsection{Versionskontrolle mit Git}
 \subsubsection{Allgemein}
-Die Versionskontrolle oder Quellcodekontrolle ermöglicht es Änderungen an
+Die Versionskontrolle oder Quellcodekontrolle ermöglicht es, Änderungen an
 Softwarecode zu verfolgen. Die Verfolgung aller Änderungen erlaubt bei Bedarf
 die Wiederherstellung eines früheren Datenstands. \parencite{git-allgemein}
 
@@ -9,13 +9,14 @@ git-Datenbank-Dateien. Programmierer können dadurch in ihren Teams genau
 analysieren, wer welche Zeile wann geändert oder neu eingesetzt hat.
 
 Durch Git können mehrere Entwickler an demselben Projekt bzw. Repository
-arbeiten und sogar dieselben Dateien gleichzeitig ändern. Git bietet hierfür
-Prozesse um solche Konflikte sauber lösen zu können. Beim Zusammenführen der
-beiden Zustände kann man entscheiden welche Zeile man aus welcher Änderung
-übernimmt.
+arbeiten und sogar dieselben Dateien gleichzeitig ändern. Oftmals entstehen
+Konflikte, wenn zwei oder mehr Personen an derselben Datei arbeiten. Git bietet
+hierfür Prozesse, um solche Konflikte sauber lösen zu können. Beim
+Zusammenführen der beiden Zustände kann man entscheiden, welche Zeile man aus
+welcher Änderung übernimmt.
 
-Git bietet durch die Speicherung jeder Änderung nicht nur den Vorteil vom
-gemeinsamen Arbeiten, sondern auch eine Art \glqq Backup\grqq{}. Durch den
+Git bietet durch die Speicherung jeder Änderung nicht nur den Vorteil
+gemeinsamen Arbeitens, sondern auch eine Art \glqq Backup\grqq{}. Durch den
 genauen Verlauf des Quellcodes, können Fehlerursachen schneller analysiert,
 gefunden und verifiziert werden. Um die einzelnen Snapshots bzw. Schnappschüsse
 des aktuellen Standes zu markieren, gibt es in Git die sogenannten Commits.
@@ -26,10 +27,10 @@ Die folgenden Begriffsklärungen und Anleitungen rund um das
 Versionskontrollsystem Git sind wichtig, um den Rest der Arbeit besser verstehen
 zu können.
 
-\subsubsection{Repositories und Commits}
+\subsubsection{Repositorys und Commits}
 Das Git-Repository ist der Kern des Projekts und umfasst alle Dateien, die von
-Git getracked werden sollen. Es ist sozusagen das Projekt an dem die Entwickler
-arbeiten. Um ein Repository anzulegen braucht es nur einen Ordner in dem man
+Git getrackt werden sollen. Es ist sozusagen das Projekt, an dem die Entwickler
+arbeiten. Um ein Repository anzulegen, braucht es nur einen Ordner, in dem man
 in der Konsole folgenden Befehl ausführt:
 \begin{lstlisting}[style=Bash]
     $ git init
@@ -37,7 +38,7 @@ in der Konsole folgenden Befehl ausführt:
 Daraufhin wird in diesem Verzeichnis ein neuer \texttt{.git}-Ordner erstellt,
 welcher alle Informationen über das gerade erstellte Repository enthält. Sobald
 man nun beispielsweise eine neue Textdatei anlegt, wird diese Handlung im
-\texttt{.git}-Ordner getracked.
+\texttt{.git}-Ordner getrackt.
 
 Git arbeitet mit Snapshots, die man manuell anlegen muss. Wenn der Entwickler
 nun täglich einen Absatz in die Textdatei schreibt, gibt es hierfür keine
@@ -72,8 +73,8 @@ Die Ausgabe des erläuterten Beispiels sähe ungefähr so aus:
 \end{lstlisting}
 
 Wie die Ausgabe bereits verrät, wurde bisher noch kein Commit angelegt. Außerdem
-verrät sie, dass die Datei \texttt{hallo-welt.txt} angelegt wurde, bisher jedoch
-nicht getracked wird. Nun kann der Entwickler die Änderung tracken, indem er
+zeigt sie, dass die Datei \texttt{hallo-welt.txt} angelegt wurde, bisher jedoch
+nicht getrackt wird. Nun kann der Entwickler die Änderung tracken, indem er
 folgenden Befehl ausführt:
 
 \begin{lstlisting}[style=Bash]
@@ -82,7 +83,7 @@ folgenden Befehl ausführt:
 
 Durch den Befehl \code{git add .} kann er auch mit einem Kommando alle
 \emph{untracked} (nicht verfolgte) Änderungen in den neuen Commit hinzufügen.
-Jetzt weiß Git welche Änderungen commited werden sollen. Mit dem Befehl
+Jetzt weiß Git, welche Änderungen committet werden sollen. Mit dem Befehl
 
 \begin{lstlisting}[style=Bash]
     $ git commit -m "Neue Hallo Welt Datei angelegt"
@@ -92,16 +93,16 @@ wird ein Commit mit der Nachricht \glqq Neue Hallo Welt Datei angelegt\grqq{}
 angelegt. Dies ist nun ein neuer Snapshot, welcher in der Commit-Historie
 gespeichert wird. Sollte der Programmierer die Datei nun verändern, kann er die
 neuen Änderungen erneut tracken und wieder committen. An diesem Punkt könnte er
-jedoch jederzeit zu dem alten bereits committeten Zustand zurückkehren.
+jedoch jederzeit zu dem alten, bereits committeten Zustand zurückkehren.
 
-Damit Repositories im Internet verfügbar sind, benötigt man einen Server mit
-einer Kopie des lokalen Repositories. Diese Repositories nennt man auch
-Remote-Repositories. Der bekannteste Dienstleister für die Speicherung
-von Remote-Repositories ist GitHub. Der Vorteil von einer Online-Version des
-eigenen Repositories ist, dass andere Entwickler das Projekt klonen und
+Damit Repositorys im Internet verfügbar sind, benötigt man einen Server mit
+einer Kopie des lokalen Repositorys. Diese Repositorys nennt man auch
+Remote-Repositorys. Der bekannteste Dienstleister für die Speicherung
+von Remote-Repositorys ist GitHub. Der Vorteil von einer Online-Version des
+eigenen Repositorys ist, dass andere Entwickler das Projekt klonen und
 anschließend mitarbeiten können. Nach dem Klonvorgang haben diese Personen
-ebenfalls eine lokale Kopie des Repositories auf ihrem Endgerät. Um nun einen
-lokalen Commit online verfügbar zu machen, muss dieser \emph{gepushed} werden.
+ebenfalls eine lokale Kopie des Repositorys auf ihrem Endgerät. Um nun einen
+lokalen Commit online verfügbar zu machen, muss dieser \emph{gepushet} werden.
 
 Zuerst muss über folgenden Befehl geprüft werden, ob im lokalen Repository das
 richtige Remote-Repository referenziert wird:
@@ -129,7 +130,7 @@ Repository zu laden, benötigt man einen sogenannten \emph{Pull}:
 Der Git-Workflow umfasst noch viele weitere Befehle und kann für Unerfahrene
 schnell sehr kompliziert werden. Aus diesem Grund enthalten die meisten gängigen
 Entwicklungsumgebungen grafische Oberflächen für die Verwendung von Git. So
-benötigt der Entwickler weder Konsole, noch tieferes Fachwissen über die genaue
+benötigt der Entwickler weder Konsole noch tieferes Fachwissen über die genaue
 Verwendung bzw. Syntax der Befehle.
 
 \subsubsection{Branches}
@@ -157,7 +158,7 @@ von Branches eine Lösung für dieses Problem dar.
 \end{figure}
 
 Branches (Äste) teilen den linearen Entwicklungsablauf in mehrere parallele
-Zustände. Standardmäßig arbeitet man bei Git auf dem \texttt{Main}-Branch. Der
+Zustände. Standardmäßig arbeitet man bei Git auf dem \texttt{Main}-Branch -- Der
 Hauptzweig sozusagen (siehe Abbildung \ref{fig:git-branch}, der weiße Strang).
 Die weißen Kugeln stellen in Abbildung \ref{fig:git-branch} jeweils einzelne
 Commits dar. Sobald ein neues Feature entwickelt wird, möchte der zuständige
@@ -204,5 +205,6 @@ fehlerfreien \texttt{Main}-Branch in den \texttt{Feature}-Branch mergen und den
 heißt hier nichts anderes als das Zusammenführen zweier Codebasen. Dies ist auch
 sinnvoll, wenn die Entwicklung eines Features einen längeren Zeitraum
 beansprucht. Ansonsten geht man die Gefahr ein, dass sich der Hauptzweig bei der
-Zusammenführung so sehr verändert hat, dass er dem \texttt{Feature}-Zweig zu
-sehr differenziert und ein Merge sehr viel manuelle Arbeit erfordert.
+Zusammenführung so sehr verändert hat, dass er sich zu sehr vom
+\texttt{Feature}-Zweig unterscheidet und ein Merge sehr viel manuelle Arbeit
+erfordern würde.

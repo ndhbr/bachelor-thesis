@@ -1,13 +1,13 @@
 \subsection{Vergleich vorhandener Systeme}
 \subsubsection{CS50 der Harvard University}
 \paragraph{Allgemeines}
-CS50 ist die ursprüngliche Bezeichnung eines Lernkurses über Informatik,
-welcher von der Harvard University ins Leben gerufen wurde und weiterhin
-betreut wird. Der Kurs wurde aufgrund seines Erfolgs digitalisiert und wird nun
-als CS50x auf der Online-Lernplattform edX angeboten. Folgende Recherchen und
-Aussagen über CS50 sind jeweils immer auf die Online-Version CS50x bezogen.
+CS50 ist die ursprüngliche Bezeichnung eines Informatik-Kurses, welcher von der
+Harvard University ins Leben gerufen wurde und weiterhin betreut wird. Der Kurs
+wurde aufgrund seines Erfolgs digitalisiert und wird nun als CS50x auf der
+Online-Lernplattform edX angeboten. Die folgenden Recherchen und Aussagen über
+CS50 sind jeweils immer auf die Online-Version CS50x bezogen.
 
-Der Kurs CS50 lehrt Schülerinnen und Schüler die Grundlagen der Informatik.
+Der Kurs CS50 lehrt Schülerinnen und Schülern die Grundlagen der Informatik.
 Dabei werden diverse Programmierübungen abgefragt. Aufgrund der hohen Anzahl an
 Teilnehmenden besitzt der Kurs ein automatisiertes Abgabe- und Benotungssystem.
 
@@ -30,26 +30,26 @@ Entwicklungsumgebung bearbeitet werden. Dies wird durch die flexible Architektur
 des Systems ermöglicht. Jede Funktionalität des vollautomatisierten Kurses
 geschieht durch öffentlich bereitgestellte Kommandozeilen-Tools. Dieses System
 hat den Vorteil, dass es unabhängig von der eingesetzten IDE
-(Entwicklungsumgebung) funktioniert, es wird lediglich ein Terminal mit den
+(Entwicklungsumgebung) funktioniert. Es wird lediglich ein Terminal mit den
 jeweiligen Tools benötigt. \parencite{cs50-ide}
 
 Um einen Lösungsversuch abzugeben wird das sogenannte Werkzeug \emph{submit50}
 verwendet. Um den Code vor Abgabe auf Fehler zu überprüfen, stellt Harvard das
-Tool \emph{check50} bereit. Auch die Sauberkeit und Qualität des Codes kann
+Tool \emph{check50} bereit. Auch die Sauberkeit und Qualität des Codes können
 mithilfe eines Werkzeugs überprüft werden. Hierfür heißt die Softwarelösung
 \emph{style50}. \parencite{submit50}
 
 \paragraph{Ablauf für Lehrende}
-Um eigene Programmierkurse auf Basis der CS50-Technik zu erstellen, stellt
-Harvard die \emph{me50-Plattform} kostenfrei zur Verfügung. Hierzu müssen Lehrende
-genau folgenden Link in ihrem Browser eingeben:
-\url{https://submit.cs50.io/courses/new}. Der Link führt zu
-einer Seite, um einen neuen Kurs anzulegen. Auf die Erstellungsseite gelangt man
-nur, über den Direktlink. Einen Knopf gibt es dafür nicht. Nach der Eingabe
-eines neuen Kursnamens öffnet sich die Einstellungsseite des neu angelegten
-Kurses. Dort können neben dem gerade festgelegten Namen auch die Beschreibung
-des Kurses, die beinhaltenden Aufgaben sowie die zuständigen Admin-Accounts der
-Dozierenden festgelegt und geändert werden.
+Harvard stellt die \emph{me50-Plattform} kostenfrei zur Verfügung. Diese
+Plattform gestattet es Programmierkurse auf Basis der CS50-Technik zu
+erstellen. Hierzu müssen Lehrende genau folgenden Link in ihrem Browser
+eingeben: \url{https://submit.cs50.io/courses/new}. Der Link führt zu einer
+Seite, auf der man einen neuen Kurs anlegen kann. Auf die Erstellungsseite
+gelangt man nur über den Direktlink. Eine Schaltfläche gibt es dafür nicht.
+Nach der Eingabe eines neuen Kursnamens öffnet sich die Einstellungsseite des
+neu angelegten Kurses. Dort können neben dem gerade festgelegten Namen auch die
+Beschreibung des Kurses, die enthaltenen Aufgaben sowie die zuständigen
+Admin-Accounts der Dozierenden festgelegt und geändert werden.
 
 Neue Aufgaben bzw. Probleme können mithilfe der folgenden Anleitung
 erstellt werden:
@@ -61,7 +61,7 @@ im Kurs angezeigt.
 In der Kursübersicht der me50-Plattform können Lehrende die Abgaben und Versuche
 der Studierenden sehen. Bei jedem Eintrag ist jeweils die erreichte Punktzahl
 von check50 und style50 sichtbar. Eine Übersicht der Abgaben können Dozierende
-jederzeit in Form einer .csv- oder als .json-Datei pro Aufgabe herunterladen.
+jederzeit in Form einer .csv- oder .json-Datei pro Aufgabe herunterladen.
 
 \paragraph{Architektur}
 Die Harvard University hält den Aufbau von CS50 weitestgehend transparent.
@@ -69,9 +69,9 @@ Viele der eingesetzten Werkzeuge sind öffentlich als Open-Source-Projekte unter
 der GitHub-Organisation \glqq CS50\grqq{} zu finden \parencite{cs50-github}.
 Darunter befinden sich unter anderem folgende Projekte:
 \begin{itemize}
-\item submit50: Abgabe von Code
+\item submit50: Abgabe des Codes
 \item check50: Funktionalitätstests des Codes
-\item render50: Erzeugung von .PDF-Dateien aus Code
+\item render50: Erzeugung von .PDF-Dateien aus dem Code
 \item ide50: Online-Entwicklungsumgebung
 \item style50: Überprüfung der Code-Qualität
 \item compare50: Plagiatserkennung von abgegebenen Projekten
@@ -79,9 +79,9 @@ Darunter befinden sich unter anderem folgende Projekte:
 \end{itemize}
 
 In Abbildung \ref{fig:cs50-architektur} ist der Aufbau der Lernplattform CS50
-vereinfacht grafisch dargestellt. Die Rechtecke und Menschen sind die
+vereinfacht grafisch dargestellt. Die Rechtecke und Strichmännchen sind die
 beteiligten Komponenten. Die Pfeile zwischen den Komponenten beschreiben die
-verbindende Relation. Von der \texttt{CS50-Programm}-Komponente ausgehende
+jeweiligen Relationen. Von der \texttt{CS50-Programm}-Komponente ausgehende
 gestrichelte Pfeile zeigen, je nach ausgeführtem Befehl, mögliche Relationen.
 
 \begin{figure}[h]
@@ -92,7 +92,7 @@ gestrichelte Pfeile zeigen, je nach ausgeführtem Befehl, mögliche Relationen.
     \label{fig:cs50-architektur}
 \end{figure}
 
-Teilnehmer dieses Online-Lehrangebots erhalten von den Dozierenden einen
+Teilnehmende dieses Online-Lehrangebots erhalten von den Dozierenden einen
 Einladungslink zum Kurs. Dieser Link führt sie zur me50-Plattform
 (https://submit.cs50.io/), welche gleichzeitig als Aufgabenübersicht dient.
 Auf dieser Plattform können Studierende sowohl ihre Abgaben, als auch ihre Kurse
@@ -133,7 +133,7 @@ Programme, mit welcher Aufgabe sie die Lösung des Teilnehmenden vergleichen
 sollen.
 
 Die letzte Zeile verlinkt erneut auf die me50-Plattform und zeigt dem
-Kursteilnehmer seine Abgaben dieser Aufgabe und seine damit erreichte
+Kursteilnehmenden seine Abgaben dieser Aufgabe und seine damit erreichte
 Punktezahl. Gleichzeitig verlinkt die me50-Plattform auf das vorher erstellte
 GitHub-Repository des Teilnehmers. Die Plattform legt bei jeder neu abgegebenen
 Aufgabe einen neuen git-Branch für diese an. Nach der Abgabe des vorherigen
@@ -160,8 +160,8 @@ der OTH zum heutigen Datum nicht möglich.
 \paragraph{Allgemeines}
 Code FREAK ist eine All-in-one-Lösung für Online-Programmieraufgaben mit
 automatisiertem Feedback. Die von der Hochschule Kiel entwickelte
-Open-Source-Software soll den Einstieg in eine digitale Lernumgebung einfach
-machen. Die Zielgruppe von Code FREAK bezieht sich hierbei explizit auf
+Open-Source-Software soll den Einstieg in eine digitale Lernumgebung
+vereinfachen. Die Zielgruppe von Code FREAK bezieht sich hierbei explizit auf
 Universitäten und Einrichtungen einer höheren Bildung.
 \parencite{codefreak-startseite}
 
@@ -182,20 +182,21 @@ bearbeiten. Die einzelnen Aufgaben können dann entweder über die integrierte
 Online-Entwicklungsumgebung, durch Hochladen der Lösung, oder durch die Angabe
 eines Git-Remote-Repository-Links bearbeitet werden.
 
-Mit dem Klick auf den \glqq Start Evaluation\grqq{} Knopf wird die hochgeladene
-Lösung der Aufgabe überprüft. Die Ergebnisse der einzelnen Test-Schritte können
-dann in einem weiteren Tab eingesehen werden. Zu den Test-Schritten können neben
-üblichen Unit-Tests auch Stylechecks gehören. Ein Stylecheck kann zum Beispiel
-überprüfen, ob der geschriebene Code nach den für die Programmiersprache
-üblichen Konventionen formatiert ist. Die Evaluation einer Aufgabe kann beliebig
-oft wiederholt werden. Wenn alle Tests der Aufgabe bestanden wurden, wird der
-Task mit einem grünen Haken versehen. So sieht der Schüler in der
-Assignment-Ansicht auf einen Blick, welche Aufgaben er bereits gelöst hat.
+Mit dem Klick auf die \glqq Start Evaluation\grqq{} Schaltfläche wird die
+hochgeladene Lösung der Aufgabe überprüft. Die Ergebnisse der einzelnen
+Test-Schritte können dann in einem weiteren Tab eingesehen werden. Zu den
+Test-Schritten können neben üblichen Unit-Tests auch Stylechecks gehören. Ein
+Stylecheck kann zum Beispiel überprüfen, ob der geschriebene Code nach den für
+die Programmiersprache üblichen Konventionen formatiert ist. Die Evaluation
+einer Aufgabe kann beliebig oft wiederholt werden. Wenn alle Tests der Aufgabe
+bestanden wurden, wird der Task mit einem grünen Haken versehen. So sieht der
+Schüler in der Assignment-Ansicht auf einen Blick, welche Aufgaben er bereits
+gelöst hat.
 
 \paragraph{Ablauf für Lehrende}
-Lehrende haben in Code FREAK die Möglichkeit Aufgaben im Task Pool zu
+Lehrende haben in Code FREAK die Möglichkeit, Aufgaben im Task Pool zu
 erstellen. Im Task Pool können beliebig viele Tasks angelegt werden. Bei der
-Aufgabenkonfiguration ist es neben dem Erstellen der Anleitung auch möglich die
+Aufgabenkonfiguration ist es neben dem Erstellen der Anleitung auch möglich, die
 einzelnen Test-Schritte festgelegzulegen. Außerdem können mehrere nacheinander
 ablaufende Testabläufe erstellt werden. So kann beispielsweise neben dem
 Ergebnis auch die Code-Qualität getestet werden.
@@ -262,10 +263,10 @@ Kommandozeile testen und abgeben kann. In Code FREAK kann man Aufgaben lediglich
 % TODO: GitHub Classroom kann auch LMS Integration
 GitHub Classroom ist ein weiterer Kandidat für den Einsatz an der
 Hochschule Regensburg. Die Plattform ermöglicht die automatisierte
-Erstellung von Repositories auf GitHub. Außerdem hilft Classroom dabei,
+Erstellung von Repositorys auf GitHub. Außerdem hilft Classroom dabei,
 Aufgabenvorlagen und dazugehörige Abgaben einfach zu verwalten und automatisch
 zu benoten. Dabei enthalten die von GitHub Classroom erstellten
-Aufgaben-Repositories bereits vorkonfigurierte Zugriffskontrollen. \parencite{github-classroom-startseite}
+Aufgaben-Repositorys bereits vorkonfigurierte Zugriffskontrollen. \parencite{github-classroom-startseite}
 
 \paragraph{Ablauf für Studierende}
 Studierende bekommen pro Programmieraufgabe einen Einladungslink. Nach Annahme
@@ -282,7 +283,7 @@ Tests bestanden sind, hat der Studierende die Aufgabe erfolgreich abgeschlossen.
 Um einen Aufgabe in GitHub Classroom zur Verfügung zu stellen, bedarf es zuerst
 einer GitHub Organisation, sowie einem Kurs in GitHub Classroom. Sobald beides
 erstellt ist, können Lehrende neue Assignments (Aufgaben) mithilfe von
-bestehenden Vorlage-Repositories erstellen. In der Vorlage befindet sich in der
+bestehenden Vorlage-Repositorys erstellen. In der Vorlage befindet sich in der
 Regel ein Ordner mit Tests, welche das Ergebnis des Programms prüfen sollen.
 In GitHub Classroom kann demnach eine Reihe an Kommandozeilenbefehlen festgelegt
 werden, die dann diese Tests ausführen und je nach Ergebnis bepunkten.
@@ -290,14 +291,14 @@ werden, die dann diese Tests ausführen und je nach Ergebnis bepunkten.
 Eine Übersicht über die Abgaben und erreichten Punktzahlen der Studierenden,
 kann sich der Dozierende jederzeit beim Klick auf eine Aufgabe anzeigen lassen.
 Gleichzeitig ist es in dieser Ansicht möglich alle Noten als .CSV-Datei und
-alle Repositories als .ZIP-Datei herunterzuladen.
+alle Repositorys als .ZIP-Datei herunterzuladen.
 
 \paragraph{Architektur} % TODO: Zitieren?
 GitHub Classroom ist ein Bildungsservice der Firma GitHub Inc. und ist Stand
 heute kostenfrei \parencite{github-classroom-kostenlos}. Die Software basiert
-auf der Automatisierung von Repositories. Jeder bei GitHub registrierte Nutzer,
+auf der Automatisierung von Repositorys. Jeder bei GitHub registrierte Nutzer,
 kann einen sogenannten \emph{Classroom} erstellen und darin Aufgaben auf
-Basis vorhandener öffentlichen GitHub-Repositories erstellen.
+Basis vorhandener öffentlichen GitHub-Repositorys erstellen.
 
 \paragraph{Probleme beim Einsatz für die OTH}
 Es gibt keine Möglichkeit das System von GitHub Classroom auf einen lokalen
