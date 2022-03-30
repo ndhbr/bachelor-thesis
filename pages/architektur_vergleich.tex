@@ -1,4 +1,10 @@
 \subsection{Vergleich vorhandener Systeme}
+Nachdem die Grundlagen und Voraussetzungen für die folgende Arbeit geklärt sind,
+werden nun vorhandene etablierte Online-Lernsysteme miteinander verglichen und
+bewertet. Dabei wird jeweils der Ablauf für Studierende sowie der Ablauf für
+Lehrende beschrieben. Außerdem werden für jedes System mögliche Hindernisse und
+Probleme beim Einsatz an der Hochschule Regensburg diskutiert.
+
 \subsubsection{CS50 der Harvard University}
 \paragraph{Allgemeines}
 CS50 ist die ursprüngliche Bezeichnung eines Informatik-Kurses, welcher von der
@@ -7,9 +13,9 @@ wurde aufgrund seines Erfolgs digitalisiert und wird nun als CS50x auf der
 Online-Lernplattform edX angeboten. Die folgenden Recherchen und Aussagen über
 CS50 sind jeweils immer auf die Online-Version CS50x bezogen.
 
-Der Kurs CS50 lehrt Schülerinnen und Schülern die Grundlagen der Informatik.
-Dabei werden diverse Programmierübungen abgefragt. Aufgrund der hohen Anzahl an
-Teilnehmenden besitzt der Kurs ein automatisiertes Abgabe- und Benotungssystem.
+Der Kurs CS50 lehrt Schülern die Grundlagen der Informatik. Dabei werden diverse
+Programmierübungen abgefragt. Aufgrund der hohen Anzahl an Teilnehmenden besitzt
+der Kurs ein automatisiertes Abgabe- und Benotungssystem.
 
 Das System hinter CS50 wird mittlerweile vielfältig eingesetzt und wurde zu
 einem universalen Online-Lernsystem erweitert. Jeder kann sich durch eine
@@ -61,6 +67,8 @@ In der Kursübersicht der me50-Plattform können Lehrende die Abgaben und Versuc
 der Studierenden sehen. Bei jedem Eintrag ist jeweils die erreichte Punktzahl
 von check50 und style50 sichtbar. Eine Übersicht der Abgaben können Dozierende
 jederzeit in Form einer .csv- oder .json-Datei pro Aufgabe herunterladen.
+
+\newpage
 
 \paragraph{Architektur}
 Die Harvard University hält den Aufbau von CS50 weitestgehend transparent.
@@ -150,9 +158,10 @@ Dieses Projekt ist gleichzeitig der größte Bestandteil des Netzwerks und ist
 deshalb essenziell für die Verwendung der Werkzeuge an der Regensburger
 Hochschule. Nach Rücksprache mit Herrn Carter Zenke der Harvard University ist
 ein Neuaufbau dieser Website mit einhergehender Veröffentlichung als
-Open-Source-Projekt gerade in Planung. Einen genauen öffentlichen Zeitplan
-hierfür gibt es aktuell nicht. Infolgedessen ist ein Einsatz des CS50-Systems an
-der OTH zum heutigen Datum nicht möglich.
+Open-Source-Projekt gerade in Planung (siehe Anhang
+\ref{appendix:carter-zenke}). Einen genauen öffentlichen Zeitplan hierfür gibt
+es aktuell nicht. Infolgedessen ist ein Einsatz des CS50-Systems an der OTH zum
+heutigen Datum nicht möglich.
 
 \newpage
 \subsubsection{Code FREAK der Fachhochschule Kiel}\label{code-freak}
@@ -161,8 +170,7 @@ Code FREAK ist eine All-in-one-Lösung für Online-Programmieraufgaben mit
 automatisiertem Feedback. Die von der Hochschule Kiel entwickelte
 Open-Source-Software soll den Einstieg in eine digitale Lernumgebung
 vereinfachen. Die Zielgruppe von Code FREAK bezieht sich hierbei explizit auf
-Universitäten und Einrichtungen einer höheren Bildung.
-\parencite{codefreak-startseite}
+Hochschulen und Universitäten. \parencite{codefreak-startseite}
 
 Des Weiteren wirbt Code FREAK mit einer \emph{LMS-Integration}. LMS ist die
 englische Abkürzung für Learning Management System (Lernplattform). Viele
@@ -174,41 +182,42 @@ können sich direkt mit ihrem gewohnten Hochschulzugang anmelden.
 \paragraph{Ablauf für Studierende}
 Studierende können nach Anmeldung am System, an für sie sichtbaren Kursen
 (Assignments) teilnehmen. Dies geschieht meist durch einen vom Dozierenden
-generierten Einladungslink. Jedes Assignment kann mehrere Aufgaben (Tasks)
-enthalten. Sobald der Einladungslink zum Assignment akzeptiert
-wurde, kann die teilnehmende Person alle Tasks aus dem Assignment sehen und
-bearbeiten. Die einzelnen Aufgaben können dann entweder über die integrierte
+generierten Einladungslink. Jedes Assignment enthält eine oder mehrere Aufgaben
+(Tasks). Sobald der Einladungslink zum Assignment akzeptiert wurde, hat die
+teilnehmende Person Zugang zu allen in dem Assignment enthaltenen Tasks. Die
+einzelnen Aufgaben werden dann entweder über die integrierte
 Online-Entwicklungsumgebung, durch Hochladen der Lösung, oder durch die Angabe
-eines Git-Remote-Repository-Links bearbeitet werden.
+eines Git-Remote-Repository-Links bearbeitet.
 
 Mit dem Klick auf die \glqq Start Evaluation\grqq{} Schaltfläche wird die
 hochgeladene Lösung der Aufgabe überprüft. Die Ergebnisse der einzelnen
-Test-Schritte können dann in einem weiteren Tab eingesehen werden. Zu den
-Test-Schritten können neben üblichen Unit-Tests auch Stylechecks gehören. Ein
-Stylecheck kann zum Beispiel überprüfen, ob der geschriebene Code nach den für
-die Programmiersprache üblichen Konventionen formatiert ist. Die Evaluation
-einer Aufgabe kann beliebig oft wiederholt werden. Wenn alle Tests der Aufgabe
-bestanden wurden, wird der Task mit einem grünen Haken versehen. So sieht der
-Schüler in der Assignment-Ansicht auf einen Blick, welche Aufgaben er bereits
-gelöst hat.
+Test-Schritte werden in einem weiteren Tab visualisiert. Zusätzlich zu den
+üblichen Unit-Tests enthalten die Test-Schritte unter Umständen auch
+sogenannte \emph{Stylechecks}. Ein Stylecheck überprüft, ob der geschriebene
+Code nach den für die Programmiersprache üblichen Konventionen formatiert ist.
+Die Evaluation einer Aufgabe kann beliebig oft wiederholt werden. Wenn alle
+Tests der Aufgabe bestanden wurden, wird der Task mit einem grünen Haken
+versehen. So sieht der Schüler in der Assignment-Ansicht auf einen Blick, welche
+Aufgaben er bereits gelöst hat und an welchen Aufgaben er noch arbeiten muss.
 
 \paragraph{Ablauf für Lehrende}
-Lehrende haben in Code FREAK die Möglichkeit, Aufgaben im Task Pool zu
-erstellen. Im Task Pool können beliebig viele Tasks angelegt werden. Bei der
-Aufgabenkonfiguration ist es neben dem Erstellen der Anleitung auch möglich, die
-einzelnen Test-Schritte festgelegzulegen. Außerdem können mehrere nacheinander
-ablaufende Tests erstellt werden. So kann beispielsweise neben dem Ergebnis auch
-die Code-Qualität getestet werden.
+Lehrende erstellen in Code FREAK Aufgaben in einem sogenannten \emph{Task Pool}.
+In diesem Task Pool können beliebig viele Tasks angelegt werden. Zusätzlich zum
+Verfassen einer ausführlichen Anleitung, enthält Code FREAK bei der Erstellung
+neuer Tasks außerdem einen Bereich, um einzelne Test-Schritte festzulegen. Diese
+Schritte erlauben es neben den vorher erklärten Unit-Tests (siehe Kapitel
+\ref{unit-tests}) zusätzliche Tests, wie beispielsweise für die Code-Qualität,
+nacheinander auszuführen.
 
-Anschließend können Lehrende Assignments erstellen, welche aus den vorher
-angelegten Tasks im Task Pool bestehen. Der Task Pool hat den Vorteil, dass
-mehrere Kurse dieselben Aufgaben anbieten können, ohne diese redundant anlegen
-zu müssen. Dieses Vorgehen erhöht die Wartbarkeit der Aufgaben ungemein. In der
-Einzelansicht eines Kurses können Dozierende eine optionale Deadline, sowie eine
-maximale Bearbeitungsdauer angeben. Außerdem können Ergebnisse und Bewertungen
-der Studierenden als .CSV-Datei exportiert werden. Die Lösungsversuche der
-Studierenden können wiederum als .ZIP- oder als .TAR-Datei heruntergeladen
-werden.
+Anschließend erstellen Lehrende Assignments, welche aus den vorher angelegten
+Tasks im Task Pool bestehen. Der Task Pool hat den Vorteil, dass mehrere Kurse
+dieselben Aufgaben wiederverwenden können, ohne diese redundant anlegen zu
+müssen. Dieses Vorgehen erhöht die Wartbarkeit der Aufgaben ungemein. Die
+Einzelansicht eines Kurses erlaubt es zusätzlich eine optionale Deadline sowie
+eine maximale Bearbeitungsdauer anzugeben. Außerdem gibt es eine Schaltfläche,
+um Ergebnisse und Bewertungen der Studierenden als .CSV-Datei zu exportieren.
+Die Lösungsversuche der Studierenden werden wiederum als .ZIP- oder als
+.TAR-Datei zum Heruntergeladen angeboten.
 
 \paragraph{Architektur}
 Code FREAK wird als fertiger Docker-Container ausgeliefert. Docker ist eine
@@ -238,7 +247,7 @@ gewährleisten zu können, werden dementsprechend sehr hohe Serverkosten fällig
 \parencite{codefreak-memory-problem}
 
 Eine weitere Hürde ist die Stabilität der Software. Code FREAK befindet sich,
-Stand heute, mitten in der Entwicklung, weshalb einige Funktionen und Features
+Stand \today, mitten in der Entwicklung, weshalb einige Funktionen und Features
 noch nicht ordnungsgemäß funktionieren -- darunter die vorher angeworbene
 LMS-Integration \parencite{codefreak-docs}. Zum heutigen Zeitpunkt ist das
 \ac{ldap} die einzige Möglichkeit, sich mit dem System zu authentifizieren. Ein
@@ -259,13 +268,13 @@ Kommandozeile testen und abgeben kann. In Code FREAK kann man Aufgaben lediglich
 \newpage
 \subsubsection{GitHub Classroom}
 \paragraph{Allgemeines}
-% TODO: GitHub Classroom kann auch LMS Integration
 GitHub Classroom ist ein weiterer Kandidat für den Einsatz an der
 Hochschule Regensburg. Die Plattform ermöglicht die automatisierte
 Erstellung von Repositorys auf GitHub. Außerdem hilft Classroom dabei,
 Aufgabenvorlagen und dazugehörige Abgaben einfach zu verwalten und automatisch
 zu benoten. Dabei enthalten die von GitHub Classroom erstellten
-Aufgaben-Repositorys bereits vorkonfigurierte Zugriffskontrollen. \parencite{github-classroom-startseite}
+Aufgaben-Repositorys bereits vorkonfigurierte Zugriffskontrollen.
+\parencite{github-classroom-startseite}
 
 \paragraph{Ablauf für Studierende}
 Studierende bekommen pro Programmieraufgabe einen Einladungslink. Nach Annahme
@@ -292,9 +301,9 @@ sich der Dozierende jederzeit beim Klick auf eine Aufgabe anzeigen lassen.
 Gleichzeitig ist es in dieser Ansicht möglich, alle Noten als .CSV-Datei und
 alle Repositorys als .ZIP-Datei herunterzuladen.
 
-\paragraph{Architektur} % TODO: Zitieren?
-GitHub Classroom ist ein Bildungsservice der Firma GitHub Inc. und ist Stand
-heute kostenfrei \parencite{github-classroom-kostenlos}. Die Software basiert
+\paragraph{Architektur}
+GitHub Classroom ist ein Bildungsservice der Firma GitHub Inc. und ist, Stand
+\today, kostenfrei \parencite{github-classroom-kostenlos}. Die Software basiert
 auf der Automatisierung von Repositorys. Jeder bei GitHub registrierte Nutzer
 kann einen sogenannten \emph{Classroom} erstellen und darin Aufgaben auf
 Basis vorhandener öffentlichen GitHub-Repositorys erstellen.
@@ -304,19 +313,20 @@ Es gibt keine Möglichkeit, das System von GitHub Classroom auf einem lokalen
 Git-Server zu replizieren. Aufgrund dessen schafft man sich durch die
 Verwendung von Classroom eine externe Abhängigkeit an GitHub. Dies kann unter
 Umständen zu erheblichen Problemen führen, wenn der Dienst beispielsweise
-nicht erreichbar oder eingestellt wird. Beides ist durch die Größe und
-Infrastruktur des Unternehmens nicht (häufig) zu erwarten.
+nicht erreichbar oder eingestellt wird. Durch die Größe und Infrastruktur des
+Unternehmens ist weder ein häufiger Ausfall noch eine Auflösung des Dienstes zu
+erwarten.
 
-Eine weitere Hürde ist der Bedarf an weiterer Software. GitHub Classroom alleine
-ist nicht ausreichend, um als vollständige Lernplattform für den Kurs Digital
-Skills zu fungieren. Hier bietet es sich an, eine eigene statische Website
-mit Anleitungen und Erklärungen zu bauen, welche dann jeweils auf Classroom
-Einladungslinks verweist. Als Online-Entwicklungsumgebung kann der Dienst Replit
-verwendet werden. In Replit ist es möglich, ein vorhandenes Git-Repository als
-Template (Vorlage) für eine neue Umgebung zu verwenden. Dieses Template könnte
-dann Hilfsprogramme für den Git-Workflow enthalten. Der Vorteil daran:
-Studierende bekommen erste Erfahrungen mit der Kommandozeile, müssen jedoch
-keine komplexen Git-Kommandos absetzen.
+Eine weitere Herausforderung ist der Bedarf an weiterer Software. GitHub
+Classroom alleine ist nicht ausreichend, um als vollständige Lernplattform für
+den Kurs Digital Skills zu fungieren. Hier bietet es sich an, eine eigene
+statische Website mit Anleitungen und Erklärungen zu bauen, welche dann jeweils
+auf Classroom Einladungslinks verweist. Als Online-Entwicklungsumgebung kann der
+Dienst Replit verwendet werden. In Replit ist es möglich, ein vorhandenes
+Git-Repository als Template (Vorlage) für eine neue Umgebung zu verwenden.
+Dieses Template könnte dann Hilfsprogramme für den Git-Workflow enthalten. Der
+Vorteil daran: Studierende bekommen erste Erfahrungen mit der Kommandozeile,
+müssen jedoch keine komplexen Git-Kommandos absetzen.
 
 \subsubsection{Bewertung und Entscheidung der vorhandenen Systeme}
 Die folgende Abbildung \ref{fig:systemvergleich} visualisiert die erläuterten
@@ -337,9 +347,12 @@ Die Spalten drei, vier und fünf enthalten die Bewertungen, in welchem Grad die
 Systeme die Anforderungen erfüllen. Hierbei gilt ähnlich wie bei der Gewichtung:
 je höher der Wert, desto besser. Der valide Bereich befindet sich hier jedoch
 zwischen 0,0 und 3,0. Der Wert 0 bedeutet, dass das Feature nicht vorhanden ist,
-oder nicht zutrifft. Die Spalten enthalten hierbei das Ergebnis der
+oder nicht zutrifft. Eine 3 als Wert wiederum stellt eine völlige
+Übereinstimmung mit der geforderten Anforderung dar. Alle Werte dazwischen 
+bilden lineare Zwischenwerte. Die Spalten enthalten hierbei das Ergebnis der
 Multiplikation aus der Bepunktung mit der in der zweiten Spalte enthaltenen
-Gewichtung.
+Gewichtung. Sowohl die Punkteverteilung als auch die Recherchen über die
+gegebenen Plattformen und Anforderungen wurden von Andreas Huber durchgeführt.
 
 \begin{figure}[H]
     \centering

@@ -1,15 +1,21 @@
 \section{Konfiguration und Implementierung}\label{konfiguration-u-impl}
+Nachdem die Entscheidung über die zu verwendende Architektur getroffen ist,
+folgt nun die Konfiguration der einzelnen Komponenten. Im ersten Schritt wird
+Tutors als Aufgabensammlung erläutert. Danach geht es um die Automatisierung der
+Benotung und der Quellcodeverwaltung mit GitHub Classroom. Anschließend folgt
+die Erstellung und Programmierung eines Template-Repositorys, welches diverse
+Hilfsprogramme enthält, um den Workflow für den Studierenden zu erleichtern.
 
 % Tutors.dev
 \subsection{Tutors als Aufgabensammlung}\label{tutors-als-aufgabensammlung}
-Da der Programmierkurs nur ein Teil eines ganzen Modulkatalogs des Kurses
+Da der Programmierkurs nur ein Teil eines ganzen Modulkatalogs des Studiums
 Digital Skills ist, übernehmen die Einrichtung Konfiguration von Tutors die
 hierfür zuständigen wissenschaftlichen Mitarbeitenden des Zusatzstudiums.
 
 Für die Einpflegung der Aufgaben werden lediglich Anleitungen sowie
 jeweils dazugehörige Thumbnails (Vorschaubilder) benötigt. Die Anleitungen
-werden, wie in Kapitel \ref{finale-architektur-tutors} genauer erläutert, im
-standardisierten und weit verbreiteten Format Markdown verfasst.
+werden, wie in Unterabschnitt \ref{finale-architektur-tutors} genauer erläutert,
+im standardisierten und weit verbreiteten Format Markdown verfasst.
 
 Anleitungen können durch Markdown mit verhältnismäßig wenig Aufwand verfasst
 werden und schließlich als \code{README.md}-Datei im Aufgaben-Repository
@@ -63,8 +69,12 @@ von nicht geplanten Eingaben vergeben. \parencite{github-assignment-erstellen}
 
 % Replit
 \subsection{Erstellung eines Replit-Starter-Templates}\label{replit-template}
+Sobald die Anleitungen in Tutors veröffentlicht und die Aufgaben in GitHub
+Classroom als Assignments erstellt wurden, folgt nun die Konfiguration von
+Replit. Damit der Workflow der Studierenden mit der Online-IDE unterstützt wird,
+wird ein dafür hilfreiches Template-Repository erstellt.
+
 \subsubsection{Template-Repository}\label{replit-template-repository}
-% TODO: Quelle?
 Projekte in Replit heißen \emph{Repls}. Ein Projekt ist in Replit ein
 vollumfänglicher Arbeitsbereich, um neue oder bestehende Software zu entwickeln.
 Neben einer Dateiübersicht, einem Texteditor und einer Konsole enthält der
@@ -81,12 +91,13 @@ Kursaufgaben für den Teilnehmenden erleichtern.
 
 Aus diesem Grund wurde ein öffentliches Repository in der vorher erstellten
 GitHub Organisation angelegt. Dies ist das Template, welches später von den
-Studierenden als Starter-Vorlage verwendet wird. Replit versteckt alle Dateien,
-welche sich in einem Ordner namens \texttt{node\_modules} befinden.
-Normalerweise wird der Ordner automatisch im Kontext mit externen Modulen der
-JavaScript-Bibliothek Node.js verwendet \parencite{nodejs}. Das ist auch der
-Grund, weshalb Replit diesen Ordner automatisch versteckt. Dieses Verhalten
-nutzen wir, um Hilfsprogramme und Konfigurationen zu verstecken.
+Studierenden als Starter-Vorlage verwendet wird.
+\parencite{git-repo:replit-template} Replit versteckt alle Dateien, welche sich
+in einem Ordner namens \texttt{node\_modules} befinden. Normalerweise wird der
+Ordner automatisch im Kontext mit externen Modulen der JavaScript-Bibliothek
+Node.js verwendet \parencite{nodejs}. Das ist auch der Grund, weshalb Replit
+diesen Ordner automatisch versteckt. Dieses Verhalten nutzen wir, um
+Hilfsprogramme und Konfigurationen zu verstecken.
 
 Studierende werden den ganzen Kurs in einem einzigen Repl absolvieren. Jede
 Programmieraufgabe wird als Ordner im Repl Arbeitsbereich abgespeichert. Um die

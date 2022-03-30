@@ -63,6 +63,9 @@ footskip=12mm}
 % Konfiguriere das Inhaltsverzeichnis
 \usepackage{tocbasic}
 
+% Anhang: PDF einfügen
+\usepackage{pdfpages}
+
 % subsubsubsection durch paragraph
 \usepackage{titlesec}
 \setcounter{secnumdepth}{4}
@@ -138,7 +141,7 @@ footskip=12mm}
 
 % Römische Nummerierung
 \newpage
-\pagenumbering{roman}
+\pagenumbering{Roman}
 \setcounter{page}{3}
 
 % Abbildungsverzeichnis
@@ -147,5 +150,9 @@ footskip=12mm}
 % Literaturliste soll im Inhaltsverzeichnis auftauchen
 \newpage
 \input{pages/x_literaturverzeichnis}
+
+% Anhang
+\newpage
+\input{pages/x_anhang}
 
 \end{document}
