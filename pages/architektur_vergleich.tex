@@ -9,9 +9,9 @@ Probleme beim Einsatz an der Hochschule Regensburg diskutiert.
 \paragraph{Allgemeines}
 CS50 ist die ursprüngliche Bezeichnung eines Informatik-Kurses, welcher von der
 Harvard University ins Leben gerufen wurde und weiterhin betreut wird. Der Kurs
-wurde aufgrund seines Erfolgs digitalisiert und wird nun als CS50x auf der
-Online-Lernplattform edX angeboten. Die folgenden Recherchen und Aussagen über
-CS50 sind jeweils immer auf die Online-Version CS50x bezogen.
+wurde aufgrund seines Erfolgs digitalisiert und wird nun mit dem Namen CS50x auf
+der Online-Lernplattform edX angeboten. Die folgenden Recherchen und Aussagen
+über CS50 beziehen sich jeweils immer auf die Online-Version CS50x.
 
 Der Kurs CS50 lehrt Schülern die Grundlagen der Informatik. Dabei werden diverse
 Programmierübungen abgefragt. Aufgrund der hohen Anzahl an Teilnehmenden besitzt
@@ -85,7 +85,7 @@ Darunter befinden sich unter anderem folgende Projekte:
 \item server50: Webserver
 \end{itemize}
 
-In Abbildung \ref{fig:cs50-architektur} ist der Aufbau der Lernplattform CS50
+In \autoref{fig:cs50-architektur} ist der Aufbau der Lernplattform CS50
 vereinfacht grafisch dargestellt. Die Rechtecke und Strichmännchen sind die
 beteiligten Komponenten. Die Pfeile zwischen den Komponenten beschreiben die
 jeweiligen Relationen. Von der \texttt{CS50-Programm}-Komponente ausgehende
@@ -205,9 +205,9 @@ Lehrende erstellen in Code FREAK Aufgaben in einem sogenannten \emph{Task Pool}.
 In diesem Task Pool können beliebig viele Tasks angelegt werden. Zusätzlich zum
 Verfassen einer ausführlichen Anleitung, enthält Code FREAK bei der Erstellung
 neuer Tasks außerdem einen Bereich, um einzelne Test-Schritte festzulegen. Diese
-Schritte erlauben es neben den vorher erklärten Unit-Tests (siehe Kapitel
-\ref{unit-tests}) zusätzliche Tests, wie beispielsweise für die Code-Qualität,
-nacheinander auszuführen.
+Schritte erlauben es neben den vorher erklärten Unit-Tests (siehe
+\autoref{unit-tests}) zusätzliche Tests, wie beispielsweise für die
+Code-Qualität, nacheinander auszuführen.
 
 Anschließend erstellen Lehrende Assignments, welche aus den vorher angelegten
 Tasks im Task Pool bestehen. Der Task Pool hat den Vorteil, dass mehrere Kurse
@@ -216,8 +216,8 @@ müssen. Dieses Vorgehen erhöht die Wartbarkeit der Aufgaben ungemein. Die
 Einzelansicht eines Kurses erlaubt es zusätzlich eine optionale Deadline sowie
 eine maximale Bearbeitungsdauer anzugeben. Außerdem gibt es eine Schaltfläche,
 um Ergebnisse und Bewertungen der Studierenden als .CSV-Datei zu exportieren.
-Die Lösungsversuche der Studierenden werden wiederum als .ZIP- oder als
-.TAR-Datei zum Heruntergeladen angeboten.
+Die Lösungsversuche der Teilnehmenden werden wiederum als .ZIP- oder als
+.TAR-Datei zum Herunterladen angeboten.
 
 \paragraph{Architektur}
 Code FREAK wird als fertiger Docker-Container ausgeliefert. Docker ist eine
@@ -297,7 +297,7 @@ In GitHub Classroom kann demnach eine Reihe an Kommandozeilenbefehlen festgelegt
 werden, die dann diese Tests ausführen und je nach Ergebnis bepunkten.
 
 Eine Übersicht über die Abgaben und erreichten Punktzahlen der Studierenden kann
-sich der Dozierende jederzeit beim Klick auf eine Aufgabe anzeigen lassen.
+sich der Dozierende jederzeit per Klick auf eine Aufgabe anzeigen lassen.
 Gleichzeitig ist es in dieser Ansicht möglich, alle Noten als .CSV-Datei und
 alle Repositorys als .ZIP-Datei herunterzuladen.
 
@@ -314,8 +314,8 @@ Git-Server zu replizieren. Aufgrund dessen schafft man sich durch die
 Verwendung von Classroom eine externe Abhängigkeit an GitHub. Dies kann unter
 Umständen zu erheblichen Problemen führen, wenn der Dienst beispielsweise
 nicht erreichbar oder eingestellt wird. Durch die Größe und Infrastruktur des
-Unternehmens ist weder ein häufiger Ausfall noch eine Auflösung des Dienstes zu
-erwarten.
+Unternehmens ist jedoch weder ein häufiger Ausfall noch eine Auflösung des
+Dienstes zu erwarten.
 
 Eine weitere Herausforderung ist der Bedarf an weiterer Software. GitHub
 Classroom alleine ist nicht ausreichend, um als vollständige Lernplattform für
@@ -329,12 +329,12 @@ Vorteil daran: Studierende bekommen erste Erfahrungen mit der Kommandozeile,
 müssen jedoch keine komplexen Git-Kommandos absetzen.
 
 \subsubsection{Bewertung und Entscheidung der vorhandenen Systeme}
-Die folgende Abbildung \ref{fig:systemvergleich} visualisiert die erläuterten
-Systeme und bewertet diese anhand der vorher definierten Anforderungen (siehe 
-Kapitel \ref{anforderungsanalyse}). Die blau hinterlegten Zeilen repräsentieren
+Die folgende \autoref{fig:systemvergleich} visualisiert die erläuterten Systeme
+und bewertet diese anhand der vorher definierten Anforderungen (siehe
+\autoref{anforderungsanalyse}). Die blau hinterlegten Zeilen repräsentieren
 die nichtfunktionalen Anforderungen. Alle rosa hinterlegten Zeilen wiederum
 repräsentieren die funktionalen Anforderungen aus der Sicht des Teilnehmers. Der
-letzte Teil, welcher gelb hinterlegt ist, spiegelt schließlich die funktionalen
+letzte, gelb hinterlegte, Teil spiegelt schließlich die funktionalen
 Anforderungen aus der Sicht der Lehrenden wider.
 
 Die erste Spalte enthält die Namen der Anforderungen, während in der zweiten
@@ -347,11 +347,10 @@ Die Spalten drei, vier und fünf enthalten die Bewertungen, in welchem Grad die
 Systeme die Anforderungen erfüllen. Hierbei gilt ähnlich wie bei der Gewichtung:
 je höher der Wert, desto besser. Der valide Bereich befindet sich hier jedoch
 zwischen 0,0 und 3,0. Der Wert 0 bedeutet, dass das Feature nicht vorhanden ist,
-oder nicht zutrifft. Eine 3 als Wert wiederum stellt eine völlige
-Übereinstimmung mit der geforderten Anforderung dar. Alle Werte dazwischen 
-bilden lineare Zwischenwerte. Die Spalten enthalten hierbei das Ergebnis der
-Multiplikation aus der Bepunktung mit der in der zweiten Spalte enthaltenen
-Gewichtung. Sowohl die Punkteverteilung als auch die Recherchen über die
+oder nicht zutrifft. Eine 3 wiederum stellt eine völlige Übereinstimmung mit der
+geforderten Anforderung dar. Alle Werte dazwischen bilden lineare Zwischenwerte.
+Die Spalten enthalten hierbei das Ergebnis der Multiplikation aus der Bepunktung
+mit der Gewichtung. Sowohl die Punkteverteilung als auch die Recherchen über die
 gegebenen Plattformen und Anforderungen wurden von Andreas Huber durchgeführt.
 
 \begin{figure}[H]
@@ -361,6 +360,8 @@ gegebenen Plattformen und Anforderungen wurden von Andreas Huber durchgeführt.
     \bildquelle{Eigene Darstellung}
     \label{fig:systemvergleich}
 \end{figure}
+
+\newpage
 
 Zusammenfassend befinden sich in der letzten Zeile die Summen der Benotungen. In
 diesem Fall hat das System mit GitHub Classroom die meisten Punkte erreicht und
