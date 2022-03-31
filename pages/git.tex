@@ -5,7 +5,7 @@ Softwarecode zu verfolgen. Die Verfolgung aller Änderungen erlaubt bei Bedarf
 die Wiederherstellung eines früheren Datenstands. \parencite{git-allgemein}
 
 Versionskontrollsysteme, wie Git, speichern jede Änderung am Code in speziellen
-git-Datenbank-Dateien. Programmierer können dadurch in ihren Teams genau
+Git-Datenbank-Dateien. Programmierer können dadurch in ihren Teams genau
 analysieren, wer welche Zeile wann geändert oder neu eingesetzt hat.
 
 Durch Git können mehrere Entwickler an demselben Projekt bzw. Repository
@@ -37,7 +37,7 @@ in der Konsole folgenden Befehl ausführt:
 \end{lstlisting}
 Daraufhin wird in diesem Verzeichnis ein neuer \texttt{.git}-Ordner erstellt,
 welcher alle Informationen über das gerade erstellte Repository enthält. Sobald
-man nun beispielsweise eine neue Textdatei anlegt, wird diese Handlung im
+man nun beispielsweise eine neue Textdatei anlegt, wird der Erstellvorgang im
 \texttt{.git}-Ordner getrackt.
 
 Git arbeitet mit Snapshots, die man manuell anlegen muss. Wenn der Entwickler
@@ -81,8 +81,9 @@ folgenden Befehl ausführt:
 \end{lstlisting}
 
 Durch den Befehl \code{git add .} kann er auch mit einem Kommando alle
-\emph{untracked} (nicht verfolgte) Änderungen in den neuen Commit hinzufügen.
-Jetzt weiß Git, welche Änderungen committet werden sollen. Mit dem Befehl
+\emph{untracked} (nicht verfolgte) Änderungen verschiedener Dateien in den neuen
+Commit hinzufügen. Jetzt weiß Git, welche Änderungen committet werden sollen.
+Mit dem Befehl
 
 \begin{lstlisting}[style=Bash]
     $ git commit -m "Neue Hallo Welt Datei angelegt"
@@ -94,12 +95,12 @@ gespeichert wird. Sollte der Programmierer die Datei nun verändern, kann er die
 neuen Änderungen erneut tracken und wieder committen. An diesem Punkt könnte er
 jedoch jederzeit zu dem alten, bereits committeten Zustand zurückkehren.
 
-Damit Repositorys im Internet verfügbar sind, benötigt man einen Server mit
+Damit ein Repository im Internet verfügbar ist, benötigt man einen Server mit
 einer Kopie des lokalen Repositorys. Diese Repositorys nennt man auch
 Remote-Repositorys. Der bekannteste Dienstleister für die Speicherung
 von Remote-Repositorys ist GitHub. Der Vorteil von einer Online-Version des
 eigenen Repositorys ist, dass andere Entwickler das Projekt klonen und
-anschließend mitarbeiten können. Nach dem Klonvorgang haben diese Personen
+anschließend daran mitarbeiten können. Nach dem Klonvorgang haben diese Personen
 ebenfalls eine lokale Kopie des Repositorys auf ihrem Endgerät. Um nun einen
 lokalen Commit online verfügbar zu machen, muss dieser \emph{gepushet} werden.
 
@@ -166,15 +167,15 @@ neues Feature entwickelt wird, möchte der zuständige Programmierer nicht, dass
 sich während der Entwicklung der Funktion etwas am restlichen Code ändert. Aus
 diesem Grund eröffnet der Feature-Programmierer, wie in \autoref{fig:git-branch}
 ersichtlich, einen neuen Branch auf den aktuellen Commit des Hauptzweigs (blauer
-Zweig). Wenn sich der Hauptzweig jetzt durch Überarbeitungen von anderen
-Kollegen ändert, merkt der Feature-Programmierer nichts davon, weil er sich auf
-einem anderen Ast (Branch) befindet und dabei seine ganz eigene Kopie des
-Projekts bearbeitet. Sobald er mit dem Feature fertig ist, kann er seinen Branch
-mit dem \texttt{Main}-Branch wieder zusammenführen. Falls sich in der
-Zwischenzeit die Dateien und Zeilen, die auch er bearbeitet hat, geändert haben,
-müssen die Konflikte in aller Regel manuell gelöst werden. Sollten nicht
-dieselben Zeilen bearbeitet worden sein, löst Git die Konflikte selbst und führt
-die zwei Zustände automatisch zusammen.
+Zweig). Wenn sich der Hauptzweig nun durch Überarbeitungen von anderen Kollegen
+ändert, merkt der Feature-Programmierer nichts davon, weil er sich auf einem
+anderen Ast (Branch) befindet und dabei seine ganz eigene Kopie des Projekts
+bearbeitet. Sobald er mit dem Feature fertig ist, kann er seinen Branch mit dem
+\texttt{Main}-Branch wieder zusammenführen. Falls sich in der Zwischenzeit die
+Dateien und Zeilen, die auch er bearbeitet hat, geändert haben, müssen die
+Konflikte in aller Regel manuell gelöst werden. Sollten nicht dieselben Zeilen
+bearbeitet worden sein, löst Git die Konflikte selbst und führt die zwei
+Zustände automatisch zusammen.
 
 Eine bekannte Konvention unter Programmierern ist es, dass der
 \texttt{Main}-Branch immer eine lauffähige Version der Software hält. Es darf

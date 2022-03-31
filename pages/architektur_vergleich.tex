@@ -9,9 +9,9 @@ Probleme beim Einsatz an der Hochschule Regensburg diskutiert.
 \paragraph{Allgemeines}
 CS50 ist die ursprüngliche Bezeichnung eines Informatik-Kurses, welcher von der
 Harvard University ins Leben gerufen wurde und weiterhin betreut wird. Der Kurs
-wurde aufgrund seines Erfolgs digitalisiert und wird nun mit dem Namen CS50x auf
-der Online-Lernplattform edX angeboten. Die folgenden Recherchen und Aussagen
-über CS50 beziehen sich jeweils immer auf die Online-Version CS50x.
+wurde aufgrund seines Erfolgs digitalisiert und wird nun unter dem Namen CS50x
+auf der Online-Lernplattform edX angeboten. Die folgenden Recherchen und
+Aussagen über CS50 beziehen sich jeweils immer auf die Online-Version CS50x.
 
 Der Kurs CS50 lehrt Schülern die Grundlagen der Informatik. Dabei werden diverse
 Programmierübungen abgefragt. Aufgrund der hohen Anzahl an Teilnehmenden besitzt
@@ -50,7 +50,7 @@ Plattform gestattet es Programmierkurse auf Basis der CS50-Technik zu
 erstellen. Hierzu müssen Lehrende genau folgenden Link in ihrem Browser
 eingeben: \url{https://submit.cs50.io/courses/new}. Der Link führt zu einer
 Seite, auf der man einen neuen Kurs anlegen kann. Auf die Erstellungsseite
-gelangt man nur über den Direktlink. Eine Schaltfläche gibt es dafür nicht.
+gelangt man nur über den Direktlink -- eine Schaltfläche gibt es dafür nicht.
 Nach der Eingabe eines neuen Kursnamens öffnet sich die Einstellungsseite des
 neu angelegten Kurses. Dort können neben dem gerade festgelegten Namen auch die
 Beschreibung des Kurses, die enthaltenen Aufgaben sowie die zuständigen
@@ -85,11 +85,12 @@ Darunter befinden sich unter anderem folgende Projekte:
 \item server50: Webserver
 \end{itemize}
 
-In \autoref{fig:cs50-architektur} ist der Aufbau der Lernplattform CS50
-vereinfacht grafisch dargestellt. Die Rechtecke und Strichmännchen sind die
-beteiligten Komponenten. Die Pfeile zwischen den Komponenten beschreiben die
-jeweiligen Relationen. Von der \texttt{CS50-Programm}-Komponente ausgehende
-gestrichelte Pfeile zeigen, je nach ausgeführtem Befehl, mögliche Relationen.
+In \autoref{fig:cs50-architektur} auf der nächsten Seite ist der Aufbau der
+Lernplattform CS50 vereinfacht grafisch dargestellt. Die Rechtecke und
+Strichmännchen sind die beteiligten Komponenten des Systems. Die Pfeile zwischen
+den Komponenten beschreiben die jeweiligen Relationen. Von der
+\texttt{CS50-Programm}-Komponente ausgehende gestrichelte Pfeile zeigen, je nach 
+ausgeführtem Befehl, verschiedene mögliche Relationen.
 
 \begin{figure}[h]
     \centering
@@ -101,8 +102,9 @@ gestrichelte Pfeile zeigen, je nach ausgeführtem Befehl, mögliche Relationen.
 
 Teilnehmende dieses Online-Lehrangebots erhalten von den Dozierenden einen
 Einladungslink zum Kurs. Dieser Link führt sie zur me50-Plattform
-(https://submit.cs50.io/), welche gleichzeitig als Aufgabenübersicht dient.
-Auf dieser Plattform können Studierende sowohl ihre Abgaben, als auch ihre Kurse
+(https://submit.cs50.io/), welche gleichzeitig als Aufgabenübersicht dient. Die
+Authentifizierung mit der Plattform geschieht dabei über GitHub. Auf dieser
+Plattform können Studierende sowohl ihre Abgaben, als auch ihre Kurse
 übersichtlich verwalten. Neben der Weiterleitung zur me50-Plattform wird
 gleichzeitig in der me50-GitHub-Organisation ein leeres Repository mit dem
 GitHub-Username des Teilnehmers angelegt.
@@ -133,17 +135,17 @@ Namens der Aufgabe die Lösung überprüfen und schließlich abgeben. Eine Abgab
     Go to https://submit.cs50.io/users/ndhbr/cs50/problems/2021/x/hello to see your results.
 \end{lstlisting}
 
-Der Parameter \texttt{cs50/problems/20212/x/hello} im Aufruf von submit50 ist
+Der Parameter \texttt{cs50/problems/2021/x/hello} im Aufruf von submit50 ist
 der im vorherigen Abschnitt erläuterte Slug. Das Programm check50 wird ebenfalls
-mit dem Slug als Parameter aufgerufen. Mit dieser Information wissen die
+mit dem Slug als Parameter aufgerufen. Durch diese Information wissen die
 Programme, mit welcher Aufgabe sie die Lösung des Teilnehmenden vergleichen
 sollen.
 
 Die letzte Zeile verlinkt erneut auf die me50-Plattform und zeigt dem
 Kursteilnehmenden seine Abgaben dieser Aufgabe und seine damit erreichte
 Punktezahl. Gleichzeitig verlinkt die me50-Plattform auf das vorher erstellte
-GitHub-Repository des Teilnehmers. Die Plattform legt bei jeder neu abgegebenen
-Aufgabe einen neuen git-Branch für diese an. Nach der Abgabe des vorherigen
+GitHub-Repository des Lernenden. Die Plattform legt bei jeder neu abgegebenen
+Aufgabe einen neuen Git-Branch für diese an. Nach der Abgabe des vorherigen
 Beispiels hätte die Plattform folgenden Branch in dem Repository angelegt
 \texttt{cs50/problems/2021/x/hello}. Durch die Commit-History in diesem Branch 
 kann man später den Verlauf der Versuche nachverfolgen.
@@ -206,8 +208,8 @@ In diesem Task Pool können beliebig viele Tasks angelegt werden. Zusätzlich zu
 Verfassen einer ausführlichen Anleitung, enthält Code FREAK bei der Erstellung
 neuer Tasks außerdem einen Bereich, um einzelne Test-Schritte festzulegen. Diese
 Schritte erlauben es neben den vorher erklärten Unit-Tests (siehe
-\autoref{unit-tests}) zusätzliche Tests, wie beispielsweise für die
-Code-Qualität, nacheinander auszuführen.
+\autoref{unit-tests}) zusätzliche Tests, wie beispielsweise Stylechecks,
+nacheinander auszuführen.
 
 Anschließend erstellen Lehrende Assignments, welche aus den vorher angelegten
 Tasks im Task Pool bestehen. Der Task Pool hat den Vorteil, dass mehrere Kurse
@@ -326,16 +328,17 @@ Dienst Replit verwendet werden. In Replit ist es möglich, ein vorhandenes
 Git-Repository als Template (Vorlage) für eine neue Umgebung zu verwenden.
 Dieses Template könnte dann Hilfsprogramme für den Git-Workflow enthalten. Der
 Vorteil daran: Studierende bekommen erste Erfahrungen mit der Kommandozeile,
-müssen jedoch keine komplexen Git-Kommandos absetzen.
+müssen jedoch keine komplexen Git-Kommandos im Zusammenhang mit GitHub Classroom
+absetzen.
 
 \subsubsection{Bewertung und Entscheidung der vorhandenen Systeme}
-Die folgende \autoref{fig:systemvergleich} visualisiert die erläuterten Systeme
-und bewertet diese anhand der vorher definierten Anforderungen (siehe
-\autoref{anforderungsanalyse}). Die blau hinterlegten Zeilen repräsentieren
-die nichtfunktionalen Anforderungen. Alle rosa hinterlegten Zeilen wiederum
-repräsentieren die funktionalen Anforderungen aus der Sicht des Teilnehmers. Der
-letzte, gelb hinterlegte, Teil spiegelt schließlich die funktionalen
-Anforderungen aus der Sicht der Lehrenden wider.
+Die auf der nächsten Seite folgende \autoref{fig:systemvergleich} visualisiert
+die erläuterten Systeme und bewertet diese anhand der vorher definierten
+Anforderungen (siehe \autoref{anforderungsanalyse}). Die blau hinterlegten
+Zeilen repräsentieren die nichtfunktionalen Anforderungen. Alle rosa
+hinterlegten Zeilen wiederum repräsentieren die funktionalen Anforderungen aus
+der Sicht des Teilnehmers. Der letzte, gelb hinterlegte, Teil spiegelt
+schließlich die funktionalen Anforderungen aus der Sicht der Lehrenden wider.
 
 Die erste Spalte enthält die Namen der Anforderungen, während in der zweiten
 Spalte die Gewichtungen der Anforderungen aufgeführt sind. Der valide Bereich
@@ -350,8 +353,9 @@ zwischen 0,0 und 3,0. Der Wert 0 bedeutet, dass das Feature nicht vorhanden ist,
 oder nicht zutrifft. Eine 3 wiederum stellt eine völlige Übereinstimmung mit der
 geforderten Anforderung dar. Alle Werte dazwischen bilden lineare Zwischenwerte.
 Die Spalten enthalten hierbei das Ergebnis der Multiplikation aus der Bepunktung
-mit der Gewichtung. Sowohl die Punkteverteilung als auch die Recherchen über die
-gegebenen Plattformen und Anforderungen wurden von Andreas Huber durchgeführt.
+mit der Gewichtung. Sowohl die Punkteverteilung und Festlegung der Gewichtungen
+als auch die Recherchen über die gegebenen Plattformen und Anforderungen wurden
+von Andreas Huber durchgeführt.
 
 \begin{figure}[H]
     \centering

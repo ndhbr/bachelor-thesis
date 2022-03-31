@@ -2,14 +2,14 @@
 Nachdem die Entscheidung über die zu verwendende Architektur getroffen ist,
 folgt nun die Konfiguration der einzelnen Komponenten. Im ersten Schritt wird
 Tutors als Aufgabensammlung erläutert. Danach geht es um die Automatisierung der
-Benotung und der Quellcodeverwaltung mit GitHub Classroom. Anschließend folgt
-die Erstellung und Programmierung eines Template-Repositorys, welches diverse
-Hilfsprogramme enthält, um den Workflow für den Studierenden zu erleichtern.
+Benotung und Quellcodeverwaltung mit GitHub Classroom. Anschließend folgt die
+Erstellung und Programmierung eines Template-Repositorys, welches diverse
+Hilfsprogramme enthält, um den Workflow für die Studierenden zu erleichtern.
 
 % Tutors.dev
 \subsection{Tutors als Aufgabensammlung}\label{tutors-als-aufgabensammlung}
 Da der Programmierkurs nur ein Teil eines ganzen Modulkatalogs des Studiums
-Digital Skills ist, übernehmen die Einrichtung Konfiguration von Tutors die
+Digital Skills ist, übernehmen die Einrichtung und Konfiguration von Tutors die
 hierfür zuständigen wissenschaftlichen Mitarbeitenden des Zusatzstudiums.
 
 Für die Einpflegung der Aufgaben werden lediglich Anleitungen sowie
@@ -20,9 +20,9 @@ standardisierten und weit verbreiteten Format Markdown verfasst.
 Anleitungen können durch Markdown mit verhältnismäßig wenig Aufwand verfasst
 werden und schließlich als \code{README.md}-Datei im Aufgaben-Repository
 abgelegt werden. Dies hat den Vorteil, dass die Anleitung auch in der
-Versionskontrolle der Aufgabe enthalten ist. Außerdem können GitHub und Replit
-beim Klick auf die Aufgabe die Anleitung neben Tutors auch zusätzlich
-formatiert anzeigen.
+Versionskontrolle der Aufgabe enthalten ist. Außerdem bieten GitHub und Replit
+die Funktionalität beim Klick auf die Aufgabe die Anleitung neben Tutors auch
+zusätzlich formatiert anzuzeigen.
 
 % GitHub Classroom
 \subsection{GitHub Classroom}\label{github-classroom}
@@ -40,28 +40,30 @@ Aufgabenvorlagen sind in GitHub Classroom normale Repositorys, welche in GitHub
 als Template markiert wurden. Sie beinhalten meist zusätzlich Unit-Tests, um den
 Code darin zu prüfen.
 
-Sobald die Organisation mit Aufgaben gefüllt ist, kann der
-Classroom für den Kurs angelegt werden. Anfangs ist ein Classroom, wie die
-Organisation auch, leer. Über die Oberfläche können neue Assignments
-erstellt werden. Assignments sind Aufgaben, welche dem Studierenden zur
-Verfügung stehen. Für jedes vorher angelegte Aufgabenrepository wird ein
-Assignment erstellt. Bei der Erstellung gibt man verschiedene
-Konfigurationsparameter an. Dazu gehört die Auswahl, ob eine Aufgabe von
+Das Kursmodul \glqq Grundlagen der Programmierung\grqq{} setzt im ersten Schritt
+auf Übungen mit der Programmiersprache Python. Sobald die Organisation mit
+Python-Aufgaben gefüllt ist, kann der Classroom für den Kurs angelegt werden.
+Anfangs ist ein Classroom, wie die Organisation auch, leer. Über die Oberfläche
+können neue Assignments erstellt werden. Assignments sind Aufgaben, welche dem
+Studierenden zur Verfügung stehen. Für jedes vorher angelegte Aufgabenrepository
+wird ein Assignment erstellt. Bei der Erstellung gibt man verschiedene
+Konfigurationsparameter an. Dazu gehört die Auswahl, ob eine Übung von
 Einzelpersonen oder einer Gruppe bearbeitet werden kann, oder ob die jeweiligen
 Versuche für alle Studierenden oder nur für die Lehrenden sichtbar sind. Ferner
 gibt es die Möglichkeit eine Deadline, sowie den Starter Code anzugeben. Für den
-Starter Code wird in diesem Fall jeweils das Aufgabenrepository ausgewählt.
+Starter Code wird in diesem Fall immer jeweils das Aufgabenrepository aus der
+vorher erstellten Organisation ausgewählt.
 \parencite{github-assignment-erstellen}
 
 \subsubsection{Tests und Benotung}\label{classroom-tests}
 Im nächsten Schritt legt man die Benotung und das Feedback fest. Das Autograding
 (die Benotung) geschieht über Kommandos in der Konsole. Im vorliegenden Fall
-beinhaltet jedes Aufgabenrepository einen Ordner mit pytest-Tests. Pytest ist
+beinhaltet jedes Aufgabenrepository einen Ordner mit Pytest-Tests. Pytest ist
 eine Code-Test-Bibliothek für Python. Die Assignments wurden so konfiguriert,
-dass GitHub nach jedem Push zum Repository des Studierenden die pytest-Tests
+dass GitHub nach jedem Push zum Repository des Studierenden die Pytest-Tests
 startet. Wenn alle Tests erfolgreich sind, erhält der Studierende eine
-vorkonfigurierte Punktzahl. Durch Classroom ist es außerdem möglich, jedem
-Test eine individuelle Punktzahl zuzuweisen. So kann man dem Schüler neben der
+vorkonfigurierte Punktzahl. Durch Classroom ist es außerdem möglich, jedem Test
+eine individuelle Punktzahl zuzuweisen. So kann man dem Schüler neben der
 erfolgreichen Ausführung beispielsweise noch Bonuspunkte für das Berücksichtigen
 von nicht geplanten Eingaben vergeben. \parencite{github-assignment-erstellen}
 
@@ -72,7 +74,7 @@ von nicht geplanten Eingaben vergeben. \parencite{github-assignment-erstellen}
 Sobald die Anleitungen in Tutors veröffentlicht und die Aufgaben in GitHub
 Classroom als Assignments erstellt wurden, folgt nun die Konfiguration von
 Replit. Damit der Workflow der Studierenden mit der Online-IDE unterstützt wird,
-wird ein dafür hilfreiches Template-Repository erstellt.
+erstellt Herr Huber ein dafür hilfreiches Template-Repository.
 
 \subsubsection{Template-Repository}\label{replit-template-repository}
 Projekte in Replit heißen \emph{Repls}. Ein Projekt ist in Replit ein
@@ -91,13 +93,13 @@ Kursaufgaben für den Teilnehmenden erleichtern.
 
 Aus diesem Grund wurde ein öffentliches Repository in der vorher erstellten
 GitHub Organisation angelegt. Dies ist das Template, welches später von den
-Studierenden als Starter-Vorlage verwendet wird
-\parencite{git-repo:replit-template}. Replit versteckt alle Dateien, welche sich
-in einem Ordner namens \texttt{node\_modules} befinden. Normalerweise wird der
-Ordner automatisch im Kontext mit externen Modulen der JavaScript-Bibliothek
-Node.js verwendet \parencite{nodejs}. Das ist auch der Grund, weshalb Replit
-diesen Ordner automatisch versteckt. Dieses Verhalten nutzen wir, um
-Hilfsprogramme und Konfigurationen zu verstecken.
+Studierenden als Starter-Vorlage in Replit verwendet wird
+\parencite{git-repo:replit-template}. Replit versteckt zudem alle Dateien,
+welche sich in einem Ordner namens \texttt{node\_modules} befinden.
+Normalerweise wird der Ordner automatisch im Kontext mit externen Modulen der 
+JavaScript-Bibliothek Node.js verwendet \parencite{nodejs}. Das ist auch der
+Grund, weshalb Replit diesen Ordner automatisch versteckt. Dieses Verhalten
+nutzen wir, um Hilfsprogramme und Konfigurationen zu verstecken.
 
 Studierende werden den ganzen Kurs in einem einzigen Repl absolvieren. Jede
 Programmieraufgabe wird als Ordner im Repl Arbeitsbereich abgespeichert. Um die
@@ -137,9 +139,9 @@ Unit-Tests.
 Schließlich pusht der Befehl \texttt{submit <PROJEKT-REPOSITORY>}
 den Lösungsversuch in das GitHub Classroom Aufgabenrepository des
 Kursteilnehmers. Dazu überprüft das Skript zuerst, ob es in der Zwischenzeit
-Änderungen am Repository gab und lädt diese herunter. Anschließend erstellt
-das Skript einen automatisierten Commit und lädt diesen in das Remote-Repository
-in die GitHub-Organisation des Kurses hoch.
+Änderungen am Repository gab und lädt diese gegebenenfalls zuerst herunter.
+Anschließend erstellt das Skript einen automatisierten Commit und lädt diesen
+in das Remote-Repository in die GitHub-Organisation des Kurses hoch.
 
 Damit die Skripte ordnerunabhängig ausgeführt werden können, werden
 Konsolenaliase benötigt. Konsolenaliase können in einer Bash-Konsole
@@ -164,7 +166,7 @@ sogenannte OTH-Console in der Konsole. Dies ist eine neue
 modifizierte Konsoleninstanz, welche alle für die Arbeit benötigten
 Konfigurationen enthält.
 
-Beim Start der OTH-Console beginnt die Ausführung des Einrichtungsskripts
+Beim Start der OTH-Console beginnt die Ausführung des Python-Einrichtungsskripts
 \texttt{setup.py}, welches die benötigten Dateien in das Benutzerverzeichnis
 schreibt.
 
@@ -206,9 +208,8 @@ Link zum Hinzufügen von SSH-Keys in GitHub aus.
 Des Weiteren überprüft das Programm, ob Git bereits konfiguriert ist. Um Commits
 zu erstellen, benötigt Git wie vorher bereits erwähnt einen Namen sowie eine
 dazugehörige E-Mail-Adresse. Sind die benötigten Werte nicht in der
-Replit-Datenbank vorhanden, fragt das Programm den Nutzenden nach dem Namen und
-der studentischen E-Mail-Adresse. Nach gültiger Eingabe der Daten werden diese
-Werte in der nutzerspezifischen Replit-Datenbank des Arbeitsbereiches
-hinterlegt. Damit Git die Werte übernehmen kann, werden sie, wie beim
-Einrichtungsskript auch, in eine dafür vorgesehene Git-Konfigurationsdatei
-geschrieben.
+Replit-Datenbank vorhanden, fragt das Programm den User nach dem Namen und der 
+studentischen E-Mail-Adresse. Nach gültiger Eingabe der Daten werden diese Werte
+in der nutzerspezifischen Replit-Datenbank des Arbeitsbereiches hinterlegt.
+Damit Git die Werte übernehmen kann, werden sie, wie beim Einrichtungsskript
+auch, in eine dafür vorgesehene Git-Konfigurationsdatei geschrieben.

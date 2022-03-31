@@ -12,10 +12,10 @@ Programmieraufgaben (Anleitungen, Fehlerbeschreibungen, Aufbau, Schwierigkeit,
 ...) gefunden, behoben und für zukünftige Aufgaben berücksichtigt werden.
 
 \subsection{Methode}
-Um für jeden Durchlauf gleiche Testbedingungen sicherstellen zu können, wird ein
-Testkonzept ausgearbeitet. Bei jeder Durchführung wird sich auf die Regeln
-und den Ablauf des Testkonzepts bezogen. Das vollständige Testkonzept befindet
-sich im Anhang \ref{appendix:testkonzept}.
+Um für jeden Durchlauf gleiche Testbedingungen sicherstellen zu können, wird von
+Herrn Huber ein Testkonzept ausgearbeitet. Bei jeder Durchführung wird sich auf
+die Regeln und den Ablauf des Testkonzepts bezogen. Das vollständige Testkonzept
+befindet sich im Anhang \ref{appendix:testkonzept}.
 
 Das Testkonzept legt im Grunde die Metadaten der Studie fest. Neben der
 Zielsetzung, der Zielgruppe und der Dauer des Tests wird in dem Konzept auch die
@@ -31,11 +31,12 @@ Anteilnahme an der folgenden Studie.
 
 Um eine gleichmäßig verteilte Stichprobenmenge zu erhalten, werden mindestens
 fünf Testpersonen aus fünf unterschiedlichen Studiengängen für die Durchführung
-benötigt. Wie in \autoref{table:studie-teilnehmende} absolut dargestellt, ist
-das Geschlechterverhältnis mit 40 \% männlichen Teilnehmern sehr ausgeglichen.
-Folgende Tabelle enthält neben dem Geschlecht auch das jeweilige Alter, sowie
-den Studiengang und das Semester der Testpersonen. Das Alter ist wichtig, um
-eine realistische Abbildung der Zielgruppe von Digital Skills zu erzeugen.
+benötigt. Wie auf der nächsten Seite in \autoref{table:studie-teilnehmende}
+absolut dargestellt, ist das Geschlechterverhältnis mit 40 \% männlichen
+Teilnehmern sehr ausgeglichen. Folgende Tabelle enthält neben dem Geschlecht
+auch das jeweilige Alter, sowie den Studiengang und das Semester der
+Testpersonen. Das Alter ist wichtig, um eine realistische Abbildung der
+Zielgruppe von Digital Skills zu erzeugen.
 
 \begin{table}[H]
 \renewcommand*{\arraystretch}{1.6}
@@ -70,7 +71,7 @@ Danach wurde den Teilnehmern die Agenda (siehe Anhang
 \ref{appendix:testkonzept}) vorgetragen. Anschließend wurden den Personen
 jeweils vier Fragen gestellt. Die Fragen mussten jeweils mit Schulnoten
 von 1 bis 6 beantwortet werden. Die Note 6 bedeutete hier immer eine
-vollständige Verneinung, während eins einer völligen Zustimmung entsprach. Die
+vollständige Verneinung, während eins einer völligen Zustimmung entsprach. Alle
 restlichen Noten bildeten wie gewohnt lineare Zwischenwerte.
 
 Nachdem die Fragen von der teilnehmenden Person beantwortet wurden, wurde sie
@@ -82,8 +83,8 @@ Think-Aloud-Methodik folgt. Die Think-Aloud-Methode ist eine Forschungsmethode,
 bei der der Testteilnehmer darum gebeten wird, seine Gedanken laut
 auszusprechen. Mit dieser Methode können mögliche Aufhänger und Probleme in den
 Anleitungen der Aufgaben leichter gefunden werden. Der Beobachter des Tests
-schreibt alle Anomalien kategorisiert nach Fortschritt und Teilnehmer des Tests
-auf. \parencite{think-aloud}
+schreibt alle Anomalien kategorisiert nach Teilnehmenden und Fortschritt des
+Tests auf. \parencite{think-aloud}
 
 Aufkommende Fragen konnten vom Beobachter beantwortet werden. Sollte eine Frage
 bzw. Aufgabe unlösbar erscheinen, gab es am Ende jeder Aufgabe einen
@@ -100,7 +101,7 @@ fünf weitere Fragen gestellt. Die Fragen mussten -- wie vorher auch -- in
 Schulnoten von 1 bis 6 beantwortet werden. Die Ergebnisse der Fragen wurden vom
 Beobachter notiert und in die vorher erwähnte Datentabelle eingetragen.
 
-Als grober Leitfaden wurde die Dauer von 30 bis 60 Minuten festgelegt, dies
+Als grober Leitfaden wurde eine Dauer von 30 bis 60 Minuten festgelegt, dies
 sollte jedoch kein hartes Zeitlimit darstellen. Der Test sollte möglichst
 unabhängig ablaufen und konnte bei möglichen Unverständnissen auch deutlich
 länger dauern. Gemäß einer Feldstudie darf das Ergebnis der Studie nicht durch
@@ -166,7 +167,8 @@ Die Aufgabe des Teilnehmenden ist es nun den Namen in folgenden
 Format wieder auszugeben: \code{Hallo, mein Name ist <NAME>}. Der Platzhalter
 \code{<NAME>} soll dabei durch den vorher abgefragten Namen ersetzt werden.
 Diese Aufgabe kann der Teilnehmer mit einer einzigen Codezeile lösen. Die
-Ausgabe der Lösung sieht dann so aus:
+Ausgabe der Lösung sieht, wie auf der nächsten Seite dokumentiert, in etwa so
+aus:
 
 \begin{lstlisting}[style=Bash]
 $ python main.py
@@ -248,6 +250,8 @@ Höhe: 6
 ######
 \end{lstlisting}
 
+\newpage
+
 Das Beispiel zeigt neben der Pyramide auch, dass das Skript ungültige
 Größenangaben erkennen und ignorieren soll. Aufgrund der erhöhten Schwierigkeit
 dieser Aufgabe wurde entschieden, die letzte Aufgabe für die Feldstudie zu
@@ -257,9 +261,9 @@ verwerfen.
 Für die Vorbereitung der Interviews wird eine neue GitHub-Organisation, sowie
 ein neuer GitHub-Classroom angelegt. Sowohl das Replit-Template als auch die im
 vorherigen Kapitel beschriebenen Aufgaben werden als Template-Repositorys in
-der Test-Organisation abgelegt.
+der Test-Organisation abgelegt. \parencite{git-orga:ndhbr-classroom}
 
-Für die Aufgaben werden mithilfe des Test-Frameworks pytest Benotungstests
+Für die Aufgaben werden mithilfe des Test-Frameworks Pytest Benotungstests
 programmiert und in GitHub-Classroom konfiguriert. Jede gelöste Aufgabe belohnt
 den Studienteilnehmenden pauschal mit zehn Punkten.
 
@@ -345,13 +349,13 @@ bei der Frage PAST5, kann man nicht auf eine vollständige Abneigung der
 Studierenden schließen. Trotzdem kann die negative Tendenz des Interesses auf zu
 schwere oder dürftig erklärte Aufgaben hindeuten. Ein weiterer
 Interpretationsversuch ist, dass die Studierenden nach der Präsentation des 
-Zusatzstudiums andere Vorstellungen zu den Modulen hatten.
+Zusatzstudiums andere Vorstellungen zum Programmiermodul hatten.
 
 % PAST1, PAST2, PAST3
 Die Fragen PAST1, PAST2 und PAST3 beziehen sich jeweils auf das
-Schwierigkeitsempfinden der Studierenden im Bezug auf die drei
+Schwierigkeitsempfinden der Studierenden in Bezug auf die drei
 Programmieraufgaben. Die erste Programmieraufgabe ist in diesem Fall die
-Einrichtungsaufgabe des Arbeitsbereiches. Mit dem Design der Aufgaben wird
+Einrichtungsaufgabe des Arbeitsbereichs. Mit dem Design der Aufgaben wird
 versucht die Schwierigkeit mit jeder Aufgabe zu steigern. Die Durchschnitte der
 Umfrage bestätigen den Erfolg eines linearen Schwierigkeitsanstiegs. Während
 PAST1 einen Durchschnitt von 2,600 aufweist, scheint die Schwierigkeit bei der
