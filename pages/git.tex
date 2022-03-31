@@ -29,7 +29,7 @@ zu können.
 
 \subsubsection{Repositorys und Commits}
 Das Git-Repository ist der Kern des Projekts und umfasst alle Dateien, die von
-Git getrackt werden sollen. Es ist sozusagen das Projekt, an dem die Entwickler
+Git überwacht werden sollen. Es ist sozusagen das Projekt, an dem die Entwickler
 arbeiten. Um ein Repository anzulegen, braucht es nur einen Ordner, in dem man
 in der Konsole folgenden Befehl ausführt:
 \begin{lstlisting}[style=Bash]
@@ -40,10 +40,10 @@ welcher alle Informationen über das gerade erstellte Repository enthält. Sobal
 man nun beispielsweise eine neue Textdatei anlegt, wird der Erstellvorgang im
 \texttt{.git}-Ordner getrackt.
 
-Git arbeitet mit Snapshots, die man manuell anlegen muss. Wenn der Entwickler
-nun täglich einen Absatz in die Textdatei schreibt, gibt es hierfür keine
-Historie. Git weiß nur, dass im ersten Snapshot keine Datei vorhanden war und
-nun eine Datei mit gefülltem Text vorliegt.
+Git arbeitet mit Snapshots, die manuell angelegt werden müssen. Wenn der
+Entwickler nun täglich einen Absatz in die Textdatei schreibt, gibt es hierfür
+keine Historie. Git weiß nur, dass im ersten Snapshot keine Datei vorhanden war
+und nun eine Datei mit gefülltem Text vorliegt.
 
 Um einen Verlauf der Erstellung zu speichern, muss der Entwickler sogenannte
 Commits mit aktuellen Zeitstempeln erstellen. Wann die Commits jeweils erstellt
@@ -55,11 +55,6 @@ abgerufen werden:
 
 \begin{lstlisting}[style=Bash]
     $ git status
-\end{lstlisting}
-
-Die Ausgabe des erläuterten Beispiels sähe ungefähr so aus:
-
-\begin{lstlisting}[style=Bash]
     On branch main
 
     No commits yet
@@ -71,10 +66,12 @@ Die Ausgabe des erläuterten Beispiels sähe ungefähr so aus:
     nothing added to commit but untracked files present (use "git add" to track)
 \end{lstlisting}
 
-Wie die Ausgabe bereits verrät, wurde bisher noch kein Commit angelegt. Außerdem
-zeigt sie, dass die Datei \texttt{hallo-welt.txt} angelegt wurde, bisher jedoch
-nicht getrackt wird. Nun kann der Entwickler die Änderung tracken, indem er
-folgenden Befehl ausführt:
+\newpage
+
+Wie die Ausgabe auf der vorherigen Seite bereits verrät, wurde bisher noch kein
+Commit angelegt. Außerdem zeigt sie, dass die Datei \texttt{hallo-welt.txt}
+angelegt wurde, bisher jedoch nicht getrackt wird. Nun kann der Entwickler die
+Änderung tracken, indem er folgenden Befehl ausführt:
 
 \begin{lstlisting}[style=Bash]
     $ git add hallo-welt.txt
@@ -102,7 +99,7 @@ von Remote-Repositorys ist GitHub. Der Vorteil von einer Online-Version des
 eigenen Repositorys ist, dass andere Entwickler das Projekt klonen und
 anschließend daran mitarbeiten können. Nach dem Klonvorgang haben diese Personen
 ebenfalls eine lokale Kopie des Repositorys auf ihrem Endgerät. Um nun einen
-lokalen Commit online verfügbar zu machen, muss dieser \emph{gepushet} werden.
+lokalen Commit online verfügbar zu machen, muss dieser \emph{gepusht} werden.
 
 Zuerst muss über folgenden Befehl geprüft werden, ob im lokalen Repository das
 richtige Remote-Repository referenziert wird:
