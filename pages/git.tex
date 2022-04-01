@@ -10,7 +10,7 @@ analysieren, wer welche Zeile wann geändert oder neu eingesetzt hat.
 
 Durch Git können mehrere Entwickler an demselben Projekt bzw. Repository
 arbeiten und sogar dieselben Dateien gleichzeitig ändern. Oftmals entstehen
-Konflikte, wenn zwei oder mehr Personen an derselben Datei arbeiten. Git bietet
+Konflikte, wenn zwei oder mehr Personen an derselben Datei arbeiten. Git enthält
 hierfür Prozesse, um solche Konflikte sauber lösen zu können. Beim
 Zusammenführen der beiden Zustände kann man entscheiden, welche Zeile man aus
 welcher Änderung übernimmt.
@@ -78,19 +78,21 @@ angelegt wurde, bisher jedoch nicht getrackt wird. Nun kann der Entwickler die
     $ git add hallo-welt.txt
 \end{lstlisting}
 
-Durch den Befehl \code{git add .} kann er auch mit einem Kommando alle
-\emph{untracked} (nicht verfolgte) Änderungen verschiedener Dateien in den neuen
-Commit hinzufügen. Jetzt weiß Git, welche Änderungen committet werden sollen.
-Mit dem Befehl
+Durch den Befehl \code{git add .} wäre es zudem möglich mit einem Kommando alle
+\emph{untracked} (nicht verfolgten) Änderungen verschiedener Dateien in den
+neuen Commit hinzuzufügen. Schließlich weiß Git jetzt, welche Änderungen
+committet werden sollen. Mit dem Befehl
 
+% TODO: hier weiter machen
 \begin{lstlisting}[style=Bash]
     $ git commit -m "Neue Hallo Welt Datei angelegt"
 \end{lstlisting}
 
-wird ein Commit mit der Nachricht \glqq Neue Hallo Welt Datei angelegt\grqq{}
-angelegt. Dies ist nun ein neuer Snapshot, welcher in der Commit-Historie
-gespeichert wird. Sollte der Programmierer die Datei nun verändern, kann er die
-neuen Änderungen erneut tracken und wieder committen. An diesem Punkt könnte er
+\noindent
+wird ein Commit mit der Nachricht \glqq Neue Hallo Welt Datei\grqq{} angelegt.
+Dies ist nun ein neuer Snapshot, welcher in der Commit-Historie gespeichert
+wird. Sollte der Programmierer die Datei erneut verändern, kann er die neuen
+Änderungen wieder tracken und schließlich committen. An diesem Punkt könnte er
 jedoch jederzeit zu dem alten, bereits committeten Zustand zurückkehren.
 
 Damit ein Repository im Internet verfügbar ist, benötigt man einen Server mit
@@ -121,7 +123,7 @@ folgendem Befehl ein Commit hochgeladen werden:
 \newpage
 
 Um mögliche Änderungen durch andere Mitarbeitende in das eigene lokale
-Repository zu laden, benötigt man einen sogenannten \emph{Pull}:
+Repository zu laden, benötigt man wiederum einen sogenannten \emph{Pull}:
 
 \begin{lstlisting}[style=Bash]
     $ git pull
@@ -130,20 +132,20 @@ Repository zu laden, benötigt man einen sogenannten \emph{Pull}:
 Der Git-Workflow umfasst noch viele weitere Befehle und kann für Unerfahrene
 schnell sehr kompliziert werden. Aus diesem Grund enthalten die meisten gängigen
 Entwicklungsumgebungen grafische Oberflächen für die Verwendung von Git. So
-benötigt der Entwickler weder Konsole noch tieferes Fachwissen über die genaue
-Verwendung bzw. Syntax der Befehle.
+benötigt der Entwickler weder die Kommandozeile noch tieferes Fachwissen über
+die genaue Verwendung bzw. Syntax der Befehle.
 
 \subsubsection{Branches}
 Git bietet neben der Kontrolle und Verfolgung von Commits und Änderungen auch
 die Möglichkeit echt parallel zu arbeiten. In einem großen Softwareprojekt sind
 zur Laufzeit auftretende Fehler in der Regel unumgänglich. Um keine Kunden zu
-verlieren, müssen einige diese Fehler gegebenenfalls schnellstmöglich behoben
+verlieren, müssen einige dieser Fehler gegebenenfalls schnellstmöglich behoben
 werden.
 
 In diesem beispielhaften Fall, dass in einer Software ein gravierender Fehler
 auftritt, sollte möglichst schnell ein Update mit einer Lösung ausgearbeitet
 werden. Es kann jedoch sein, dass ein Teil des Entwicklungsteams gerade an einem
-sehr großen neuen Feature arbeitet, welches nicht halbfertig veröffentlicht
+sehr großen neuen Feature arbeitet, welches nicht unvollständig veröffentlicht
 werden darf. Es muss also eine Lösung gefunden werden, damit eine neue Version
 mit dem behobenen Fehler veröffentlicht werden kann, ohne, dass die Arbeit an
 dem neuen Feature gestört oder rückgängig gemacht werden muss. Git stellt mit
@@ -197,14 +199,14 @@ Softwarefehler auftritt, kann das Team ausgehend vom lauffähigen
 \autoref{fig:git-branch-fehler}, roter Kreis). Auf diesem Zweig können sie
 unabhängig von der Entwicklung eines neuen Features den Fehler beheben, mit dem
 Hauptzweig zusammenführen und das Update veröffentlichen. Wenn das Feature
-fertig ist, wird es mit dem Hauptzweig zusammengeführt und der Fehler auch darin
-automatisch behoben. Sollte der Fehler so gravierend sein, dass er die
-Entwicklung des \texttt{Feature}-Branches behindert, kann man jederzeit den nun
-fehlerfreien \texttt{Main}-Branch in den \texttt{Feature}-Branch mergen und den
-\texttt{Feature}-Branch somit wieder auf den aktuellen Stand bringen. Mergen
-heißt hier nichts anderes als das Zusammenführen zweier Codebasen. Dies ist auch
-sinnvoll, wenn die Entwicklung eines Features einen längeren Zeitraum
-beansprucht. Ansonsten geht man die Gefahr ein, dass sich der Hauptzweig bei der
-Zusammenführung so sehr verändert hat, dass er sich zu sehr vom
-\texttt{Feature}-Zweig unterscheidet und ein Merge sehr viel manuelle Arbeit
-erfordern würde.
+fertig ist, wird der \texttt{Feature}-Branch mit dem Hauptzweig zusammengeführt
+und der Fehler auch darin automatisch behoben. Sollte der Fehler so gravierend
+sein, dass er die Entwicklung des \texttt{Feature}-Branches behindert, kann man 
+jederzeit den nun fehlerfreien \texttt{Main}-Branch in den
+\texttt{Feature}-Branch mergen und den \texttt{Feature}-Branch somit wieder auf
+den aktuellen Stand bringen. Mergen heißt hier nichts anderes als das
+Zusammenführen zweier Codebasen. Dies ist auch sinnvoll, wenn die Entwicklung
+eines Features einen längeren Zeitraum beansprucht. Ansonsten geht man die
+Gefahr ein, dass sich der Hauptzweig bei der Zusammenführung so sehr verändert
+hat, dass er sich zu sehr vom \texttt{Feature}-Zweig unterscheidet und ein Merge
+sehr viel manuelle Arbeit erfordern würde.

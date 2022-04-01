@@ -56,16 +56,16 @@ neu angelegten Kurses. Dort können neben dem gerade festgelegten Namen auch die
 Beschreibung des Kurses, die enthaltenen Aufgaben sowie die zuständigen
 Admin-Accounts der Dozierenden festgelegt und geändert werden.
 
-Neue Aufgaben bzw. Probleme können mithilfe der folgenden Anleitung
-erstellt werden:
+Neue Aufgaben bzw. Probleme können mithilfe der folgenden Anleitung erstellt
+werden:
 \url{https://cs50.readthedocs.io/projects/check50/en/latest/check_writer}. Nach
-der Erstellung eines Problems kann der sogenannte Slug (Name des Problems) in
-den Kurseinstellungen referenziert werden. Dadurch wird die Aufgabe automatisch
-im Kurs angezeigt.
+der Erstellung einer Übung kann der sogenannte Slug (Name der Aufgabe) in den 
+Kurseinstellungen referenziert werden. Dadurch wird die Übung automatisch dem
+vorher erstellten Kurs hinzugefügt.
 
 In der Kursübersicht der me50-Plattform können Lehrende die Abgaben und Versuche
-der Studierenden sehen. Bei jedem Eintrag ist jeweils die erreichte Punktzahl
-von check50 und style50 sichtbar. Eine Übersicht der Abgaben können Dozierende
+der Studierenden sehen. Bei jedem Eintrag wird jeweils die erreichte Punktzahl
+von check50 und style50 angezeigt. Eine Übersicht der Abgaben können Dozierende
 jederzeit in Form einer .csv- oder .json-Datei pro Aufgabe herunterladen.
 
 \newpage
@@ -150,7 +150,7 @@ Beispiels hätte die Plattform folgenden Branch in dem Repository angelegt
 \texttt{cs50/problems/2021/x/hello}. Durch die Commit-History in diesem Branch 
 kann man später den Verlauf der Versuche nachverfolgen.
 
-\paragraph{Probleme beim Einsatz für die OTH}
+\paragraph{Probleme beim Einsatz an der OTH}
 Die Toolchain von CS50 wäre grundsätzlich adäquat für den Einsatz an der
 OTH-Regensburg. Jedoch ist eines der Projekte aktuell noch nicht Open-Source:
 die Website zur Erstellung von neuen Kursen, Abgaben und Mitgliederverwaltung. 
@@ -239,7 +239,7 @@ integrierte Online-Entwicklungsumgebung, muss für jede Instanz ein zusätzliche
 Container mit der Laufzeitumgebung der IDE gestartet werden. Jeder weitere
 Container benötigt weiteren Arbeitsspeicher und erhöht die Prozessorlast.
 
-\paragraph{Probleme beim Einsatz für die OTH}
+\paragraph{Probleme beim Einsatz an der OTH}
 Beim Einsatz von Code FREAK an der Hochschule Regensburg gibt es einige
 Probleme. Das erste Hindernis bezieht sich auf den vorher erwähnten
 Arbeitsspeicher. Die Praxis zeigt, dass eine Instanz der Online-IDE schon nach
@@ -310,7 +310,7 @@ auf der Automatisierung von Repositorys. Jeder bei GitHub registrierte Nutzer
 kann einen sogenannten \emph{Classroom} erstellen und darin Aufgaben auf
 Basis vorhandener öffentlichen GitHub-Repositorys erstellen.
 
-\paragraph{Probleme beim Einsatz für die OTH}
+\paragraph{Probleme beim Einsatz an der OTH}
 Es gibt keine Möglichkeit, das System von GitHub Classroom auf einem lokalen
 Git-Server zu replizieren. Aufgrund dessen schafft man sich durch die
 Verwendung von Classroom eine externe Abhängigkeit an GitHub. Dies kann unter
