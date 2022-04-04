@@ -32,11 +32,11 @@ dem vorher genannten System bearbeiten können. \parencite{cs50-edx}
 Die Programmieraufgaben können entweder mit der, auf AWS Cloud9 basierten,
 \ac{ide} \emph{CS50-IDE} von Harvard, oder in jeder anderen beliebigen
 Entwicklungsumgebung bearbeitet werden. Dies wird durch die flexible Architektur
-des Systems ermöglicht. Jede Funktionalität des vollautomatisierten Kurses
-geschieht durch öffentlich bereitgestellte Kommandozeilen-Tools. Dieses System
-hat den Vorteil, dass es unabhängig von der eingesetzten IDE
-(Entwicklungsumgebung) funktioniert. Es wird lediglich ein Terminal mit den
-jeweiligen Tools benötigt. \parencite{cs50-ide}
+des Systems ermöglicht. Die Korrektur und Abgabe der Übungen erfolgt dabei mit
+öffentlich bereitgestellten Kommandozeilen-Tools. Dieses System hat den Vorteil,
+dass es unabhängig von der eingesetzten IDE (Entwicklungsumgebung) funktioniert.
+Es wird lediglich ein Terminal mit den jeweiligen Tools benötigt.
+\parencite{cs50-ide}
 
 Um einen Lösungsversuch abzugeben wird das sogenannte Werkzeug \emph{submit50}
 verwendet. Um den Code vor Abgabe auf Fehler zu überprüfen, stellt Harvard das
@@ -102,7 +102,7 @@ ausgeführtem Befehl, verschiedene mögliche Relationen.
 
 Teilnehmende dieses Online-Lehrangebots erhalten von den Dozierenden einen
 Einladungslink zum Kurs. Dieser Link führt sie zur me50-Plattform
-(https://submit.cs50.io/), welche gleichzeitig als Aufgabenübersicht dient. Die
+(\url{https://submit.cs50.io}), welche gleichzeitig als Aufgabenübersicht dient. Die
 Authentifizierung mit der Plattform geschieht dabei über GitHub. Auf dieser
 Plattform können Studierende sowohl ihre Abgaben, als auch ihre Kurse
 übersichtlich verwalten. Neben der Weiterleitung zur me50-Plattform wird
@@ -111,7 +111,7 @@ GitHub-Username des Teilnehmers angelegt.
 
 Nach Annahme des Einladungslinks können Studierende in jeder beliebigen
 Entwicklungsumgebung die Aufgaben auf der CS50-Plattform
-(https://cs50.harvard.edu/) lösen. Das Korrigieren und Abgeben der Aufgabe
+(\url{https://cs50.harvard.edu}) lösen. Das Korrigieren und Abgeben der Aufgabe
 benötigt mindestens Zugriff auf die Kommandozeilen-Tools check50 und submit50.
 Diese sind über den Python-Paketmanager frei verfügbar. Harvard stellt außerdem
 eine kostenlose Online-IDE bereit, welche die genannten Python-Programme bereits
@@ -122,17 +122,17 @@ Namens der Aufgabe die Lösung überprüfen und schließlich abgeben. Eine Abgab
 über die Konsole kann dann beispielsweise so aussehen:
 
 \begin{lstlisting}[style=Bash]
-    ~/hello/ $ submit50 cs50/problems/2021/x/hello
-    Connecting......
-    Authenticating...
-    Verifying.........
-    Preparing..................
-    Files that will be submitted:
-    ./hello.c
-    Keeping in mind the course's policy on academic honesty, are you sure you want to submit these files (yes/no)? yes
-    Uploading....
-    .......
-    Go to https://submit.cs50.io/users/ndhbr/cs50/problems/2021/x/hello to see your results.
+~/hello/ $ submit50 cs50/problems/2021/x/hello
+Connecting......
+Authenticating...
+Verifying.........
+Preparing..................
+Files that will be submitted:
+./hello.c
+Keeping in mind the course's policy on academic honesty, are you sure you want to submit these files (yes/no)? yes
+Uploading....
+.......
+Go to https://submit.cs50.io/users/ndhbr/cs50/problems/2021/x/hello to see your results.
 \end{lstlisting}
 
 Der Parameter \texttt{cs50/problems/2021/x/hello} im Aufruf von submit50 ist
@@ -143,7 +143,7 @@ sollen.
 
 Die letzte Zeile verlinkt erneut auf die me50-Plattform und zeigt dem
 Kursteilnehmenden seine Abgaben dieser Aufgabe und seine damit erreichte
-Punktezahl. Gleichzeitig verlinkt die me50-Plattform auf das vorher erstellte
+Punktzahl. Gleichzeitig verlinkt die me50-Plattform auf das vorher erstellte
 GitHub-Repository des Lernenden. Die Plattform legt bei jeder neu abgegebenen
 Aufgabe einen neuen Git-Branch für diese an. Nach der Abgabe des vorherigen
 Beispiels hätte die Plattform folgenden Branch in dem Repository angelegt
@@ -163,7 +163,7 @@ ein Neuaufbau dieser Website mit einhergehender Veröffentlichung als
 Open-Source-Projekt gerade in Planung (siehe Anhang
 \ref{appendix:carter-zenke}). Einen genauen öffentlichen Zeitplan hierfür gibt
 es aktuell nicht. Infolgedessen ist ein Einsatz des CS50-Systems an der OTH zum
-heutigen Datum nicht möglich.
+heutigen Datum (\today) nicht möglich.
 
 \newpage
 \subsubsection{Code FREAK der Fachhochschule Kiel}\label{code-freak}
@@ -310,7 +310,7 @@ auf der Automatisierung von Repositorys. Jeder bei GitHub registrierte Nutzer
 kann einen sogenannten \emph{Classroom} erstellen und darin Aufgaben auf
 Basis vorhandener öffentlichen GitHub-Repositorys erstellen.
 
-\paragraph{Probleme beim Einsatz an der OTH}
+\paragraph{Probleme beim Einsatz an der OTH}\label{classroom-probleme}
 Es gibt keine Möglichkeit, das System von GitHub Classroom auf einem lokalen
 Git-Server zu replizieren. Aufgrund dessen schafft man sich durch die
 Verwendung von Classroom eine externe Abhängigkeit an GitHub. Dies kann unter
@@ -360,8 +360,9 @@ von Andreas Huber durchgeführt.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{systemvergleich}
-    \caption{Vergleich und Benotung der Systeme}
-    \bildquelle{Eigene Darstellung}
+    %\caption{Vergleich und Benotung der Systeme}
+    \captionof{table}{Vergleich und Benotung der Systeme}
+    %\bildquelle{Eigene Darstellung}
     \label{fig:systemvergleich}
 \end{figure}
 

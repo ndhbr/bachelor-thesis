@@ -112,13 +112,21 @@ footskip=12mm}
 
 % Inhaltsverzeichnis
 \tableofcontents
+
+% Abbildungsverzeichnis
 \newpage
+\input{pages/x_abbildungsverzeichnis}
+
+% Tabellenverzeichnis
+\newpage
+\input{pages/x_tabellenverzeichnis}
 
 % Abkürzungsverzeichnis
-\input{pages/x_abkuerzungsverzeichnis}
 \newpage
+\input{pages/x_abkuerzungsverzeichnis}
 
 % Arabische Seitennummerierung ab hier
+\newpage
 \pagenumbering{arabic}
 
 % Einleitung
@@ -148,9 +156,6 @@ footskip=12mm}
 \newpage
 %\pagenumbering{Roman}
 %\setcounter{page}{5}
-
-% Abbildungsverzeichnis
-\input{pages/x_abbildungsverzeichnis}
 
 % Literaturliste soll im Inhaltsverzeichnis auftauchen
 \newpage

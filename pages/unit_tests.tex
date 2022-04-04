@@ -1,5 +1,5 @@
 \subsection{Softwaretests}
-\subsubsection{Allgemein}
+\subsubsection{Allgemeines}
 Um Programmieraufgaben vollständig automatisiert bewerten zu können, benötigt
 man eine Methode, welche es ermöglicht einzelne Funktionen oder Klassen eines
 Quellcodes auf ihre Funktionalität zu testen. In professionellen Softwareteams
@@ -22,22 +22,22 @@ In folgendem Beispiel wird mithilfe der Python Unit-Test-Bibliothek Pytest
 ein einfacher Komponententest durchgeführt:
 
 \begin{lstlisting}[style=Python]
-    # test_my_name_is.py
+# test_my_name_is.py
 
-    # Zu testende Funktion
-    def my_name_is(name):
-        return f'Hallo, mein Name ist {name}'
+# Zu testende Funktion
+def my_name_is(name):
+  return f'Hallo, mein Name ist {name}'
 
-    # Unit-Test Funktion
-    def test_my_name_is():
-        assert my_name_is('Andreas') == 'Hallo, mein Name ist Andreas'
+# Unit-Test Funktion
+def test_my_name_is():
+  assert my_name_is('Andreas') == 'Hallo, mein Name ist Andreas'
 \end{lstlisting}
 
 In diesem Code-Ausschnitt wird die Methode \texttt{my\_name\_is(name)} mithilfe
 der Unit-Test-Funktion \code{test\_my\_name\_is()} getestet. Die Methode 
 \code{my\_name\_is(name)} in Zeile 4 hat die Aufgabe, abhängig des in der
 Variable \code{name} übergebenen Namens, die Nachricht \glqq Hallo, mein Name
-ist \code{<NAME>}\grqq{} auszugeben. \code{<NAME>} ist hier ein Platzhalter
+ist \code{<NAME>}\grqq{} auszugeben. \code{<NAME>} ist hier der Platzhalter für
 die Variable \code{name}.
 
 Die Unit-Test-Funktion \code{test\_my\_name\_is()} ruft die Methode
@@ -48,7 +48,7 @@ Pytest gestartet werden. Hierfür benötigt man lediglich folgenden
 Kommandozeilen-Befehl:
 
 \begin{lstlisting}[style=Bash]
-    $ pytest test_my_name_is.py
+$ pytest test_my_name_is.py
 \end{lstlisting}
 
 Daraufhin erhält man beim erfolgreichen Bestehen des Tests folgende Ausgabe:

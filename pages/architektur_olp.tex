@@ -1,4 +1,11 @@
 \subsection{Finale Architektur des Digital Skills Coding Course}
+GitHub Classroom hat in der Nutzwertanalyse die meisten Punkte erreicht und wird
+nun als Basis für den Digital Skills Coding Course eingesetzt. In
+\autoref{classroom-probleme} wurde der Bedarf an weiterer Software als
+Herausforderung beschrieben. Diese Herausforderung wird in folgendem Kapitel
+bei der Erläuterung der Architektur durch den zusätzlichen Einsatz von Tutors
+und Replit bestritten.
+
 \subsubsection{Tutors als Aufgabensammlung}\label{finale-architektur-tutors}
 Das freie Open-Source-Projekt \emph{Tutors} ist eine Sammlung von
 Softwarepaketen, die entwickelt wurden, um Online-Kurse mit Vorlesungen,
@@ -14,26 +21,23 @@ jede Aufgabe jeweils auf den Einladungslink der GitHub-Classroom-Aufgabe.
 Neue Anleitungsseiten können mithilfe der in der Informatik üblichen
 Dokumentensprache Markdown angelegt, formatiert und präsentiert werden. Wie der
 \autoref{fig:markdown} auf der nächsten Seite zu entnehmen ist, kann eine 
-Markdown-Anleitung in jedem beliebigen Text-Editor geschrieben werden.
-
-In diesem Fall befindet sich links der Text-Editor und rechts die Vorschau des
-daraus interpretierbaren Dokuments. Grundsätzlich bleibt eine Markdown-Datei
-unkompiliert. Es gibt jedoch einige Programme und Tools, die die Dateien
-nach dem Markdown-Standard interpretieren und für den Betrachter formatiert
-ausgeben.
+Markdown-Anleitung in jedem beliebigen Text-Editor geschrieben werden. In diesem
+Fall befindet sich links der Text-Editor und rechts die Vorschau des daraus 
+interpretierbaren Dokuments. Grundsätzlich bleibt eine Markdown-Datei
+unkompiliert. Es gibt jedoch einige Programme und Tools, die die Dateien nach
+dem Markdown-Standard interpretieren und für den Betrachter formatiert ausgeben.
 
 Die elfte Zeile des Markdown-Dokuments im Text-Editor zeigt eine Überschrift,
 welche durch zwei Rautezeichen (\code{\#\#}) markiert wird. Diese Überschrift
 ist bereits eine Unterüberschrift. Der Titelüberschrift wird lediglich ein
 Rautezeichen vorangesetzt, währenddessen eine Unterunterüberschrift drei
-Rautezeichen benötigt (siehe Zeile 29 in \autoref{fig:markdown}).
-
-Projekte, wie Tutors, interpretieren diese Rautezeichen als Überschrift und
-können so die Schriftgröße und Abstände für alle hinter den Rautezeichen
-stehenden Wörter anpassen. Das Rautezeichen ist nur ein Beispiel für eines von
-vielen verschiedenen Formatierungszeichen. Aus diesen simplen
-Formatierungszeichen entsteht später für den Teilnehmenden ein gut lesbares
-Online-Dokument. \parencite{markdown}
+Rautezeichen benötigt (siehe Zeile 29 in \autoref{fig:markdown}). Projekte,
+wie Tutors, interpretieren diese Rautezeichen als Überschrift und können so die 
+Schriftgröße und Abstände für alle hinter den Rautezeichen stehenden Wörter
+anpassen. Das Rautezeichen ist nur ein Beispiel für eines von vielen
+verschiedenen Formatierungszeichen. Aus diesen Formatierungszeichen entsteht
+durch den Interpreter für den Teilnehmenden eine gut lesbare Dokumentenansicht.
+\parencite{markdown}
 
 \begin{figure}[H]
     \centering
@@ -63,7 +67,7 @@ GitHub Classroom eignet sich für den Einsatz an der Hochschule vor allem durch
 seine Flexibilität und Einfachheit. Durch diese Flexibilität ist es möglich,
 GitHub Classroom nur als eine austauschbare Komponente des Systems zu verwenden.
 Classroom übernimmt im System die Rolle des Aufgabenservers. Hier werden alle
-Aufgabenvorlagen, sowie alle Versuche der Studierenden gespeichert und bewertet.
+Aufgabenvorlagen sowie alle Versuche der Studierenden gespeichert und bewertet.
 
 Sollte diese Komponente des Systems ausfallen, besteht weiterhin Replit als
 Online-IDE, sowie Tutors mit den jeweiligen Anleitungen. Dadurch muss lediglich

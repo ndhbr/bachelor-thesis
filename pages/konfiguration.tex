@@ -38,7 +38,7 @@ Replit, sowie alle Aufgabenrepositorys der Studierenden.
 Nach der Erstellung der OTH-Organisation werden die Aufgabenvorlagen erstellt.
 Aufgabenvorlagen sind in GitHub Classroom normale Repositorys, welche in GitHub
 als Template markiert wurden. Sie beinhalten meist zusätzlich Unit-Tests, um den
-Code darin zu prüfen.
+Quelltext darin zu prüfen.
 
 Das Kursmodul \glqq Grundlagen der Programmierung\grqq{} setzt im ersten Schritt
 auf Übungen mit der Programmiersprache Python. Sobald die Organisation mit
@@ -74,15 +74,15 @@ von nicht geplanten Eingaben vergeben. \parencite{github-assignment-erstellen}
 Sobald die Anleitungen in Tutors veröffentlicht und die Aufgaben in GitHub
 Classroom als Assignments erstellt wurden, folgt nun die Konfiguration von
 Replit. Damit der Workflow der Studierenden mit der Online-IDE unterstützt wird,
-erstellt Herr Huber ein dafür hilfreiches Template-Repository.
+entwickelt Herr Huber hierfür ein Template-Repository.
 
 \subsubsection{Template-Repository}\label{replit-template-repository}
 Wie vorher bereits erwähnt, heißen Projekte in Replit Repls. Ein Repl ist in
 Replit ein vollumfänglicher Arbeitsbereich, um neue oder bestehende Software zu
-entwickeln. Neben einer Dateiübersicht, einem Text\-editor und einer Konsole
+programmieren. Neben einer Dateiübersicht, einem Text\-editor und einer Konsole
 enthält der Arbeitsbereich viele weitere Funktionen. Dazu zählt unter anderem
 eine eingebaute Oberfläche für die Versionskontrolle Git, ein
-Quellcode-Debugger, eine lokale Key-Value-Datenbank, private Umgebungsvariablen,
+Quelltext-Debugger, eine lokale Key-Value-Datenbank, private Umgebungsvariablen,
 sowie ein spezieller Bereich für Unit-Tests.
 
 Repls können auf Basis von bestehenden GitHub Repositorys erzeugt werden. Durch
@@ -95,8 +95,8 @@ Aus diesem Grund wurde ein öffentliches Repository in der vorher erstellten
 GitHub Organisation angelegt. Dies ist das Template, welches später von den
 Studierenden als Starter-Vorlage in Replit verwendet wird
 \parencite{git-repo:replit-template}. Replit versteckt zudem alle Dateien,
-welche sich in einem Ordner namens \texttt{node\_modules} befinden.
-Normalerweise wird der Ordner automatisch im Kontext mit externen Modulen der 
+welche sich in dem Verzeichnis namens \texttt{node\_modules} befinden.
+Normalerweise wird der Ordner im Kontext von externen Modulen der
 JavaScript-Bibliothek Node.js verwendet \parencite{nodejs}. Das ist auch der
 Grund, weshalb Replit diesen Ordner automatisch versteckt. Dieses Verhalten
 nutzen wir, um Hilfsprogramme und Konfigurationen zu verstecken.
@@ -105,9 +105,9 @@ Studierende werden den ganzen Kurs in einem einzigen Repl absolvieren. Jede
 Programmieraufgabe wird als Ordner in den Repl Arbeitsbereich abgespeichert. Um
 die Aufgaben herunterladen, prüfen und schließlich abgeben zu können, benötigt
 man Git-Kenntnisse, sowie Erfahrungen mit Test-Frameworks, wie zum Beispiel
-pytest. Im \texttt{node\_modules}-Ordner des Starter-Templates befinden sich
-diverse Hilfsprogramme, welche den Studierenden bei der Einrichtung und
-Verwaltung der Programmieraufgaben unterstützen.
+Pytest. Im \texttt{node\_modules}-Ordner des Starter-Templates befinden sich
+diverse Tools, welche den Studierenden bei der Einrichtung und Verwaltung der 
+Programmieraufgaben unterstützen.
 
 \subsubsection{Hilfsprogramme (get, check, submit)}
 \label{replit-template-wrapper-tools}
@@ -125,7 +125,7 @@ Programmiersprache enthält. Das \texttt{check}-Skript liest die
 \texttt{.language}-Datei aus und entscheidet daraufhin, welche Befehle zum
 Ausführen der Tests nötig sind. Python ist die vom Zusatzstudium Digital Skills
 verwendete Programmiersprache. In diesem Fall installiert das Skript zuerst die
-nötigen Abhängigkeiten mit
+nötigen Abhängigkeiten mit:
 
 \begin{lstlisting}[style=Bash]
 $ pip3 install pytest --quiet
@@ -192,14 +192,14 @@ Konfiguration von Git angewandt. Git benötigt, um Commits zu pushen, einen
 Namen mit zugehöriger E-Mail-Adresse \parencite{git-config}. Diese Daten werden
 zusammen mit den SSH-Keys in der Replit-Datenbank gespeichert.
 
-Nach der Ausführung des Einrichtungsskripts, wird eine neue
+Nach der Ausführung des Einrichtungsskripts, wird automatisch eine neue
 Bash-Konsolen-Instanz, mit der gerade angelegten Konfigurationsdatei als
 Parameter, gestartet.
 
 \subsubsection{SSH-Keys}\label{replit-template-ssh-keys}
 Um das vorher generierte SSH-Schlüsselpaar für die Authentifizierung gegen
-GitHub zu verwenden, muss der öffentliche Schlüssel noch zu dem GitHub-Profil
-des Studierenden hinzugefügt werden. Hierfür enthält das Starter-Template ein
+GitHub zu verwenden, muss der öffentliche Schlüssel noch zum GitHub-Profil des 
+Studierenden hinzugefügt werden. Hierfür enthält das Starter-Template ein
 weiteres Programm auf Basis von Python, welches mit dem Befehl \texttt{github}
 in der OTH-Console ausgeführt werden kann. Dieses weitere Tool lädt den im
 SSH-Ordner gespeicherten öffentlichen Schlüssel und gibt ihn zusammen mit einem
